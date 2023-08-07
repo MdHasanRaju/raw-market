@@ -38,10 +38,10 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{backgroundColor:'#183a1d'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <LocalMall sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          <LocalMall  sx={{ display: { xs: "none", md: "flex" }, mr: 1 , color:'red'}} />
           <Typography
             variant="h6"
             noWrap
@@ -55,7 +55,7 @@ const Navbar = () => {
               textDecoration: "none",
             }}
           >
-            <Link to="/">Bazar</Link>
+            <Link style={{color:"red"}} to="/">Bazar</Link>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -93,40 +93,38 @@ const Navbar = () => {
                 </MenuItem>
               ))} */}
               <MenuItem onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">
+                <Typography sx={{color:'red'}} textAlign="center">
                   <Link to="/home">Home</Link>
                 </Typography>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">
+                <Typography sx={{color:'red'}} textAlign="center">
                   <Link to="/products">Products</Link>
                 </Typography>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">
+                <Typography sx={{color:'red'}} textAlign="center">
                   <Link to="/about">About</Link>
                 </Typography>
               </MenuItem>
             </Menu>
           </Box>
-          <LocalMall sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+          <LocalMall sx={{ display: { xs: "flex", md: "none" }, mr: 1 , color:'red'}} />
           <Typography
             variant="h5"
-            noWrap
-            component="a"
-            href=""
+            noWrap  
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
               fontFamily: "monospace",
               fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
+              color:'inherit',
+              letterSpacing: ".3rem", 
               textDecoration: "none",
             }}
           >
-            Bazar
+            <Link Bazar to="/">Bazar</Link>
           </Typography>
           {/* <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
@@ -142,13 +140,13 @@ const Navbar = () => {
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: "white", display: "block" }}
+              sx={{ my: 2, color: "white", display: "block", }}
             >
-              <Link to="/home">Home</Link>
+              <Link style={{color:"red"}} to="/home">Home</Link>
             </Button>
             <MenuItem onClick={handleCloseNavMenu}>
               <Typography textAlign="center">
-                <Link to="/about">About</Link>
+                <Link style={{color:"red"}} to="/about">About</Link>
               </Typography>
             </MenuItem>
           </Box>
@@ -175,11 +173,26 @@ const Navbar = () => {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
+              {/* {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
-              ))}
+              ))} */}
+              <MenuItem onClick={handleCloseNavMenu}>
+                <Typography  textAlign="center">
+                  <Link  style={{color:"red"}} to="/home">Home</Link>
+                </Typography>
+              </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu}>
+                <Typography textAlign="center">
+                  <Link style={{color:"red"}} to="/products">Products</Link>
+                </Typography>
+              </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu}>
+                <Typography textAlign="center">
+                  <Link style={{color:"red"}} to="/about">About</Link>
+                </Typography>
+              </MenuItem>
             </Menu>
           </Box>
         </Toolbar>
