@@ -98,32 +98,50 @@ const Navbar = () => {
               ))} */}
               <MenuItem onClick={handleCloseNavMenu}>
                 <Typography sx={{ color: "red" }} textAlign="center">
-                  <Link
-                    style={{ textDecoration: "none", color: "black" }}
+                  <NavLink
+                  style={({ isActive }) => {
+                    return {
+                      fontWeight: isActive ? "bold" : "",
+                      color: isActive ? "red" : "orange",
+                      textDecoration: "none" ,
+                    };
+                  }}
                     to="/home"
                   >
                     Home
-                  </Link>
+                  </NavLink>
                 </Typography>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>
                 <Typography sx={{ color: "red" }} textAlign="center">
-                  <Link
-                    style={{ textDecoration: "none", color: "black" }}
+                  <NavLink
+                  style={({ isActive }) => {
+                    return {
+                      fontWeight: isActive ? "bold" : "",
+                      color: isActive ? "red" : "orange",
+                      textDecoration: "none" ,
+                    };
+                  }}
                     to="/products"
                   >
                     Products
-                  </Link>
+                  </NavLink>
                 </Typography>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>
                 <Typography sx={{ color: "red" }} textAlign="center">
-                  <Link
-                    style={{ textDecoration: "none", color: "black" }}
+                  <NavLink
+                  style={({ isActive }) => {
+                    return {
+                      fontWeight: isActive ? "bold" : "",
+                      color: isActive ? "red" : "orange",
+                      textDecoration: "none" ,
+                    };
+                  }}
                     to="/about"
                   >
                     About
-                  </Link>
+                  </NavLink>
                 </Typography>
               </MenuItem>
             </Menu>
@@ -174,22 +192,18 @@ const Navbar = () => {
             </Button> */}
             <MenuItem onClick={handleCloseNavMenu}>
               <Typography textAlign="center">
-                <Link
-                  style={{ color: "white", textDecoration: "none" }}
+                <NavLink
+                  style={({ isActive }) => {
+                    return {
+                      fontWeight: isActive ? "bold" : "",
+                      color: isActive ? "red" : "orange",
+                      textDecoration: "none" ,
+                    };
+                  }}
                   to="/home"
                 >
                   Home
-                </Link>
-              </Typography>
-            </MenuItem>
-            <MenuItem onClick={handleCloseNavMenu}>
-              <Typography textAlign="center">
-                <Link
-                  style={{ color: "white", textDecoration: "none" }}
-                  to="/products"
-                >
-                  Products
-                </Link>
+                </NavLink>
               </Typography>
             </MenuItem>
             <MenuItem onClick={handleCloseNavMenu}>
@@ -198,7 +212,23 @@ const Navbar = () => {
                   style={({ isActive }) => {
                     return {
                       fontWeight: isActive ? "bold" : "",
-                      color: isActive ? "red" : "black",
+                      color: isActive ? "red" : "orange",
+                      textDecoration: "none" ,
+                    };
+                  }}
+                  to="/products"
+                >
+                  Products
+                </NavLink>
+              </Typography>
+            </MenuItem>
+            <MenuItem onClick={handleCloseNavMenu}>
+              <Typography textAlign="center">
+                <NavLink
+                  style={({ isActive }) => {
+                    return {
+                      fontWeight: isActive ? "bold" : "",
+                      color: isActive ? "red" : "orange",
                       textDecoration: "none" ,
                     };
                   }}
