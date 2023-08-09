@@ -12,7 +12,7 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { LocalMall } from "@mui/icons-material";
 
 const pages = ["Products", "Pricing", "Blog"];
@@ -38,10 +38,12 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="static" sx={{backgroundColor:'#183a1d'}}>
+    <AppBar position="static" sx={{ backgroundColor: "#183a1d" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <LocalMall  sx={{ display: { xs: "none", md: "flex" }, mr: 1 , color:'white'}} />
+          <LocalMall
+            sx={{ display: { xs: "none", md: "flex" }, mr: 1, color: "white" }}
+          />
           <Typography
             variant="h6"
             noWrap
@@ -55,7 +57,9 @@ const Navbar = () => {
               textDecoration: "none",
             }}
           >
-            <Link style={{color:"white", textDecoration:"none"}} to="/">Bazar</Link>
+            <Link style={{ color: "white", textDecoration: "none" }} to="/">
+              Bazar
+            </Link>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -93,39 +97,80 @@ const Navbar = () => {
                 </MenuItem>
               ))} */}
               <MenuItem onClick={handleCloseNavMenu}>
-                <Typography sx={{color:'red'}} textAlign="center">
-                  <Link style={{textDecoration:"none", color:"black"}} to="/home">Home</Link>
+                <Typography sx={{ color: "red" }} textAlign="center">
+                  <NavLink
+                  style={({ isActive }) => {
+                    return {
+                      fontWeight: isActive ? "bold" : "",
+                      color: isActive ? "red" : "orange",
+                      textDecoration: "none" ,
+                    };
+                  }}
+                    to="/home"
+                  >
+                    Home
+                  </NavLink>
                 </Typography>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>
-                <Typography sx={{color:'red'}} textAlign="center">
-                  <Link style={{textDecoration:"none", color:"black"}} to="/products">Products</Link>
+                <Typography sx={{ color: "red" }} textAlign="center">
+                  <NavLink
+                  style={({ isActive }) => {
+                    return {
+                      fontWeight: isActive ? "bold" : "",
+                      color: isActive ? "red" : "orange",
+                      textDecoration: "none" ,
+                    };
+                  }}
+                    to="/products"
+                  >
+                    Products
+                  </NavLink>
                 </Typography>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>
-                <Typography sx={{color:'red'}} textAlign="center">
-                  <Link style={{textDecoration:"none", color:"black"}} to="/about">About</Link>
+                <Typography sx={{ color: "red" }} textAlign="center">
+                  <NavLink
+                  style={({ isActive }) => {
+                    return {
+                      fontWeight: isActive ? "bold" : "",
+                      color: isActive ? "red" : "orange",
+                      textDecoration: "none" ,
+                    };
+                  }}
+                    to="/about"
+                  >
+                    About
+                  </NavLink>
                 </Typography>
               </MenuItem>
             </Menu>
           </Box>
-          <LocalMall sx={{ display: { xs: "none", md: "none" }, mr: 1 , color:'white'}} />
+          <LocalMall
+            sx={{ display: { xs: "none", md: "none" }, mr: 1, color: "white" }}
+          />
           <Typography
             variant="h5"
-            noWrap  
+            noWrap
             sx={{
               mr: 2,
-              textDecoration:"none",
+              textDecoration: "none",
               display: { xs: "none", md: "none" },
               flexGrow: 1,
               fontFamily: "monospace",
               fontWeight: 700,
-              color:'white',
-              letterSpacing: ".3rem", 
+              color: "white",
+              letterSpacing: ".3rem",
               textDecoration: "none",
             }}
           >
-            <Link state={{textDecoration:"none", color:"white"}}  Bazar to="/">Bazar</Link>
+            <Link
+              state={{ textDecoration: "none", color: "white" }}
+              Bazar
+              to="/"
+            >
+              Bazar
+            </Link>
           </Typography>
           {/* <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
@@ -145,19 +190,52 @@ const Navbar = () => {
             >
               <Link style={{color:"white" , textDecoration:"none"}} to="/home">Home</Link>
             </Button> */}
-             <MenuItem onClick={handleCloseNavMenu}>
+            <MenuItem onClick={handleCloseNavMenu}>
               <Typography textAlign="center">
-                <Link style={{color:"white" , textDecoration:"none"}} to="/home">Home</Link>
-              </Typography>
-            </MenuItem>
-             <MenuItem onClick={handleCloseNavMenu}>
-              <Typography textAlign="center">
-                <Link style={{color:"white" , textDecoration:"none"}} to="/products">Products</Link>
+                <NavLink
+                  style={({ isActive }) => {
+                    return {
+                      fontWeight: isActive ? "bold" : "",
+                      color: isActive ? "red" : "orange",
+                      textDecoration: "none" ,
+                    };
+                  }}
+                  to="/home"
+                >
+                  Home
+                </NavLink>
               </Typography>
             </MenuItem>
             <MenuItem onClick={handleCloseNavMenu}>
               <Typography textAlign="center">
-                <Link style={{color:"white" , textDecoration:"none"}} to="/about">About</Link>
+                <NavLink
+                  style={({ isActive }) => {
+                    return {
+                      fontWeight: isActive ? "bold" : "",
+                      color: isActive ? "red" : "orange",
+                      textDecoration: "none" ,
+                    };
+                  }}
+                  to="/products"
+                >
+                  Products
+                </NavLink>
+              </Typography>
+            </MenuItem>
+            <MenuItem onClick={handleCloseNavMenu}>
+              <Typography textAlign="center">
+                <NavLink
+                  style={({ isActive }) => {
+                    return {
+                      fontWeight: isActive ? "bold" : "",
+                      color: isActive ? "red" : "orange",
+                      textDecoration: "none" ,
+                    };
+                  }}
+                  to="/about"
+                >
+                  About
+                </NavLink>
               </Typography>
             </MenuItem>
           </Box>
@@ -190,18 +268,33 @@ const Navbar = () => {
                 </MenuItem>
               ))} */}
               <MenuItem onClick={handleCloseNavMenu}>
-                <Typography  textAlign="center">
-                  <Link style={{color:"black", textDecoration:"none"}} to="/home">Home</Link>
+                <Typography textAlign="center">
+                  <Link
+                    style={{ color: "black", textDecoration: "none" }}
+                    to="/home"
+                  >
+                    Home
+                  </Link>
                 </Typography>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>
                 <Typography textAlign="center">
-                  <Link style={{color:"black", textDecoration:"none"}} to="/products">Products</Link>
+                  <Link
+                    style={{ color: "black", textDecoration: "none" }}
+                    to="/products"
+                  >
+                    Products
+                  </Link>
                 </Typography>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>
                 <Typography textAlign="center">
-                  <Link style={{color:"black", textDecoration:"none"}} to="/about">About</Link>
+                  <Link
+                    style={{ color: "black", textDecoration: "none" }}
+                    to="/about"
+                  >
+                    About
+                  </Link>
                 </Typography>
               </MenuItem>
             </Menu>
