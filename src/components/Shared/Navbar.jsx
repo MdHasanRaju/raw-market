@@ -15,9 +15,6 @@ import AdbIcon from "@mui/icons-material/Adb";
 import { Link, NavLink } from "react-router-dom";
 import { LocalMall } from "@mui/icons-material";
 
-const pages = ["Products", "Pricing", "Blog"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
-
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -91,21 +88,16 @@ const Navbar = () => {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {/* {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center"><Link to={`${page}`}>{page}</Link></Typography>
-                </MenuItem>
-              ))} */}
               <MenuItem onClick={handleCloseNavMenu}>
                 <Typography sx={{ color: "red" }} textAlign="center">
                   <NavLink
-                  style={({ isActive }) => {
-                    return {
-                      fontWeight: isActive ? "bold" : "",
-                      color: isActive ? "red" : "orange",
-                      textDecoration: "none" ,
-                    };
-                  }}
+                    style={({ isActive }) => {
+                      return {
+                        fontWeight: isActive ? "bold" : "",
+                        color: isActive ? "red" : "orange",
+                        textDecoration: "none",
+                      };
+                    }}
                     to="/home"
                   >
                     Home
@@ -115,13 +107,13 @@ const Navbar = () => {
               <MenuItem onClick={handleCloseNavMenu}>
                 <Typography sx={{ color: "red" }} textAlign="center">
                   <NavLink
-                  style={({ isActive }) => {
-                    return {
-                      fontWeight: isActive ? "bold" : "",
-                      color: isActive ? "red" : "orange",
-                      textDecoration: "none" ,
-                    };
-                  }}
+                    style={({ isActive }) => {
+                      return {
+                        fontWeight: isActive ? "bold" : "",
+                        color: isActive ? "red" : "orange",
+                        textDecoration: "none",
+                      };
+                    }}
                     to="/products"
                   >
                     Products
@@ -131,13 +123,13 @@ const Navbar = () => {
               <MenuItem onClick={handleCloseNavMenu}>
                 <Typography sx={{ color: "red" }} textAlign="center">
                   <NavLink
-                  style={({ isActive }) => {
-                    return {
-                      fontWeight: isActive ? "bold" : "",
-                      color: isActive ? "red" : "orange",
-                      textDecoration: "none" ,
-                    };
-                  }}
+                    style={({ isActive }) => {
+                      return {
+                        fontWeight: isActive ? "bold" : "",
+                        color: isActive ? "red" : "orange",
+                        textDecoration: "none",
+                      };
+                    }}
                     to="/about"
                   >
                     About
@@ -172,24 +164,8 @@ const Navbar = () => {
               Bazar
             </Link>
           </Typography>
-          {/* <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box> */}
+
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {/* <Button
-              onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: "white", display: "block", }}
-            >
-              <Link style={{color:"white" , textDecoration:"none"}} to="/home">Home</Link>
-            </Button> */}
             <MenuItem onClick={handleCloseNavMenu}>
               <Typography textAlign="center">
                 <NavLink
@@ -197,7 +173,7 @@ const Navbar = () => {
                     return {
                       fontWeight: isActive ? "bold" : "",
                       color: isActive ? "red" : "orange",
-                      textDecoration: "none" ,
+                      textDecoration: "none",
                     };
                   }}
                   to="/home"
@@ -213,7 +189,7 @@ const Navbar = () => {
                     return {
                       fontWeight: isActive ? "bold" : "",
                       color: isActive ? "red" : "orange",
-                      textDecoration: "none" ,
+                      textDecoration: "none",
                     };
                   }}
                   to="/products"
@@ -229,7 +205,7 @@ const Navbar = () => {
                     return {
                       fontWeight: isActive ? "bold" : "",
                       color: isActive ? "red" : "orange",
-                      textDecoration: "none" ,
+                      textDecoration: "none",
                     };
                   }}
                   to="/about"
@@ -262,11 +238,6 @@ const Navbar = () => {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {/* {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))} */}
               <MenuItem onClick={handleCloseNavMenu}>
                 <Typography textAlign="center">
                   <Link
