@@ -11,7 +11,7 @@ const About = () => {
         </Typography>
 
         <Box sx={{ flexGrow: 1 }}>
-          <Grid container alignItems="center" spacing={2}>
+          <Grid container alignItems="center"  spacing={2}>
             <Grid item md={4}>
               <Box
                 sx={{
@@ -29,7 +29,7 @@ const About = () => {
                     borderRadius: "50%",
                     display: "flex",
                     justifyContent: "center",
-                    alignItems: "center",
+                    alignItems: "center", 
                   }}
                 >
                   <Box sx={{

@@ -3,6 +3,8 @@ import Grid from "@mui/material/Grid";
 import Container from "@mui/system/Container";
 import React from "react";
 import { Box, TextField } from "@mui/material";
+import FacebookIcon from '@mui/icons-material/Facebook';
+import { Home} from "@mui/icons-material";
 
 const Footer = () => {
   return (
@@ -25,6 +27,14 @@ const Footer = () => {
                 Lorem Ipsum is simply <br/> dummy of the printing <br/> and typesetting
                 industry <br/> lorem Ipsum
               </Typography>
+
+              <Box >
+              <i style={{paddingRight:'10px'}} class="fa-brands fa-facebook"></i>
+              <i style={{paddingRight:'10px'}} class="fa-brands fa-instagram"></i>
+              <i style={{paddingRight:'10px'}} class="fa-brands fa-youtube"></i>
+              <i style={{paddingRight:'10px'}} class="fa-brands fa-linkedin"></i>
+              <i style={{paddingRight:'10px'}} class="fa-brands fa-pinterest"></i>
+              </Box>
         
             </Box>
           </Grid>
@@ -69,7 +79,10 @@ const Footer = () => {
                   Subscribe to our newsletter <br /> to re ceive fashion store
                   news on new update.{" "}
                 </Typography>
-                <TextField sx={{border:'1px solid white', borderRadius:'5px'}} id="outlined-basic" label="Outlined" variant="outlined" />
+                <Box sx={{border:'1px solid white', ml:'auto', borderRadius:'5px', display:'flex', alignItems:"center", justifyContent:'end'}}>
+                <i style={{marginLeft:'auto', display:'flex', justifyContent:'end'}} class="fa-solid fa-arrow-right"></i>
+                <TextField sx={{ width:'100%'}} id="outlined-basic" label="Outlined" variant="outlined" />
+                </Box>
               </Box>
             </Box>
           </Grid>
