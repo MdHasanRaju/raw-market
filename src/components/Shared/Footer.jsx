@@ -50,11 +50,13 @@ const Footer = () => {
             >
               <Box>
                 <Typography variant="h6">SERVICES</Typography>
-                <Typography variant="subtitle1">Fresh fruits</Typography>
-                <Typography variant="subtitle1">Fresh meat</Typography>
-                <Typography variant="subtitle1">Cow milk</Typography>
-                <Typography variant="subtitle1">Haldi powder</Typography>
-                <Typography variant="subtitle1">Sea & fish</Typography>
+               <Box>
+               <Typography  sx={{pt:2}} variant="subtitle1">Fresh fruits</Typography>
+                <Typography sx={{pt:2}} variant="subtitle1">Fresh meat</Typography>
+                <Typography sx={{pt:2}} variant="subtitle1">Cow milk</Typography>
+                <Typography sx={{pt:2}} variant="subtitle1">Haldi powder</Typography>
+                <Typography sx={{pt:2}} variant="subtitle1">Sea & fish</Typography>
+               </Box>
               </Box>
 
               <Box>
@@ -66,8 +68,8 @@ const Footer = () => {
                 <Typography variant="subtitle1">Help center</Typography>
               </Box>
               <Box>
-                <Typography variant="h6">MY ACCOUNT</Typography>
-                <Typography variant="subtitle1"> About vegist</Typography>
+                <Typography variant="h6" >MY ACCOUNT</Typography>
+                <Typography variant="subtitle1" > About vegist</Typography>
                 <Typography variant="subtitle1">Faq's</Typography>
                 <Typography variant="subtitle1">Contact us</Typography>
                 <Typography variant="subtitle1">News</Typography>
@@ -80,8 +82,8 @@ const Footer = () => {
                   news on new update.{" "}
                 </Typography>
                 <Box sx={{border:'1px solid white', ml:'auto', borderRadius:'5px', display:'flex', alignItems:"center", justifyContent:'end'}}>
-                <i style={{marginLeft:'auto', display:'flex', justifyContent:'end'}} class="fa-solid fa-arrow-right"></i>
-                <TextField sx={{ width:'100%'}} id="outlined-basic" label="Outlined" variant="outlined" />
+                <i style={{marginLeft:'90%', display:'flex', justifyContent:'end'}} class="fa-solid fa-arrow-right"></i>
+                <TextField style={{outline:'none'}} sx={{ width:'100%', }} id="outlined-basic" label="Outlined" />
                 </Box>
               </Box>
             </Box>
