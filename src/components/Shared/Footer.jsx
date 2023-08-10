@@ -3,8 +3,7 @@ import Grid from "@mui/material/Grid";
 import Container from "@mui/system/Container";
 import React from "react";
 import { Box, TextField } from "@mui/material";
-import FacebookIcon from '@mui/icons-material/Facebook';
-import { Home} from "@mui/icons-material";
+
 
 const Footer = () => {
   return (
@@ -20,9 +19,9 @@ const Footer = () => {
             sm={6}
             md={3}
           >
-            <Typography variant="h6">Product</Typography>
+            <Typography  variant="h6">Product</Typography>
             <Box sx={{ textAlign: "left" }}>
-              <Typography variant="subtitle1">Product</Typography>
+  
               <Typography variant="subtitle1">
                 Lorem Ipsum is simply <br/> dummy of the printing <br/> and typesetting
                 industry <br/> lorem Ipsum
@@ -51,33 +50,38 @@ const Footer = () => {
               <Box>
                 <Typography variant="h6">SERVICES</Typography>
                <Box>
-               <Typography  sx={{pt:2}} variant="subtitle1">Fresh fruits</Typography>
-                <Typography sx={{pt:2}} variant="subtitle1">Fresh meat</Typography>
-                <Typography sx={{pt:2}} variant="subtitle1">Cow milk</Typography>
-                <Typography sx={{pt:2}} variant="subtitle1">Haldi powder</Typography>
-                <Typography sx={{pt:2}} variant="subtitle1">Sea & fish</Typography>
+               <Typography  sx={{p:2}} variant="subtitle1">Fresh fruits</Typography>
+                <Typography sx={{p:2}} variant="subtitle1">Fresh meat</Typography>
+                <Typography sx={{p:2}} variant="subtitle1">Cow milk</Typography>
+                <Typography sx={{p:2}} variant="subtitle1">Haldi powder</Typography>
+                <Typography sx={{p:2}} variant="subtitle1">Sea & fish</Typography>
                </Box>
               </Box>
 
               <Box>
                 <Typography variant="h6">PRIVACY & TERMS</Typography>
-                <Typography variant="subtitle1"> My cart</Typography>
-                <Typography variant="subtitle1">Wishlist</Typography>
-                <Typography variant="subtitle1">Sign in</Typography>
-                <Typography variant="subtitle1">Shipping details</Typography>
-                <Typography variant="subtitle1">Help center</Typography>
+                 <Box>
+                 <Typography sx={{p:2}} variant="subtitle1"> My cart</Typography>
+                <Typography  sx={{p:2}} variant="subtitle1">Wishlist</Typography>
+                <Typography  sx={{p:2}} variant="subtitle1">Sign in</Typography>
+                <Typography  sx={{p:2}} variant="subtitle1">Shipping details</Typography>
+                <Typography  sx={{p:2}} variant="subtitle1">Help center</Typography>
+                 </Box>
               </Box>
               <Box>
                 <Typography variant="h6" >MY ACCOUNT</Typography>
-                <Typography variant="subtitle1" > About vegist</Typography>
-                <Typography variant="subtitle1">Faq's</Typography>
-                <Typography variant="subtitle1">Contact us</Typography>
-                <Typography variant="subtitle1">News</Typography>
-                <Typography variant="subtitle1">Store location</Typography>
+                 <Box>
+                 <Typography sx={{p:2}} variant="subtitle1" > About vegist</Typography>
+                <Typography  sx={{p:2}} variant="subtitle1">Faq's</Typography>
+                <Typography  sx={{p:2}} variant="subtitle1">Contact us</Typography>
+                <Typography  sx={{p:2}} variant="subtitle1">News</Typography>
+                <Typography  sx={{p:2}} variant="subtitle1">Store location</Typography>
+                 </Box>
               </Box>
               <Box>
-                <Typography variant="h6">SUBSCRIBE LATEST DEAL</Typography>
-                <Typography variant="subtitle1">
+                <Typography sx={{mt:-20}} variant="h6">SUBSCRIBE LATEST DEAL</Typography>
+                 <Box>
+                 <Typography  variant="subtitle1">
                   Subscribe to our newsletter <br /> to re ceive fashion store
                   news on new update.{" "}
                 </Typography>
@@ -85,6 +89,7 @@ const Footer = () => {
                 <i style={{marginLeft:'90%', display:'flex', justifyContent:'end'}} class="fa-solid fa-arrow-right"></i>
                 <TextField style={{outline:'none'}} sx={{ width:'100%', }} id="outlined-basic" label="Outlined" />
                 </Box>
+                 </Box>
               </Box>
             </Box>
           </Grid>
