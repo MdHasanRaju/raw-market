@@ -6,12 +6,15 @@ const About = () => {
   return (
     <Box>
       <Container>
-        <Typography variant="h3" sx={{ color: "green", textAlign: "center", pt:"20px", pb:"10px" }}>
+        <Typography
+          variant="h3"
+          sx={{ color: "green", textAlign: "center", pt: "20px", pb: "10px" }}
+        >
           Exquisite service
         </Typography>
 
         <Box sx={{ flexGrow: 1 }}>
-          <Grid container alignItems="center"  spacing={2}>
+          <Grid container alignItems="center" spacing={2}>
             <Grid item md={4}>
               <Box
                 sx={{
@@ -29,16 +32,18 @@ const About = () => {
                     borderRadius: "50%",
                     display: "flex",
                     justifyContent: "center",
-                    alignItems: "center", 
+                    alignItems: "center",
                   }}
                 >
-                  <Box sx={{
+                  <Box
+                    sx={{
                       color: "inherit",
                       "&:hover": {
                         color: "green !important",
-                        cursor:"pointer"
+                        cursor: "pointer",
                       },
-                    }}>
+                    }}
+                  >
                     <svg
                       viewBox="0 0 24 24"
                       width="24"
@@ -81,13 +86,15 @@ const About = () => {
                     alignItems: "center",
                   }}
                 >
-                  <Box sx={{
+                  <Box
+                    sx={{
                       color: "inherit",
                       "&:hover": {
                         color: "green !important",
-                        cursor:"pointer"
+                        cursor: "pointer",
                       },
-                    }}>
+                    }}
+                  >
                     <svg
                       viewBox="0 0 24 24"
                       width="24"
@@ -150,12 +157,12 @@ const About = () => {
                 >
                   <Box
                     sx={{
-                        color: "inherit",
-                        "&:hover": {
-                          color: "green !important",
-                          cursor:"pointer"
-                        },
-                      }}
+                      color: "inherit",
+                      "&:hover": {
+                        color: "green !important",
+                        cursor: "pointer",
+                      },
+                    }}
                   >
                     <svg
                       viewBox="0 0 24 24"
@@ -205,7 +212,7 @@ const About = () => {
                       color: "inherit",
                       "&:hover": {
                         color: "green !important",
-                        cursor:"pointer"
+                        cursor: "pointer",
                       },
                     }}
                   >
