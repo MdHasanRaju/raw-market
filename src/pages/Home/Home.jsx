@@ -1,15 +1,13 @@
-import React from "react";
-import Button from "@mui/material/Button";
+import React from "react"; 
 import Box from "@mui/material/Box";
+import HomeComp from "./../../components/Home/Home";
+import Banner from "../../components/Banner/Banner";
 
 const Home = () => {
   return (
-    <Box
-      sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
-    >
-      <Button  sx={{fontSize:{md:'40px', xs:"20px"}, my: "20px", bgcolor: "#264143" }} variant="contained">
-        কেমন হয়েছে, বস?
-      </Button>
+    <Box>
+      <Banner></Banner>
+      <HomeComp></HomeComp>
     </Box>
   );
 };
