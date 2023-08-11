@@ -21,10 +21,10 @@ const Banner = () => {
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
-        autoplay={{
-          delay:2000,
-          disableOnInteraction:false
-        }}
+        // autoplay={{
+        //   delay:2000,
+        //   disableOnInteraction:false
+        // }}
         loop={true}
         pagination={{
         clickable: true,
@@ -43,8 +43,15 @@ const Banner = () => {
               backgroundPosition: "center",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
+              backgroundPosition:{
+                md:'cover',
+                sm:"center",
+                xs:"center",
+              },
               height: {
                 md:"100vh",
+                sm:"100vh",
+                xs:"100vh",
               },
               width: "100%",
             }}
