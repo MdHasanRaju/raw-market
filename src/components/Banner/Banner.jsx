@@ -34,14 +34,14 @@ const Banner = () => {
             sx={{
               display: "flex",
               alignItems: "center",
-              justifyContent: "start",
-            }}
-            style={{
+              justifyContent: "start",  
               backgroundImage: `url(${vegetables})`,
               backgroundPosition: "center",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
-              height: "100vh",
+              height: {
+                md:"100vh",
+              },
               width: "100%",
             }}
             // sx={{

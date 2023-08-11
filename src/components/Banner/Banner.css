@@ -43,4 +43,12 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+  .swiper-button-prev,.swiper-button-next{
+    color:green;
+  }
+  .swiper-pagination-bullet-active {
+    /* opacity: var(--swiper-pagination-bullet-opacity, 1); */
+    background: green;
+}
   
