@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 import "./Banner.css";
 
 // import required modules
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import { Box, Button, Typography } from "@mui/material";
 import vegetables from "../../assets/banners/banner-vegetables.jpg";
 import fruits from "../../assets/banners/banner-fruits.jpg";
@@ -21,12 +21,16 @@ const Banner = () => {
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
+        autoplay={{
+          delay:2000,
+          disableOnInteraction:false
+        }}
         loop={true}
         pagination={{
-          clickable: true,
+        clickable: true,
         }}
         navigation={true}
-        modules={[Pagination, Navigation]}
+        modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
         <SwiperSlide>
