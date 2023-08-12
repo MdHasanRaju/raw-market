@@ -8,7 +8,7 @@ const NotFound = () => {
     return (
         <Box sx={{width:"500px", margin:'30px auto'}}>
             <PageNotFound></PageNotFound>
-            <Typography variant='h4' sx={{textAlign:'center', py:5, color:'red'}}>Opps Page Not Found 404.......</Typography>
+            <Typography variant='h4' sx={{textAlign:'center', py:6, color:'red'}}>Opps Page Not Found 404.......</Typography>
         </Box>
     );
 };
