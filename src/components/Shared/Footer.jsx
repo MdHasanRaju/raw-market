@@ -27,9 +27,8 @@ const Footer = () => {
                 industry <br/> lorem Ipsum
               </Typography>
 
-              <Box sx={{py:18}} >
-              <i style={{paddingRight:'10px', fontSize:'28px'}} class="fa-brands fa-facebook"></i>
-              <i style={{paddingRight:'10px', fontSize:'28px'}} class="fa-brands fa-instagram"></i>
+              <Box sx={{py:8}} >
+               <Box><i style={{paddingRight:'10px', fontSize:'28px'}} class="fa-brands fa-instagram"></i></Box>
               <i style={{paddingRight:'10px', fontSize:'28px'}} class="fa-brands fa-youtube"></i>
               <i style={{paddingRight:'10px', fontSize:'28px'}} class="fa-brands fa-linkedin"></i>
               <i style={{paddingRight:'10px', fontSize:'28px'}} class="fa-brands fa-pinterest"></i>
@@ -44,32 +43,32 @@ const Footer = () => {
               <Grid item md={3} sm={6} xs={12}  >
                 <Typography variant="h6">SERVICES</Typography>
                <Box>
-               <Typography  sx={{p:2}} variant="subtitle1">Fresh fruits</Typography>
-                <Typography sx={{p:2}} variant="subtitle1">Fresh meat</Typography>
-                <Typography sx={{p:2}} variant="subtitle1">Cow milk</Typography>
-                <Typography sx={{p:2}} variant="subtitle1">Haldi powder</Typography>
-                <Typography sx={{p:2}} variant="subtitle1">Sea & fish</Typography>
+               <Typography   sx={{p:{md:2,sm:2, xs:1}}} variant="subtitle1">Fresh fruits</Typography>
+                <Typography  sx={{p:{md:2,sm:2, xs:1}}} variant="subtitle1">Fresh meat</Typography>
+                <Typography  sx={{p:{md:2,sm:2, xs:1}}} variant="subtitle1">Cow milk</Typography>
+                <Typography  sx={{p:{md:2,sm:2, xs:1}}} variant="subtitle1">Haldi powder</Typography>
+                <Typography  sx={{p:{md:2,sm:2, xs:1}}} variant="subtitle1">Sea & fish</Typography>
                </Box>
               </Grid>
 
               <Grid item md={3} sm={6} xs={12} >
                 <Typography variant="h6">PRIVACY & TERMS</Typography>
                  <Box>
-                 <Typography sx={{p:{md:8,sm:4, xs:1}}} variant="subtitle1"> My cart</Typography>
-                <Typography  sx={{p:2}} variant="subtitle1">Wishlist</Typography>
-                <Typography  sx={{p:2}} variant="subtitle1">Sign in</Typography>
-                <Typography  sx={{p:2}} variant="subtitle1">Shipping details</Typography>
-                <Typography  sx={{p:2}} variant="subtitle1">Help center</Typography>
+                 <Typography sx={{p:{md:2,sm:2, xs:1}}} variant="subtitle1"> My cart</Typography>
+                <Typography  sx={{p:{md:2,sm:2, xs:1}}} variant="subtitle1">Wishlist</Typography>
+                <Typography  sx={{p:{md:2,sm:2, xs:1}}} variant="subtitle1">Sign in</Typography>
+                <Typography  sx={{p:{md:2,sm:2, xs:1}}} variant="subtitle1">Shipping details</Typography>
+                <Typography  sx={{p:{md:2,sm:2, xs:1}}} variant="subtitle1">Help center</Typography>
                  </Box>
               </Grid>
               <Grid item md={3} sm={6} xs={12} >
                 <Typography variant="h6" >MY ACCOUNT</Typography>
                  <Box>
-                 <Typography sx={{p:2}} variant="subtitle1" > About vegist</Typography>
-                <Typography  sx={{p:2}} variant="subtitle1">Faq's</Typography>
-                <Typography  sx={{p:2}} variant="subtitle1">Contact us</Typography>
-                <Typography  sx={{p:2}} variant="subtitle1">News</Typography>
-                <Typography  sx={{p:2}} variant="subtitle1">Store location</Typography>
+                 <Typography sx={{p:{md:2,sm:2, xs:1}}} variant="subtitle1" > About vegist</Typography>
+                <Typography  sx={{p:{md:2,sm:2, xs:1}}} variant="subtitle1">Faq's</Typography>
+                <Typography  sx={{p:{md:2,sm:2, xs:1}}} variant="subtitle1">Contact us</Typography>
+                <Typography  sx={{p:{md:2,sm:2, xs:1}}} variant="subtitle1">News</Typography>
+                <Typography  sx={{p:{md:2,sm:2, xs:1}}} variant="subtitle1">Store location</Typography>
                  </Box>
               </Grid>
               <Grid item md={3} sm={6} xs={12} >
