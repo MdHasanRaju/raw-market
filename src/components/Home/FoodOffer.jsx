@@ -27,7 +27,10 @@ const FoodOffer = () => {
             />
             <Box sx={{ position: "absolute", top: "30%", right: "8%" }}>
               <Typography variant="body1">GET UP TO 30% OFF</Typography>
-              <Typography sx={{ mt: 1, mb: 3 }} variant="h5">
+              <Typography
+                sx={{ mt: 1, mb: 3, fontWeight: "bold" }}
+                variant="h5"
+              >
                 BRUSSELS foods
               </Typography>
               <Button
@@ -48,27 +51,43 @@ const FoodOffer = () => {
         </Grid>
 
         <Grid width="50%" md={6}>
-            <Box sx={{position:"relative"}}>
-
-          <Box
-            sx={{ width: "100%" }}
-            component="img"
-            alt="video banner image"
-            src={videoBanner}
-          >
-            {/* <Link class="play-button popup-youtube" href="https://www.youtube.com/watch?v=0etCKCAsImI">
+          <Box sx={{ position: "relative" }}>
+            <Box
+              sx={{ width: "100%" }}
+              component="img"
+              alt="video banner image"
+              src={videoBanner}
+            >
+              {/* <Link class="play-button popup-youtube" href="https://www.youtube.com/watch?v=0etCKCAsImI">
                         <i class="fa-solid fa-play"></i>
                         <span class="video-icon-sonar">
                             <span class="video-icon-sonar-bfr"></span>
                         </span>
                     </Link> */}
-          </Box>
-          <Box sx={{bgcolor:"green", position:'absolute',border:"1px solid transparent", borderRadius:"50%", top:'40%', right:"41%",width:100, height:100, display:"flex", justifyContent:"center", alignItems:"center" }}>
-            <Link to="/https://www.youtube.com/watch?v=0etCKCAsImI">
-              <i style={{fontSize:"40px", color:"orange"}} class="fa-solid fa-play"></i>
-            </Link>
-          </Box>
             </Box>
+            <Box
+              sx={{
+                bgcolor: "green",
+                position: "absolute",
+                border: "1px solid transparent",
+                borderRadius: "50%",
+                top: "40%",
+                right: "41%",
+                width: 100,
+                height: 100,
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Link to="/https://www.youtube.com/watch?v=0etCKCAsImI">
+                <i
+                  style={{ fontSize: "40px", color: "orange" }}
+                  class="fa-solid fa-play"
+                ></i>
+              </Link>
+            </Box>
+          </Box>
         </Grid>
       </Grid>
     </Box>
