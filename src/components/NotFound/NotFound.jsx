@@ -1,10 +1,15 @@
+import Box  from '@mui/material/Box';
 import React from 'react';
+import PageNotFound from './PageNotFound';
+import  Grid from '@mui/material/Grid';
+import { Typography } from '@mui/material';
 
 const NotFound = () => {
     return (
-        <div>
-            ops the page is not found 4444000000000044444444444
-        </div>
+        <Box sx={{width:"500px", margin:'30px auto'}}>
+            <PageNotFound></PageNotFound>
+            <Typography variant='h4' sx={{textAlign:'center', py:5, color:'red'}}>Opps Page Not Found 404.......</Typography>
+        </Box>
     );
 };
 
