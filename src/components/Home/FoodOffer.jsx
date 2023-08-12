@@ -27,7 +27,7 @@ const FoodOffer = () => {
             />
             <Box sx={{ position: "absolute", top: "30%", right: "8%" }}>
               <Typography variant="body1">GET UP TO 30% OFF</Typography>
-              <Typography sx={{ mt: 1, mb: 3 }} variant="h5">
+              <Typography sx={{ mt: 1, mb:3, fontWeight:'bold'}} variant="h5">
                 BRUSSELS foods
               </Typography>
               <Button
