@@ -214,6 +214,22 @@ const Navbar = () => {
                 </NavLink>
               </Typography>
             </MenuItem>
+            <MenuItem onClick={handleCloseNavMenu}>
+              <Typography textAlign="center">
+                <NavLink
+                  style={({ isActive }) => {
+                    return {
+                      fontWeight: isActive ? "bold" : "",
+                      color: isActive ? "red" : "orange",
+                      textDecoration: "none",
+                    };
+                  }}
+                  to="/contact"
+                >
+                  Contact
+                </NavLink>
+              </Typography>
+            </MenuItem>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
