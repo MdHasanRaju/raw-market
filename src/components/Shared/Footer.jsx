@@ -27,27 +27,21 @@ const Footer = () => {
                 industry <br/> lorem Ipsum
               </Typography>
 
-              <Box >
-              <i style={{paddingRight:'10px'}} class="fa-brands fa-facebook"></i>
-              <i style={{paddingRight:'10px'}} class="fa-brands fa-instagram"></i>
-              <i style={{paddingRight:'10px'}} class="fa-brands fa-youtube"></i>
-              <i style={{paddingRight:'10px'}} class="fa-brands fa-linkedin"></i>
-              <i style={{paddingRight:'10px'}} class="fa-brands fa-pinterest"></i>
+              <Box sx={{py:18}} >
+              <i style={{paddingRight:'10px', fontSize:'28px'}} class="fa-brands fa-facebook"></i>
+              <i style={{paddingRight:'10px', fontSize:'28px'}} class="fa-brands fa-instagram"></i>
+              <i style={{paddingRight:'10px', fontSize:'28px'}} class="fa-brands fa-youtube"></i>
+              <i style={{paddingRight:'10px', fontSize:'28px'}} class="fa-brands fa-linkedin"></i>
+              <i style={{paddingRight:'10px', fontSize:'28px'}} class="fa-brands fa-pinterest"></i>
               </Box>
         
             </Box>
           </Grid>
 
-          <Grid item sx={{ textAlign: "center" }} md={9}>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                gap: "20px",
-              }}
-            >
-              <Box>
+          <Grid item md={9}>
+            <Grid container
+ >
+              <Grid item md={3} sm={6} xs={12}  >
                 <Typography variant="h6">SERVICES</Typography>
                <Box>
                <Typography  sx={{p:2}} variant="subtitle1">Fresh fruits</Typography>
@@ -56,19 +50,19 @@ const Footer = () => {
                 <Typography sx={{p:2}} variant="subtitle1">Haldi powder</Typography>
                 <Typography sx={{p:2}} variant="subtitle1">Sea & fish</Typography>
                </Box>
-              </Box>
+              </Grid>
 
-              <Box>
+              <Grid item md={3} sm={6} xs={12} >
                 <Typography variant="h6">PRIVACY & TERMS</Typography>
                  <Box>
-                 <Typography sx={{p:2}} variant="subtitle1"> My cart</Typography>
+                 <Typography sx={{p:{md:8,sm:4, xs:1}}} variant="subtitle1"> My cart</Typography>
                 <Typography  sx={{p:2}} variant="subtitle1">Wishlist</Typography>
                 <Typography  sx={{p:2}} variant="subtitle1">Sign in</Typography>
                 <Typography  sx={{p:2}} variant="subtitle1">Shipping details</Typography>
                 <Typography  sx={{p:2}} variant="subtitle1">Help center</Typography>
                  </Box>
-              </Box>
-              <Box>
+              </Grid>
+              <Grid item md={3} sm={6} xs={12} >
                 <Typography variant="h6" >MY ACCOUNT</Typography>
                  <Box>
                  <Typography sx={{p:2}} variant="subtitle1" > About vegist</Typography>
@@ -77,21 +71,23 @@ const Footer = () => {
                 <Typography  sx={{p:2}} variant="subtitle1">News</Typography>
                 <Typography  sx={{p:2}} variant="subtitle1">Store location</Typography>
                  </Box>
-              </Box>
-              <Box>
-                <Typography sx={{mt:-20}} variant="h6">SUBSCRIBE LATEST DEAL</Typography>
+              </Grid>
+              <Grid item md={3} sm={6} xs={12} >
+                <Typography  variant="h6">SUBSCRIBE LATEST DEAL</Typography>
                  <Box>
                  <Typography  variant="subtitle1">
                   Subscribe to our newsletter <br /> to re ceive fashion store
                   news on new update.{" "}
                 </Typography>
-                <Box sx={{border:'1px solid white', ml:'auto', borderRadius:'5px', display:'flex', alignItems:"center", justifyContent:'end'}}>
+               <Box>
+               <Box sx={{border:'1px solid white', ml:'auto', borderRadius:'5px', display:'flex', alignItems:"center", justifyContent:'end'}}>
                 <i style={{marginLeft:'90%', display:'flex', justifyContent:'end'}} class="fa-solid fa-arrow-right"></i>
                 <TextField style={{outline:'none'}} sx={{ width:'100%', }} id="outlined-basic" label="Outlined" />
                 </Box>
+               </Box>
                  </Box>
-              </Box>
-            </Box>
+              </Grid>
+            </Grid>
           </Grid>
         </Grid>
       </Container>
