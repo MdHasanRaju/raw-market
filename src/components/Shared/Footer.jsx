@@ -27,18 +27,18 @@ const Footer = () => {
                 industry <br/> lorem Ipsum
               </Typography>
 
-              <Box >
-              <i style={{paddingRight:'10px'}} class="fa-brands fa-facebook"></i>
-              <i style={{paddingRight:'10px'}} class="fa-brands fa-instagram"></i>
-              <i style={{paddingRight:'10px'}} class="fa-brands fa-youtube"></i>
-              <i style={{paddingRight:'10px'}} class="fa-brands fa-linkedin"></i>
-              <i style={{paddingRight:'10px'}} class="fa-brands fa-pinterest"></i>
+              <Box sx={{py:10}} >
+              <i style={{paddingRight:'10px', fontSize:'28px'}} class="fa-brands fa-facebook"></i>
+              <i style={{paddingRight:'10px', fontSize:'28px'}} class="fa-brands fa-instagram"></i>
+              <i style={{paddingRight:'10px', fontSize:'28px'}} class="fa-brands fa-youtube"></i>
+              <i style={{paddingRight:'10px', fontSize:'28px'}} class="fa-brands fa-linkedin"></i>
+              <i style={{paddingRight:'10px', fontSize:'28px'}} class="fa-brands fa-pinterest"></i>
               </Box>
         
             </Box>
           </Grid>
 
-          <Grid item sx={{ textAlign: "center" }} md={9}>
+          <Grid item md={9}>
             <Box
               sx={{
                 display: "flex",
@@ -79,7 +79,7 @@ const Footer = () => {
                  </Box>
               </Box>
               <Box>
-                <Typography sx={{mt:-20}} variant="h6">SUBSCRIBE LATEST DEAL</Typography>
+                <Typography sx={{mt:-21}} variant="h6">SUBSCRIBE LATEST DEAL</Typography>
                  <Box>
                  <Typography  variant="subtitle1">
                   Subscribe to our newsletter <br /> to re ceive fashion store
