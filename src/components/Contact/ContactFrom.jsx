@@ -4,6 +4,8 @@ import Container from "@mui/system/Container";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import mapIcon from "../../assets/icon/icon-location-marker.svg";
+import TextField from "@mui/material/TextField";
+import { Button, TextareaAutosize } from "@mui/material";
 const ContactFrom = () => {
   return (
     <Box>
@@ -16,15 +18,16 @@ const ContactFrom = () => {
                   CONTACT US
                 </Typography>
               </Box>
-              <Box sx={{ py: 2 }}>
+              <Box sx={{ py: 1 }}>
                 <Typography variant="h5">
                   We value our relationship and are keen to serve you.
                 </Typography>
               </Box>
               <Typography variant="subtitle1">
-                If you are interested to any of our plans or if you have any <br/>
-                queries, kindly share your details below. <br/> We will get back to
-                you soon.
+                If you are interested to any of our plans or if you have any{" "}
+                <br />
+                queries, kindly share your details below. <br /> We will get
+                back to you soon.
                 <a href="https://carnival.com.bd/carnival-contact/">Click</a>
               </Typography>
             </Box>
@@ -38,24 +41,74 @@ const ContactFrom = () => {
                 alt="The house from the offer."
                 src={mapIcon}
               /> */}
-              <Box sx={{ fontSize: "70px" }}>
+              <Box sx={{ fontSize: "60px", mt: 4 }}>
                 {" "}
                 <i class="fa-solid fa-location-dot"></i>
               </Box>
-              <Typography variant="h4" sx={{ fontWeight: "bold" }}>
-                Registered Address:
-              </Typography>
-              <Typography>
-                Highway Homes, KA-32/6, <br/> Bir Uttam Rafiqul Islam Ave, Dhaka –
-                1212.
-              </Typography>
+
+              <Box sx={{ mt: 4 }}>
+                <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+                  Registered Address:
+                </Typography>
+                <Typography>
+                  Highway Homes, KA-38/6, <br /> Bir Uttam Rafiqul Islam Ave,
+                  Dhaka – 1212.
+                </Typography>
+              </Box>
+              <Box>
+                <Box sx={{ mt: 4 }}>
+                  <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+                    Business Address:
+                  </Typography>
+                  <Typography>
+                    Uday Tower, Level 12, <br />
+                    54 & 56/A, Gulshan Avenue, Dhaka-1212.
+                  </Typography>
+                </Box>
+                <Box sx={{ py: 4 }}>
+                  <Typography variant="h4">
+                    Write in:raw@.market.com.bd
+                  </Typography>
+                  <Typography>Call us: 01573347472 </Typography>
+                  <Typography>Call us: 01573347472</Typography>
+                </Box>
+              </Box>
             </Box>
           </Grid>
+
           <Grid md={7} xs={12} sm={6}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
-            beatae assumenda architecto, voluptates necessitatibus vitae
-            expedita perferendis accusantium, in voluptatum temporibus dolor
-            laborum nihil et consequuntur repellat hic eum consequatur!
+            <Box sx={{ py: 6 }}>
+              <TextField
+                sx={{ p: 1 }}
+                fullWidth
+                placeholder="Your Name"
+                id="fullWidth"
+              />
+              <TextField
+                sx={{ p: 1 }}
+                fullWidth
+                placeholder=" Email Address"
+                id="fullWidth"
+              />
+              <TextField
+                sx={{ p: 1 }}
+                fullWidth
+                placeholder="Phone Number"
+                id="fullWidth"
+              />
+              <Box sx={{ p: 1 }}>
+                <TextareaAutosize
+                  placeholder="Your Message type her....."
+                  defaultValue=""
+                  style={{ width: "100%", height: "200px", padding: "10px" }}
+                />
+                <br/>
+                 <Button variant="contained" color="success"   fullWidth id="fullWidth">
+                 Submit
+              </Button>
+              </Box>
+             
+            </Box>
           </Grid>
         </Grid>
       </Container>
