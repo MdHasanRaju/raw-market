@@ -2,7 +2,8 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/system/Container";
 import React from "react";
-import { Box, TextField } from "@mui/material";
+import { Box, InputAdornment, TextField } from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
 
 const Footer = () => {
   return (
@@ -23,7 +24,7 @@ const Footer = () => {
                 typesetting industry <br /> lorem Ipsum
               </Typography>
 
-              <Box sx={{ py: 8, display:'flex' }}>
+              <Box sx={{ py: 8, display: "flex" }}>
                 <Box
                   sx={{
                     color: "inherit",
@@ -202,31 +203,39 @@ const Footer = () => {
                     news on new update.{" "}
                   </Typography>
                   <Box>
-                    <Box
+                    <TextField
+                      id="standard-basic"
                       sx={{
-                        border: "1px solid white",
-                        ml: "auto",
-                        borderRadius: "5px",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "end",
+                        mt: 3,
+                        py: 2,
+                        bgcolor: "white",
+                        "& .MuiOutlinedInput-root": {
+                          "& fieldset": {
+                            border: "none",
+                          },
+                          "&:hover fieldset": {
+                            border: "none",
+                          },
+                          "&.Mui-focused fieldset": {
+                            border: "none",
+                          },
+                        },
                       }}
-                    >
-                      <i
-                        style={{
-                          marginLeft: "90%",
-                          display: "flex",
-                          justifyContent: "end",
-                        }}
-                        class="fa-solid fa-arrow-right"
-                      ></i>
-                      <TextField
-                        style={{ outline: "none" }}
-                        sx={{ width: "100%" }}
-                        id="outlined-basic"
-                        label="Outlined"
-                      />
-                    </Box>
+                      InputProps={{
+                        endAdornment: (
+                          <InputAdornment position="end">
+                            {/* <SearchIcon sx={{ color: "red" }} /> */}
+                            <i
+                              style={{
+                                color: "green",
+                                fontSize: 22,
+                              }}
+                              class="fa-solid fa-arrow-right"
+                            ></i>
+                          </InputAdornment>
+                        ),
+                      }}
+                    />
                   </Box>
                 </Box>
               </Grid>
