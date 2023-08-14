@@ -23,7 +23,7 @@ const Footer = () => {
                 typesetting industry <br /> lorem Ipsum
               </Typography>
 
-              <Box sx={{ py: 8, display:'flex' }}>
+              <Box sx={{ py: 8, display: "flex" }}>
                 <Box
                   sx={{
                     color: "inherit",
@@ -200,8 +200,7 @@ const Footer = () => {
                   <Typography variant="subtitle1">
                     Subscribe to our newsletter <br /> to re ceive fashion store
                     news on new update.{" "}
-                  </Typography>
-                  <Box>
+                  </Typography> 
                     <Box
                       sx={{
                         border: "1px solid white",
@@ -210,24 +209,29 @@ const Footer = () => {
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "end",
+                        
                       }}
                     >
                       <i
                         style={{
-                          marginLeft: "90%",
-                          display: "flex",
-                          justifyContent: "end",
+                          marginLeft: "90%",  
                         }}
                         class="fa-solid fa-arrow-right"
                       ></i>
-                      <TextField
-                        style={{ outline: "none" }}
-                        sx={{ width: "100%" }}
-                        id="outlined-basic"
-                        label="Outlined"
+                      <TextField  
+                      
+                      style={{boxSizing:"revert-layer",}}
+                        sx={{
+                          height:"100% !",
+                          "& fieldset": { border: 'none' },
+                          
+                          '&.Mui-focused fieldset': {
+                            borderWidth: '10px',
+                      },
+                        }} 
                       />
-                    </Box>
-                  </Box>
+                      
+                    </Box> 
                 </Box>
               </Grid>
             </Grid>
