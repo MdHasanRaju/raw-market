@@ -6,7 +6,23 @@ import Typography from "@mui/material/Typography";
 import mapIcon from "../../assets/icon/icon-location-marker.svg";
 import TextField from "@mui/material/TextField";
 import { Button, TextareaAutosize } from "@mui/material";
+import emailjs from '@emailjs/browser';
 const ContactFrom = () => {
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
+
   return (
     <Box>
       <Container>
@@ -98,9 +114,10 @@ const ContactFrom = () => {
               />
               <Box sx={{ p: 1 }}>
                 <TextareaAutosize
+        
                   placeholder="Your Message type her....."
                   defaultValue=""
-                  style={{ width: "100%", height: "200px", padding: "10px" }}
+                  style={{ width: "100%", height: "200px", padding: "10px", }}
                 />
                 <br/>
                  <Button variant="contained" color="success"   fullWidth id="fullWidth">
