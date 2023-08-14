@@ -7,7 +7,8 @@ import NotFound from './../components/NotFound/NotFound';
 import Home from "../pages/Home/Home";
 import Products from './../pages/Products/Products';
 import About from './../pages/About/About';
-import Contact from "../components/Contact/Contact";
+import Contact from "../pages/Contact/Contact";
+
 
 
 export const router = createBrowserRouter([

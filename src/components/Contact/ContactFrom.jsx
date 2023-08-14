@@ -6,21 +6,8 @@ import Typography from "@mui/material/Typography";
 import mapIcon from "../../assets/icon/icon-location-marker.svg";
 import TextField from "@mui/material/TextField";
 import { Button, TextareaAutosize } from "@mui/material";
-import emailjs from '@emailjs/browser';
+
 const ContactFrom = () => {
-
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
-  };
 
 
   return (
@@ -94,6 +81,7 @@ const ContactFrom = () => {
 
           <Grid md={7} xs={12} sm={6}>
             <Box sx={{ py: 6 }}>
+            <form onSubmit={handleSubmit}>
               <TextField
                 sx={{ p: 1 }}
                 fullWidth
@@ -124,6 +112,7 @@ const ContactFrom = () => {
                  Submit
               </Button>
               </Box>
+             </form>
              
             </Box>
           </Grid>
