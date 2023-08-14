@@ -206,8 +206,7 @@ const Footer = () => {
                     <TextField
                       id="standard-basic"
                       sx={{
-                        mt: 3,
-                        py: 2,
+                        mt: 3, 
                         bgcolor: "white",
                         "& .MuiOutlinedInput-root": {
                           "& fieldset": {
