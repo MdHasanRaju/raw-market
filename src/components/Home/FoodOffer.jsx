@@ -33,6 +33,7 @@ const FoodOffer = () => {
               >
                 BRUSSELS foods
               </Typography>
+              
               <Button
                 variant="outlined"
                 sx={{
@@ -58,12 +59,6 @@ const FoodOffer = () => {
               alt="video banner image"
               src={videoBanner}
             >
-              {/* <Link class="play-button popup-youtube" href="https://www.youtube.com/watch?v=0etCKCAsImI">
-                        <i class="fa-solid fa-play"></i>
-                        <span class="video-icon-sonar">
-                            <span class="video-icon-sonar-bfr"></span>
-                        </span>
-                    </Link> */}
             </Box>
             <Box
               sx={{
