@@ -28,7 +28,7 @@ const ContactFrom = () => {
                 <br />
                 queries, kindly share your details below. <br /> We will get
                 back to you soon.
-                <a href="https://carnival.com.bd/carnival-contact/">Click</a>
+                <a href="www.facebook.com">Click</a>
               </Typography>
             </Box>
             <Box>
