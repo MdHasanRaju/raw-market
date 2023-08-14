@@ -1,4 +1,4 @@
-import React from "react";
+
 import Grid from "@mui/material/Grid";
 import Container from "@mui/system/Container";
 import Box from "@mui/material/Box";
@@ -6,9 +6,33 @@ import Typography from "@mui/material/Typography";
 import mapIcon from "../../assets/icon/icon-location-marker.svg";
 import TextField from "@mui/material/TextField";
 import { Button, TextareaAutosize } from "@mui/material";
-
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 const ContactFrom = () => {
+  const form = useRef();
 
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_q7fw8tc",
+        "template_y10yfz7",
+        form.current,
+        "0AGx-yacdwuJYI7go"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert('Thanks for you')
+    
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  };
 
   return (
     <Box>
@@ -81,34 +105,37 @@ const ContactFrom = () => {
 
           <Grid md={7} xs={12} sm={6}>
             <Box sx={{ py: 6 }}>
-            <form onSubmit={handleSubmit}>
+            <form ref={form} onSubmit={sendEmail} >
               <TextField
                 sx={{ p: 1 }}
                 fullWidth
-                placeholder="Your Name"
+                placeholder="Your Name*"
+                name="user_name}"
                 id="fullWidth"
               />
               <TextField
                 sx={{ p: 1 }}
                 fullWidth
-                placeholder=" Email Address"
+                placeholder=" Email Address*"
+                name="user_email"
                 id="fullWidth"
               />
               <TextField
                 sx={{ p: 1 }}
                 fullWidth
-                placeholder="Phone Number"
+                placeholder="Subject*"
+                name="from_name"
                 id="fullWidth"
               />
               <Box sx={{ p: 1 }}>
                 <TextareaAutosize
-        
-                  placeholder="Your Message type her....."
+                  name="message"
+                  placeholder="Your Message type her.....*"
                   defaultValue=""
                   style={{ width: "100%", height: "200px", padding: "10px", }}
                 />
                 <br/>
-                 <Button variant="contained" color="success"   fullWidth id="fullWidth">
+                 <Button variant="contained" color="success" type="Submit" value="send" fullWidth id="fullWidth">
                  Submit
               </Button>
               </Box>
