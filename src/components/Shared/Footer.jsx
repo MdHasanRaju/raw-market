@@ -4,6 +4,7 @@ import Container from "@mui/system/Container";
 import React from "react";
 import { Box, InputAdornment, TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
+import './Footer.css';
 
 const Footer = () => {
   return (
@@ -204,13 +205,16 @@ const Footer = () => {
                   </Typography>
                   <Box>
                     <TextField
-                      id="standard-basic"
+                    size="small"
+                      id="standard-basic" 
                       sx={{
+                        p:"0px 0px!important",
                         mt: 3, 
-                        bgcolor: "white",
+                        bgcolor: "white", 
                         "& .MuiOutlinedInput-root": {
                           "& fieldset": {
                             border: "none",
+                            p:'0px !important',
                           },
                           "&:hover fieldset": {
                             border: "none",
