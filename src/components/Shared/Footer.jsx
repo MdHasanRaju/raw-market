@@ -2,13 +2,18 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/system/Container";
 import React from "react";
-import { Box, InputAdornment, TextField } from "@mui/material";
+import { Box, Divider, InputAdornment, TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
-import './Footer.css';
+import "./Footer.css";
+import VisaCard from "../Svg/VisaCard";
+import Paypal from "../Svg/Paypal";
+import MasterCard from "../Svg/MasterCard";
+import GooglePay from "../Svg/GooglePay";
+import AmericanExpress from "../Svg/AmericanExpress";
 
 const Footer = () => {
   return (
-    <Box sx={{ backgroundColor: "#000", color: "#fff", p: 10 }}>
+    <Box sx={{ backgroundColor: "#000", color: "#fff", pt: 8, pb: 4 }}>
       <Container>
         <Grid container>
           <Grid
@@ -205,16 +210,15 @@ const Footer = () => {
                   </Typography>
                   <Box>
                     <TextField
-                    size="small"
-                      id="standard-basic" 
+                      size="small"
+                      id="standard-basic"
+                      placeholder="example@gmail.com"
                       sx={{
-                        p:"0px 0px!important",
-                        mt: 3, 
-                        bgcolor: "white", 
+                        mt: 3,
+                        bgcolor: "white",
                         "& .MuiOutlinedInput-root": {
                           "& fieldset": {
                             border: "none",
-                            p:'0px !important',
                           },
                           "&:hover fieldset": {
                             border: "none",
@@ -231,7 +235,7 @@ const Footer = () => {
                             <i
                               style={{
                                 color: "green",
-                                fontSize: 22,
+                                fontSize: 12,
                               }}
                               class="fa-solid fa-arrow-right"
                             ></i>
@@ -245,6 +249,23 @@ const Footer = () => {
             </Grid>
           </Grid>
         </Grid>
+      </Container>
+      <Divider color="white" sx={{ height: 1 }} />
+      <Container
+        sx={{ display: "flex", justifyContent: "space-between", mt: 3 }}
+      >
+        <Typography variant="body1">© 2023 Theme powered by Bazar</Typography>
+        <Box sx={{ display: "flex", gap: 1 }}>
+          {/* <i class="fa-brands fa-cc-amex"></i>
+                      <i class="fa-brands fa-cc-visa"></i>
+                      <i class="fa-brands fa-cc-paypal"></i>
+                      <i class="fa-brands fa-cc-mastercard"></i> */}
+          <VisaCard />
+          <Paypal />
+          <MasterCard />
+          <AmericanExpress />
+          <GooglePay />
+        </Box>
       </Container>
     </Box>
   );
