@@ -216,6 +216,9 @@ const Footer = () => {
                       sx={{
                         mt: 3,
                         bgcolor: "white",
+                        '& ::placeholder': { 
+                          fontSize:17,
+                       },
                         "& .MuiOutlinedInput-root": {
                           "& fieldset": {
                             border: "none",
@@ -235,7 +238,7 @@ const Footer = () => {
                             <i
                               style={{
                                 color: "green",
-                                fontSize: 12,
+                                fontSize: 18,
                               }}
                               class="fa-solid fa-arrow-right"
                             ></i>
