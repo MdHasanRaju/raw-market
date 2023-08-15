@@ -16,19 +16,17 @@ const Footer = () => {
     <Box sx={{ backgroundColor: "#000", color: "#fff", pt: 8, pb: 4 }}>
       <Container>
         <Grid container>
-          <Grid
-            item
-            sx={{ textAlign: "start", justifyContent: "start" }}
-            xs={12}
-            sm={6}
-            md={3}
-          >
-            <Typography variant="h6">Product</Typography>
-            <Box sx={{ textAlign: "left" }}>
-              <Typography variant="subtitle1">
-                Lorem Ipsum is simply <br /> dummy of the printing <br /> and
-                typesetting industry <br /> lorem Ipsum
-              </Typography>
+          <Grid item xs={12} sm={12} md={3}>
+            <Box sx={{ display: { sm: "flex", md: "block" }, gap: "21%" }}>
+              <Box>
+                <Typography variant="subtitle1" sx={{ mb: 3 }}>
+                  PRODUCTS
+                </Typography>
+                <Typography variant="subtitle2">
+                  Lorem Ipsum is simply <br /> dummy of the printing <br /> and
+                  typesetting industry <br /> lorem Ipsum
+                </Typography>
+              </Box>
 
               <Box sx={{ py: 8, display: "flex" }}>
                 <Box
@@ -94,35 +92,37 @@ const Footer = () => {
           <Grid item md={9}>
             <Grid container>
               <Grid item md={3} sm={6} xs={12}>
-                <Typography variant="h6">SERVICES</Typography>
+                <Typography variant="subtitle1" sx={{ mb: 3 }}>
+                  SERVICES
+                </Typography>
                 <Box>
                   <Typography
-                    sx={{ p: { md: 2, sm: 2, xs: 1 } }}
-                    variant="subtitle1"
+                    sx={{ mb: { md: 2, sm: 2, xs: 1 } }}
+                    variant="subtitle2"
                   >
                     Fresh fruits
                   </Typography>
                   <Typography
-                    sx={{ p: { md: 2, sm: 2, xs: 1 } }}
-                    variant="subtitle1"
+                    sx={{ mb: { md: 2, sm: 2, xs: 1 } }}
+                    variant="subtitle2"
                   >
                     Fresh meat
                   </Typography>
                   <Typography
-                    sx={{ p: { md: 2, sm: 2, xs: 1 } }}
-                    variant="subtitle1"
+                    sx={{ mb: { md: 2, sm: 2, xs: 1 } }}
+                    variant="subtitle2"
                   >
                     Cow milk
                   </Typography>
                   <Typography
-                    sx={{ p: { md: 2, sm: 2, xs: 1 } }}
-                    variant="subtitle1"
+                    sx={{ mb: { md: 2, sm: 2, xs: 1 } }}
+                    variant="subtitle2"
                   >
                     Haldi powder
                   </Typography>
                   <Typography
-                    sx={{ p: { md: 2, sm: 2, xs: 1 } }}
-                    variant="subtitle1"
+                    sx={{ mb: { md: 2, sm: 2, xs: 1 } }}
+                    variant="subtitle2"
                   >
                     Sea & fish
                   </Typography>
@@ -130,81 +130,87 @@ const Footer = () => {
               </Grid>
 
               <Grid item md={3} sm={6} xs={12}>
-                <Typography variant="h6">PRIVACY & TERMS</Typography>
+                <Typography variant="subtitle1" sx={{ mb: 3 }}>
+                  PRIVACY & TERMS
+                </Typography>
                 <Box>
                   <Typography
-                    sx={{ p: { md: 2, sm: 2, xs: 1 } }}
-                    variant="subtitle1"
+                    sx={{ mb: { md: 2, sm: 2, xs: 1 } }}
+                    variant="subtitle2"
                   >
                     {" "}
                     My cart
                   </Typography>
                   <Typography
-                    sx={{ p: { md: 2, sm: 2, xs: 1 } }}
-                    variant="subtitle1"
+                    sx={{ mb: { md: 2, sm: 2, xs: 1 } }}
+                    variant="subtitle2"
                   >
                     Wishlist
                   </Typography>
                   <Typography
-                    sx={{ p: { md: 2, sm: 2, xs: 1 } }}
-                    variant="subtitle1"
+                    sx={{ mb: { md: 2, sm: 2, xs: 1 } }}
+                    variant="subtitle2"
                   >
                     Sign in
                   </Typography>
                   <Typography
-                    sx={{ p: { md: 2, sm: 2, xs: 1 } }}
-                    variant="subtitle1"
+                    sx={{ mb: { md: 2, sm: 2, xs: 1 } }}
+                    variant="subtitle2"
                   >
                     Shipping details
                   </Typography>
                   <Typography
-                    sx={{ p: { md: 2, sm: 2, xs: 1 } }}
-                    variant="subtitle1"
+                    sx={{ mb: { md: 2, sm: 2, xs: 1 } }}
+                    variant="subtitle2"
                   >
                     Help center
                   </Typography>
                 </Box>
               </Grid>
               <Grid item md={3} sm={6} xs={12}>
-                <Typography variant="h6">MY ACCOUNT</Typography>
+                <Typography variant="subtitle1" sx={{ mb: 3 }}>
+                  MY ACCOUNT
+                </Typography>
                 <Box>
                   <Typography
-                    sx={{ p: { md: 2, sm: 2, xs: 1 } }}
-                    variant="subtitle1"
+                    sx={{ mb: { md: 2, sm: 2, xs: 1 } }}
+                    variant="subtitle2"
                   >
                     {" "}
                     About vegist
                   </Typography>
                   <Typography
-                    sx={{ p: { md: 2, sm: 2, xs: 1 } }}
-                    variant="subtitle1"
+                    sx={{ mb: { md: 2, sm: 2, xs: 1 } }}
+                    variant="subtitle2"
                   >
                     Faq's
                   </Typography>
                   <Typography
-                    sx={{ p: { md: 2, sm: 2, xs: 1 } }}
-                    variant="subtitle1"
+                    sx={{ mb: { md: 2, sm: 2, xs: 1 } }}
+                    variant="subtitle2"
                   >
                     Contact us
                   </Typography>
                   <Typography
-                    sx={{ p: { md: 2, sm: 2, xs: 1 } }}
-                    variant="subtitle1"
+                    sx={{ mb: { md: 2, sm: 2, xs: 1 } }}
+                    variant="subtitle2"
                   >
                     News
                   </Typography>
                   <Typography
-                    sx={{ p: { md: 2, sm: 2, xs: 1 } }}
-                    variant="subtitle1"
+                    sx={{ mb: { md: 2, sm: 2, xs: 1 } }}
+                    variant="subtitle2"
                   >
                     Store location
                   </Typography>
                 </Box>
               </Grid>
               <Grid item md={3} sm={6} xs={12}>
-                <Typography variant="h6">SUBSCRIBE LATEST DEAL</Typography>
+                <Typography variant="subtitle1" sx={{ mb: 3 }}>
+                  SUBSCRIBE LATEST DEAL
+                </Typography>
                 <Box>
-                  <Typography variant="subtitle1">
+                  <Typography variant="subtitle2">
                     Subscribe to our newsletter <br /> to re ceive fashion store
                     news on new update.{" "}
                   </Typography>
@@ -216,9 +222,9 @@ const Footer = () => {
                       sx={{
                         mt: 3,
                         bgcolor: "white",
-                        '& ::placeholder': { 
-                          fontSize:17,
-                       },
+                        "& ::placeholder": {
+                          fontSize: 17,
+                        },
                         "& .MuiOutlinedInput-root": {
                           "& fieldset": {
                             border: "none",
@@ -237,7 +243,7 @@ const Footer = () => {
                             {/* <SearchIcon sx={{ color: "red" }} /> */}
                             <i
                               style={{
-                                color: "green",
+                                color: "black",
                                 fontSize: 18,
                               }}
                               class="fa-solid fa-arrow-right"
@@ -253,9 +259,15 @@ const Footer = () => {
           </Grid>
         </Grid>
       </Container>
-      <Divider color="white" sx={{ height: 1 }} />
+      <Divider color="white" sx={{ height: 1, mt: { xs: 5 } }} />
       <Container
-        sx={{ display: "flex", justifyContent: "space-between", mt: 3 }}
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          flexDirection: { xs: "column", sm: "row" },
+          gap: { xs: 3 },
+          mt: 3,
+        }}
       >
         <Typography variant="body1">© 2023 Theme powered by Bazar</Typography>
         <Box sx={{ display: "flex", gap: 1 }}>
