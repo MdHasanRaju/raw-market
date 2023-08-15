@@ -33,7 +33,7 @@ const FoodOffer = () => {
               >
                 BRUSSELS foods
               </Typography>
-              
+
               <Button
                 variant="outlined"
                 sx={{
@@ -52,21 +52,21 @@ const FoodOffer = () => {
         </Grid>
 
         <Grid width="50%" md={6}>
-          <Box sx={{ position: "relative" }}>
+          <Box sx={{ position: "relative", }}>
             <Box
               sx={{ width: "100%" }}
               component="img"
               alt="video banner image"
               src={videoBanner}
-            >
-            </Box>
+            ></Box>
+            <Typography sx={{position:"absolute", top:"30%", right:"40%", color:"green", fontWeight:'bold'}} variant="h4">FRESH <br /><Typography variant='body1' color="black" sx={{fontSize:25,ml:3, fontWeight:"light"}}>farm</Typography></Typography>
             <Box
               sx={{
                 bgcolor: "green",
                 position: "absolute",
                 border: "1px solid transparent",
                 borderRadius: "50%",
-                top: "40%",
+                top: "50%",
                 right: "41%",
                 width: 100,
                 height: 100,
