@@ -1,5 +1,4 @@
-import React from "react";
-import DateTimeDisplay from "./DateTimeDisplay";
+import React from "react"; 
 import { Box, Button, Typography } from "@mui/material";
 import timerBanner from "../../assets/banners/timer-banner.jpg";
 
@@ -7,13 +6,13 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
   return (
     <Box
       sx={{
-        my: 8,
+        mt: 8,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         backgroundImage: `url(${timerBanner})`,
         backgroundPosition: "center",
-        backgroundSize: "cover",
+        backgroundSize: "cover", 
         backgroundRepeat: "no-repeat",
         backgroundPosition: {
           md: "cover",
@@ -36,7 +35,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
         >
           We offer a hot deal offer every festival
         </Typography>
-        <Typography variant="h6" sx={{ color: "black", textAlign: "center" , mb:4}}>
+        <Typography variant="h6" sx={{ color: "black", textAlign: "center" ,mt:1, mb:4}}>
           Deal of the day!
         </Typography>
 
@@ -61,7 +60,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
               color="white"
             >
               <Typography variant="h5">DAY</Typography>
-              <Typography variant="subtitle1">20</Typography>
+              <Typography variant="h6" sx={days <=3 && {color:'red'}}>{days}</Typography>
             </Box>
             <Typography variant="body1" sx={{ fontSize: 24 }}>
               :
@@ -87,7 +86,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
               color="white"
             >
               <Typography variant="h5">HRS</Typography>
-              <Typography variant="subtitle1">57</Typography>
+              <Typography variant="h6">{hours}</Typography>
             </Box>
             <Typography variant="body1" sx={{ fontSize: 24 }}>
               :
@@ -113,7 +112,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
               color="white"
             >
               <Typography variant="h5">MIN</Typography>
-              <Typography variant="subtitle1">43</Typography>
+              <Typography variant="h6">{minutes}</Typography>
             </Box>
             <Typography variant="body1" sx={{ fontSize: 24 }}>
               :
@@ -139,7 +138,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
               color="white"
             >
               <Typography variant="h5">SEC</Typography>
-              <Typography variant="subtitle1">35</Typography>
+              <Typography variant="h6">{seconds}</Typography>
             </Box>
              
           </Box>
