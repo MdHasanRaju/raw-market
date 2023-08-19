@@ -2,6 +2,7 @@ import React from "react";
 import ExquisiteService from "./ExquisiteService";
 import Banner from "./Banner";
 import FoodOffer from "./FoodOffer";
+import OfferTimer from "./OfferTimer";
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
       <Banner />
       <FoodOffer/>
       <ExquisiteService />
+      <OfferTimer/>
     </>
   );
 };
