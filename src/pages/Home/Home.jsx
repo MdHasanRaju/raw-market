@@ -13,7 +13,6 @@ const Home = () => {
       <ExquisiteService />
       <AddCompany />
       <OfferTimer/>
-  
     </Box>
   );
 };
