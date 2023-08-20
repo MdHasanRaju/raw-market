@@ -3,7 +3,6 @@ import Grid from "@mui/material/Grid";
 import Container from "@mui/system/Container";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import mapIcon from "../../assets/icon/icon-location-marker.svg";
 import TextField from "@mui/material/TextField";
 import { Button, TextareaAutosize } from "@mui/material";
 import React, { useRef } from "react";
@@ -59,15 +58,7 @@ const ContactFrom = () => {
               </Typography>
             </Box>
             <Box>
-              {/*  <Box
-                component="img"
-                sx={{
-                  maxHeight: { xs: 233, md: 167 },
-                  maxWidth: { xs: 350, md: 250 },
-                }}
-                alt="The house from the offer."
-                src={mapIcon}
-              /> */}
+           
               <Box sx={{ fontSize: "60px", mt: 4 }}>
                 {" "}
                 <i class="fa-solid fa-location-dot"></i>

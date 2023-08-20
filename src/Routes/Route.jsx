@@ -11,6 +11,7 @@ import Contact from "../pages/Contact/Contact";
 
 
 
+
 export const router = createBrowserRouter([
     {
       path: "/",
@@ -36,6 +37,7 @@ export const router = createBrowserRouter([
        {
              path:'/contact',
              element:<Contact></Contact>
+           
          }, 
       ]
     },
