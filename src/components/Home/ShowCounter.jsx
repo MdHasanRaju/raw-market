@@ -17,18 +17,18 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
         backgroundPosition: {
           md: "cover",
           sm: "center",
-          xs: "center",
+          xs: "cover",
         },
         height: {
           md: "80vh",
-          sm: "100vh",
-          xs: "100vh",
+          // sm: "100vh",
+          // xs: "100vh",
         },
         width: "100%",
       }}
       className="show-counter"
     >
-      <Box>
+      <Box sx={{p:4}}>
         <Typography
           variant="body1"
           sx={{ color: "green", textAlign: "center" }}
