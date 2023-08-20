@@ -39,10 +39,11 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
           Deal of the day!
         </Typography>
 
-        <Box sx={{ display: "flex" }}>
+        <Box sx={{ display: "flex" , flexDirection:{xs:'column', sm:'row', md:'row'}}}>
           <Box
             sx={{
               display: "flex",
+              flexDirection:{sm:'row',xs:'column',md:'row'},
               justifyItems: "center",
               alignItems: "center",
             }}
@@ -69,6 +70,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
           <Box
             sx={{
               display: "flex",
+              flexDirection:{sm:'row', xs:'column', md:'row'},
               justifyItems: "center",
               alignItems: "center",
             }}
@@ -95,6 +97,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
           <Box
             sx={{
               display: "flex",
+              flexDirection:{sm:'row',xs:'column',md:'row'},
               justifyItems: "center",
               alignItems: "center",
             }}
@@ -121,6 +124,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
           <Box
             sx={{
               display: "flex",
+              flexDirection:{sm:'row',xs:'column',md:'row'},
               justifyItems: "center",
               alignItems: "center",
             }}
