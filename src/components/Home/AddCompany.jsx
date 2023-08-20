@@ -3,9 +3,8 @@ import React from 'react';
 import img1 from '../../assets/Products/vegist-image (1).webp'
 const AddCompany = () => {
     return (
-        <section  style={{backgroundColor:'#fff3ed'}}>
+        <Box  sx={{bgcolor:'#fff3ed',py:10}}>
              <Container>
-            <Typography sx={{textAlign:'center', my:4}} variant='h4'>Add Services AddCompany name</Typography>
               <Grid container>
                   <Grid item xs={12} sm={6} md={6}>
                   <Box
@@ -22,11 +21,13 @@ const AddCompany = () => {
              </Grid>  
 
              <Grid item xs={12} sm={6} md={6}>
-                        
+                    <Typography sx={{fontWeight:'bold'}} variant='h6'>FRESH AND DELICIOUS</Typography>    
+                    <Typography sx={{fontWeight:'bold'}} variant='h4'>FRESH ORGANIC</Typography>
+                    <Typography  variant='subtitle1'>grocery store</Typography>
             </Grid>  
               </Grid>
         </Container>
-        </section>
+      </Box>
         
     );
 };
