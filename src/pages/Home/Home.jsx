@@ -3,7 +3,7 @@ import Banner from "../../components/Home/Banner";
 import FoodOffer from "../../components/Home/FoodOffer";
 import ExquisiteService from "../../components/Home/ExquisiteService";
 import OfferTimer from "../../components/Home/OfferTimer";
-import AddCompany from "../../components/Home/AddCompany";
+import Store from "../../components/Home/Store";
 
 const Home = () => {
   return (
@@ -11,7 +11,7 @@ const Home = () => {
       <Banner />
       <FoodOffer/>
       <ExquisiteService />
-      <AddCompany />
+      <Store />
       <OfferTimer/>
     </Box>
   );
