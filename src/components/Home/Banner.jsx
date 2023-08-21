@@ -14,6 +14,7 @@ import { Box, Button, Typography } from "@mui/material";
 import vegetables from "../../assets/banners/banner-vegetables.jpg";
 import fruits from "../../assets/banners/banner-fruits.jpg";
 import juice from "../../assets/banners/banner-juice.jpg";
+import CustomButton from "../Shared/CustomButtons/CustomButton"; 
 
 const Banner = () => {
   return (
@@ -55,16 +56,7 @@ const Banner = () => {
               },
               width: "100%",
             }}
-            // sx={{
-            //   position: "absolute",
-            //   width: "100%",
-            //   height: "100%",
-            //   backgroundImage: `url(${vegetables})`,
-            //   backgroundImage: `url('../../assets/banners/banner-vegetables.jpg')`,
-            //   backgroundPosition: "center",
-            //   backgroundSize: "cover",
-            //   backgroundRepeat: "no-repeat",
-            // }}
+           
           >
             <Box sx={{ ml: "15%" }}>
               <Typography variant="body1" color="green">
@@ -74,21 +66,10 @@ const Banner = () => {
                 <Box component="span" fontWeight="bold">
                   Organic food
                 </Box>{" "}
-                <br />& healthy tasty
+                <Box component='br'/> 
+                & healthy tasty
               </Typography>
-              <Button
-                variant="outlined"
-                sx={{
-                  "&:hover": {
-                    outline: "none",
-                    bgcolor: "green",
-                    color: "white",
-                  },
-                }}
-                color="success"
-              >
-                Shop Now
-              </Button>
+              <CustomButton color={'green'} bgcolor={'green'} outlineColor={'success'}>shop now</CustomButton>
             </Box>
           </Box>
         </SwiperSlide>
@@ -98,8 +79,8 @@ const Banner = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "start",
-            }}
-            style={{
+            // }}
+            // style={{
               backgroundImage: `url(${fruits})`,
               backgroundPosition: "center",
               backgroundSize: "cover",
@@ -140,8 +121,8 @@ const Banner = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "start",
-            }}
-            style={{
+            // }}
+            // style={{
               backgroundImage: `url(${juice})`,
               backgroundPosition: "center",
               backgroundSize: "cover",

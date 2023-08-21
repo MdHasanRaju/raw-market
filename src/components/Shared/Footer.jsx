@@ -13,13 +13,13 @@ import AmericanExpress from "../Svg/AmericanExpress";
 
 const Footer = () => {
   return (
-    <Box sx={{ backgroundColor: "#000", color: "#fff", pt: 8, pb: 4 }}>
+    <Box sx={{ backgroundColor: "#f6f6f6", color: "#6f6f6f", pt: 8, pb: 4 }}>
       <Container>
         <Grid container>
           <Grid item xs={12} sm={12} md={3}>
             <Box sx={{ display: { sm: "flex", md: "block" }, gap: "21%" }}>
               <Box>
-                <Typography variant="subtitle1" sx={{ mb: 3 }}>
+                <Typography variant="subtitle1" sx={{mb:3, color: "#232323", fontWeight:"bold"}}>
                   PRODUCTS
                 </Typography>
                 <Typography variant="subtitle2">
@@ -92,7 +92,7 @@ const Footer = () => {
           <Grid item md={9}>
             <Grid container>
               <Grid item md={3} sm={6} xs={12}>
-                <Typography variant="subtitle1" sx={{ mb: 3 }}>
+                <Typography variant="subtitle1" sx={{mb:3, color: "#232323", fontWeight:"bold"}}>
                   SERVICES
                 </Typography>
                 <Box>
@@ -130,7 +130,7 @@ const Footer = () => {
               </Grid>
 
               <Grid item md={3} sm={6} xs={12}>
-                <Typography variant="subtitle1" sx={{ mb: 3 }}>
+                <Typography variant="subtitle1" sx={{mb:3, color: "#232323", fontWeight:"bold"}}>
                   PRIVACY & TERMS
                 </Typography>
                 <Box>
@@ -168,7 +168,7 @@ const Footer = () => {
                 </Box>
               </Grid>
               <Grid item md={3} sm={6} xs={12}>
-                <Typography variant="subtitle1" sx={{ mb: 3 }}>
+                <Typography variant="subtitle1" sx={{mb:3, color: "#232323", fontWeight:"bold"}}>
                   MY ACCOUNT
                 </Typography>
                 <Box>
@@ -206,7 +206,7 @@ const Footer = () => {
                 </Box>
               </Grid>
               <Grid item md={3} sm={6} xs={12}>
-                <Typography variant="subtitle1" sx={{ mb: 3 }}>
+                <Typography variant="subtitle1" sx={{mb:3, color: "#232323", fontWeight:"bold"}}>
                   SUBSCRIBE LATEST DEAL
                 </Typography>
                 <Box>
