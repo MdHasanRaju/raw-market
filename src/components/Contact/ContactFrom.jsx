@@ -40,7 +40,7 @@ const ContactFrom = () => {
           <Grid item xs={12} sm={6} md={5}>
             <Box>
               <Box sx={{ py: 6 }}>
-                <Typography variant="h3" sx={{ color: "#d71c5c;" }}>
+                <Typography variant="h5" sx={{ color: "#d71c5c;" }}>
                   CONTACT US
                 </Typography>
               </Box>
@@ -65,7 +65,7 @@ const ContactFrom = () => {
               </Box>
 
               <Box sx={{ mt: 4 }}>
-                <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+                <Typography variant="h5" sx={{ fontWeight: "bold" }}>
                   Registered Address:
                 </Typography>
                 <Typography>
@@ -75,7 +75,7 @@ const ContactFrom = () => {
               </Box>
               <Box>
                 <Box sx={{ mt: 4 }}>
-                  <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+                  <Typography variant="h5" sx={{ fontWeight: "bold" }}>
                     Business Address:
                   </Typography>
                   <Typography>
@@ -84,7 +84,7 @@ const ContactFrom = () => {
                   </Typography>
                 </Box>
                 <Box sx={{ py: 4 }}>
-                  <Typography variant="h4">
+                  <Typography variant="h5">
                     Write in:raw@.market.com.bd
                   </Typography>
                   <Typography>Call us: 01573347472 </Typography>
