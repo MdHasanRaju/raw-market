@@ -21,11 +21,11 @@ function CompanyAdd() {
       <Box style={{}}>
       <Box>
         <Typography sx={{textAlign:'center', mt:4}} variant='h3'>Our Technology Partner</Typography>
-        <Typography sx={{textAlign:'center', my:1}} variant='subtitle1'>Lorem, ipsum dolor sit amet consectetur adipisicing <br /> elit. Consectetur esse nemo ipsam velit quia ut.</Typography>
+        <Typography sx={{textAlign:'center', my:1}} variant='subtitle1'>Lorem, ipsum dolor sit amet consectetur adipisicing <Box component="br"/> elit. Consectetur esse nemo ipsam velit quia ut.</Typography>
       </Box>
 
       <Box sx={{py:8}}>
-        <Marquee direction="right" speed={100} delay={5}>
+        <Marquee direction="right" speed={100} delay={1}>
           <Box >
           <Box
                 component="img"

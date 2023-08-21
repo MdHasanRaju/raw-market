@@ -35,11 +35,11 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="sticky" stickyHeader sx={{ backgroundColor: "#183a1d", }}>
+    <AppBar position="sticky" stickyheader={true} sx={{ backgroundColor: "#fff", boxShadow:'none' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <LocalMall
-            sx={{ display: { xs: "none", md: "flex" }, mr: 1, color: "white" }}
+            sx={{ display: { xs: "none", md: "flex" }, mr: 1, color: "#232323" }}
           />
           <Typography
             variant="h6"
@@ -54,7 +54,7 @@ const Navbar = () => {
               textDecoration: "none",
             }}
           >
-            <Link style={{ color: "white", textDecoration: "none" }} to="/">
+            <Link style={{ color: "#232323", textDecoration: "none" }} to="/">
               Bazar
             </Link>
           </Typography>
@@ -94,7 +94,7 @@ const Navbar = () => {
                     style={({ isActive }) => {
                       return {
                         fontWeight: isActive ? "bold" : "",
-                        color: isActive ? "red" : "orange",
+                        color: isActive ? "red" : "#232323",
                         textDecoration: "none",
                       };
                     }}
@@ -110,7 +110,7 @@ const Navbar = () => {
                     style={({ isActive }) => {
                       return {
                         fontWeight: isActive ? "bold" : "",
-                        color: isActive ? "red" : "orange",
+                        color: isActive ? "red" : "#232323",
                         textDecoration: "none",
                       };
                     }}
@@ -126,7 +126,7 @@ const Navbar = () => {
                     style={({ isActive }) => {
                       return {
                         fontWeight: isActive ? "bold" : "",
-                        color: isActive ? "red" : "orange",
+                        color: isActive ? "red" : "#232323",
                         textDecoration: "none",
                       };
                     }}
@@ -158,7 +158,6 @@ const Navbar = () => {
           >
             <Link
               state={{ textDecoration: "none", color: "white" }}
-              Bazar
               to="/"
             >
               Bazar
@@ -172,7 +171,7 @@ const Navbar = () => {
                   style={({ isActive }) => {
                     return {
                       fontWeight: isActive ? "bold" : "",
-                      color: isActive ? "red" : "orange",
+                      color: isActive ? "red" : "#232323",
                       textDecoration: "none",
                     };
                   }}
@@ -188,7 +187,7 @@ const Navbar = () => {
                   style={({ isActive }) => {
                     return {
                       fontWeight: isActive ? "bold" : "",
-                      color: isActive ? "red" : "orange",
+                      color: isActive ? "red" : "#232323",
                       textDecoration: "none",
                     };
                   }}
@@ -204,7 +203,7 @@ const Navbar = () => {
                   style={({ isActive }) => {
                     return {
                       fontWeight: isActive ? "bold" : "",
-                      color: isActive ? "red" : "orange",
+                      color: isActive ? "red" : "#232323",
                       textDecoration: "none",
                     };
                   }}
@@ -220,7 +219,7 @@ const Navbar = () => {
                   style={({ isActive }) => {
                     return {
                       fontWeight: isActive ? "bold" : "",
-                      color: isActive ? "red" : "orange",
+                      color: isActive ? "red" : "#232323",
                       textDecoration: "none",
                     };
                   }}
