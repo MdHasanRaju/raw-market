@@ -43,7 +43,7 @@ const Store = () => {
               randomised words which don't look even slightly believable.
             </Typography>
             <Box sx={{ my: 4 }}>
-              <CustomButton>Shop Now</CustomButton>
+            <CustomButton color={'green'} bgcolor={'green'} outlineColor={'success'}>shop now</CustomButton>
             </Box>
           </Grid>
         </Grid>
