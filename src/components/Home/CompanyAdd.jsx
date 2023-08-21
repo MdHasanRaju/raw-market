@@ -31,9 +31,7 @@ function CompanyAdd() {
                 component="img"
                 sx={{
                   height: 60,
-               /*    width: 312, */
-                  //   maxHeight: { xs: 233, md: 167 },
-                  //   maxWidth: { xs: 350, md: 250 },
+              
                 }}
                 alt="The house from the offer."
                 src={img1}
@@ -44,9 +42,7 @@ function CompanyAdd() {
                 component="img"
                 sx={{
                   height: 60,
-               /*    width: 312, */
-                  //   maxHeight: { xs: 233, md: 167 },
-                  //   maxWidth: { xs: 350, md: 250 },
+            
                 }}
                 alt="The house from the offer."
                 src={img2}
@@ -57,9 +53,8 @@ function CompanyAdd() {
                 component="img"
                 sx={{
                   height: 60,
-               /*    width: 312, */
-                  //   maxHeight: { xs: 233, md: 167 },
-                  //   maxWidth: { xs: 350, md: 250 },
+              
+                
                 }}
                 alt="The house from the offer."
                 src={img3}
@@ -70,9 +65,7 @@ function CompanyAdd() {
                 component="img"
                 sx={{
                   height: 60,
-               /*    width: 312, */
-                  //   maxHeight: { xs: 233, md: 167 },
-                  //   maxWidth: { xs: 350, md: 250 },
+             
                 }}
                 alt="The house from the offer."
                 src={img4}
@@ -85,9 +78,7 @@ function CompanyAdd() {
                 component="img"
                 sx={{
                   height: 60,
-               /*    width: 312, */
-                  //   maxHeight: { xs: 233, md: 167 },
-                  //   maxWidth: { xs: 350, md: 250 },
+            
                 }}
                 alt="The house from the offer."
                 src={img5}
@@ -99,9 +90,7 @@ function CompanyAdd() {
                 component="img"
                 sx={{
                   height: 60,
-               /*    width: 312, */
-                  //   maxHeight: { xs: 233, md: 167 },
-                  //   maxWidth: { xs: 350, md: 250 },
+             
                 }}
                 alt="The house from the offer."
                 src={img6}
@@ -113,9 +102,7 @@ function CompanyAdd() {
                 component="img"
                 sx={{
                   height: 60,
-               /*    width: 312, */
-                  //   maxHeight: { xs: 233, md: 167 },
-                  //   maxWidth: { xs: 350, md: 250 },
+              
                 }}
                 alt="The house from the offer."
                 src={img7}
@@ -127,9 +114,7 @@ function CompanyAdd() {
                 component="img"
                 sx={{
                   height: 60,
-               /*    width: 312, */
-                  //   maxHeight: { xs: 233, md: 167 },
-                  //   maxWidth: { xs: 350, md: 250 },
+             
                 }}
                 alt="The house from the offer."
                 src={img8}
@@ -140,8 +125,7 @@ function CompanyAdd() {
                 component="img"
                 sx={{
                   height: 60,
-               /*    width: 312, */
-                  //   maxHeight: { xs: 233, md: 167 },
+              
                   //   maxWidth: { xs: 350, md: 250 },
                 }}
                 alt="The house from the offer."
@@ -153,9 +137,7 @@ function CompanyAdd() {
                 component="img"
                 sx={{
                   height: 60,
-               /*    width: 312, */
-                  //   maxHeight: { xs: 233, md: 167 },
-                  //   maxWidth: { xs: 350, md: 250 },
+            
                 }}
                 alt="The house from the offer."
                 src={img10}
