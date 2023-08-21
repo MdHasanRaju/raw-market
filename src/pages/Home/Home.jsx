@@ -4,6 +4,8 @@ import FoodOffer from "../../components/Home/FoodOffer";
 import ExquisiteService from "../../components/Home/ExquisiteService";
 import OfferTimer from "../../components/Home/OfferTimer";
 import Store from "../../components/Home/Store";
+import CompanyAdd from "../../components/Home/CompanyAdd";
+
 
 const Home = () => {
   return (
@@ -13,6 +15,7 @@ const Home = () => {
       <ExquisiteService />
       <Store />
       <OfferTimer/>
+      <CompanyAdd />
     </Box>
   );
 };
