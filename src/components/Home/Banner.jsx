@@ -14,7 +14,7 @@ import { Box, Button, Typography } from "@mui/material";
 import vegetables from "../../assets/banners/banner-vegetables.jpg";
 import fruits from "../../assets/banners/banner-fruits.jpg";
 import juice from "../../assets/banners/banner-juice.jpg";
-import CustomButton from "../Shared/CustomButtons/CustomButton"; 
+import CustomButton from "../Shared/CustomButtons/CustomButton";
 
 const Banner = () => {
   return (
@@ -23,12 +23,12 @@ const Banner = () => {
         slidesPerView={1}
         spaceBetween={30}
         autoplay={{
-          delay:2000,
-          disableOnInteraction:false
+          delay: 2000,
+          disableOnInteraction: false,
         }}
         loop={true}
         pagination={{
-        clickable: true,
+          clickable: true,
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
@@ -39,24 +39,23 @@ const Banner = () => {
             sx={{
               display: "flex",
               alignItems: "center",
-              justifyContent: "start",  
+              justifyContent: "start",
               backgroundImage: `url(${vegetables})`,
               backgroundPosition: "center",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
-              backgroundPosition:{
-                md:'cover',
-                sm:"center",
-                xs:"center",
+              backgroundPosition: {
+                md: "cover",
+                sm: "center",
+                xs: "center",
               },
               height: {
-                md:"100vh",
-                sm:"100vh",
-                xs:"100vh",
+                md: "100vh",
+                sm: "100vh",
+                xs: "100vh",
               },
               width: "100%",
             }}
-           
           >
             <Box sx={{ ml: "15%" }}>
               <Typography variant="body1" color="green">
@@ -66,10 +65,15 @@ const Banner = () => {
                 <Box component="span" fontWeight="bold">
                   Organic food
                 </Box>{" "}
-                <Box component='br'/> 
-                & healthy tasty
+                <Box component="br" />& healthy tasty
               </Typography>
-              <CustomButton color={'green'} bgcolor={'green'} outlineColor={'success'}>shop now</CustomButton>
+              <CustomButton
+                color={"green"}
+                bgcolor={"green"}
+                outlineColor={"success"}
+              >
+                shop now
+              </CustomButton>
             </Box>
           </Box>
         </SwiperSlide>
@@ -79,8 +83,8 @@ const Banner = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "start",
-            // }}
-            // style={{
+              // }}
+              // style={{
               backgroundImage: `url(${fruits})`,
               backgroundPosition: "center",
               backgroundSize: "cover",
@@ -99,7 +103,7 @@ const Banner = () => {
                 </Box>{" "}
                 <br />& healthy tasty
               </Typography>
-              <Button
+              {/* <Button
                 variant="outlined"
                 sx={{
                   "&:hover": {
@@ -111,7 +115,14 @@ const Banner = () => {
                 color="success"
               >
                 Shop Now
-              </Button>
+              </Button> */}
+              <CustomButton
+                color={"green"}
+                bgcolor={"green"}
+                outlineColor={"success"}
+              >
+                shop now
+              </CustomButton>
             </Box>
           </Box>
         </SwiperSlide>
@@ -121,8 +132,8 @@ const Banner = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "start",
-            // }}
-            // style={{
+              // }}
+              // style={{
               backgroundImage: `url(${juice})`,
               backgroundPosition: "center",
               backgroundSize: "cover",
@@ -141,19 +152,13 @@ const Banner = () => {
                 </Box>{" "}
                 <br />& healthy tasty
               </Typography>
-              <Button
-                variant="outlined"
-                sx={{
-                  "&:hover": {
-                    outline: "none",
-                    bgcolor: "green",
-                    color: "white",
-                  },
-                }}
-                color="success"
+              <CustomButton
+                color={"green"}
+                bgcolor={"green"}
+                outlineColor={"success"}
               >
-                Shop Now
-              </Button>
+                shop now
+              </CustomButton>
             </Box>
           </Box>
         </SwiperSlide>
