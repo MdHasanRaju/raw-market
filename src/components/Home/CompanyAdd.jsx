@@ -26,11 +26,11 @@ function CompanyAdd() {
 
       <Box sx={{py:8}}>
         <Marquee direction="right" speed={100} delay={1}>
-          <Box >
+          <Box sx={{mr:8}}>
           <Box
                 component="img"
                 sx={{
-                  height: 60,
+                  height: 50,
                /*    width: 312, */
                   //   maxHeight: { xs: 233, md: 167 },
                   //   maxWidth: { xs: 350, md: 250 },
@@ -39,11 +39,11 @@ function CompanyAdd() {
                 src={img1}
               ></Box>
           </Box>
-          <Box >
+          <Box sx={{mr:8}}>
           <Box
                 component="img"
                 sx={{
-                  height: 60,
+                  height: 50,
                /*    width: 312, */
                   //   maxHeight: { xs: 233, md: 167 },
                   //   maxWidth: { xs: 350, md: 250 },
@@ -56,7 +56,7 @@ function CompanyAdd() {
           <Box
                 component="img"
                 sx={{
-                  height: 60,
+                  height: 50,
                /*    width: 312, */
                   //   maxHeight: { xs: 233, md: 167 },
                   //   maxWidth: { xs: 350, md: 250 },
@@ -65,11 +65,11 @@ function CompanyAdd() {
                 src={img3}
               ></Box>
           </Box>
-          <Box >
+          <Box sx={{mr:8}}>
           <Box
                 component="img"
                 sx={{
-                  height: 60,
+                  height: 50,
                /*    width: 312, */
                   //   maxHeight: { xs: 233, md: 167 },
                   //   maxWidth: { xs: 350, md: 250 },
@@ -80,11 +80,11 @@ function CompanyAdd() {
           </Box>
 
 
-          <Box >
+          <Box sx={{mr:8}}>
           <Box
                 component="img"
                 sx={{
-                  height: 60,
+                  height: 50,
                /*    width: 312, */
                   //   maxHeight: { xs: 233, md: 167 },
                   //   maxWidth: { xs: 350, md: 250 },
@@ -94,11 +94,11 @@ function CompanyAdd() {
               ></Box>
           </Box>
   
-          <Box >
+          <Box sx={{mr:8}}>
           <Box
                 component="img"
                 sx={{
-                  height: 60,
+                  height: 50,
                /*    width: 312, */
                   //   maxHeight: { xs: 233, md: 167 },
                   //   maxWidth: { xs: 350, md: 250 },
@@ -108,11 +108,11 @@ function CompanyAdd() {
               ></Box>
           </Box>
 
-          <Box >
+          <Box sx={{mr:8}}>
           <Box
                 component="img"
                 sx={{
-                  height: 60,
+                  height: 50,
                /*    width: 312, */
                   //   maxHeight: { xs: 233, md: 167 },
                   //   maxWidth: { xs: 350, md: 250 },
@@ -122,11 +122,11 @@ function CompanyAdd() {
               ></Box>
           </Box>
 
-          <Box >
+          <Box sx={{mr:8}}>
           <Box
                 component="img"
                 sx={{
-                  height: 60,
+                  height: 50,
                /*    width: 312, */
                   //   maxHeight: { xs: 233, md: 167 },
                   //   maxWidth: { xs: 350, md: 250 },
@@ -135,11 +135,11 @@ function CompanyAdd() {
                 src={img8}
               ></Box>
           </Box>
-          <Box >
+          <Box sx={{mr:8}}>
           <Box
                 component="img"
                 sx={{
-                  height: 60,
+                  height: 50,
                /*    width: 312, */
                   //   maxHeight: { xs: 233, md: 167 },
                   //   maxWidth: { xs: 350, md: 250 },
@@ -148,11 +148,11 @@ function CompanyAdd() {
                 src={img9}
               ></Box>
           </Box>
-          <Box >
+          <Box sx={{mr:8}}>
           <Box
                 component="img"
                 sx={{
-                  height: 60,
+                  height: 50,
                /*    width: 312, */
                   //   maxHeight: { xs: 233, md: 167 },
                   //   maxWidth: { xs: 350, md: 250 },
