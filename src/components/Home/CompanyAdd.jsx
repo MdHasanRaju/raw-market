@@ -17,7 +17,7 @@ import { Box, Typography } from '@mui/material';
 
 function CompanyAdd() {
   return (
-     <Box sx={{bgcolor:'#F9FFF7'}}>
+     <Box sx={{bgcolor:'#F4FFF0', p:1}}>
       <Box>
       <Box>
         <Typography sx={{textAlign:'center', mt:4}} variant='h3'>Our Technology Partner</Typography>
