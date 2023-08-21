@@ -11,7 +11,8 @@ function CompanyAdd() {
      <Box>
       <Box style={{}}>
       <Box>
-        <Typography sx={{textAlign:'center'}} variant='h3'>Our Technology Partner</Typography>
+        <Typography sx={{textAlign:'center', my:4}} variant='h3'>Our Technology Partner</Typography>
+        <Typography sx={{textAlign:'center', my:4}} variant='subtitle1'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur esse nemo ipsam velit quia ut.</Typography>
       </Box>
 
       <Box>
