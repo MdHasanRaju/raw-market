@@ -18,7 +18,7 @@ import CustomButton from "../Shared/CustomButtons/CustomButton";
 
 const Banner = () => {
   return (
-    <div>
+    <Box>
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
@@ -163,7 +163,7 @@ const Banner = () => {
           </Box>
         </SwiperSlide>
       </Swiper>
-    </div>
+    </Box>
   );
 };
 
