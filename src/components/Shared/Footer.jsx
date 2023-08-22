@@ -33,7 +33,7 @@ const Footer = () => {
                   sx={{
                     color: "inherit",
                     "&:hover": {
-                      color: "green !important",
+                      color: "#B9E2A7 !important",
                       cursor: "pointer",
                     },
                   }}
@@ -47,7 +47,7 @@ const Footer = () => {
                   sx={{
                     color: "inherit",
                     "&:hover": {
-                      color: "green !important",
+                      color: "#B9E2A7 !important",
                       cursor: "pointer",
                     },
                   }}
@@ -61,7 +61,7 @@ const Footer = () => {
                   sx={{
                     color: "inherit",
                     "&:hover": {
-                      color: "green !important",
+                      color: "#B9E2A7 !important",
                       cursor: "pointer",
                     },
                   }}
@@ -75,7 +75,7 @@ const Footer = () => {
                   sx={{
                     color: "inherit",
                     "&:hover": {
-                      color: "green !important",
+                      color: "#B9E2A7 !important",
                       cursor: "pointer",
                     },
                   }}

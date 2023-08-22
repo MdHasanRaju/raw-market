@@ -34,19 +34,19 @@ const ContactFrom = () => {
   };
 
   return (
-    <Box>
+    <Box sx={{bgcolor:'#F9FFF7'}}>
       <Container>
         <Grid container>
           <Grid item xs={12} sm={6} md={5}>
             <Box>
               <Box sx={{ py: 6 }}>
-                <Typography variant="h3" sx={{ color: "#d71c5c;" }}>
+                <Typography variant="h5" sx={{ color: "#d71c5c;" }}>
                   CONTACT US
                 </Typography>
               </Box>
               <Box sx={{ py: 1 }}>
-                <Typography variant="h5">
-                  We value our relationship and are keen to serve you.
+                <Typography variant="h6">
+                  We value our relationship and are keen to <Box component="br"/> serve you.
                 </Typography>
               </Box>
               <Typography variant="subtitle1">
@@ -59,36 +59,36 @@ const ContactFrom = () => {
             </Box>
             <Box>
            
-              <Box sx={{ fontSize: "60px", mt: 4 }}>
+              <Box sx={{ fontSize: "50px", mt: 4 }}>
                 {" "}
                 <i class="fa-solid fa-location-dot"></i>
               </Box>
 
               <Box sx={{ mt: 4 }}>
-                <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+                <Typography variant="h5" sx={{ fontWeight: "bold" }}>
                   Registered Address:
                 </Typography>
-                <Typography>
+                <Typography variant="subtitle2">
                   Highway Homes, KA-38/6, <br /> Bir Uttam Rafiqul Islam Ave,
                   Dhaka – 1212.
                 </Typography>
               </Box>
               <Box>
                 <Box sx={{ mt: 4 }}>
-                  <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+                  <Typography variant="h5" sx={{ fontWeight: "bold" }}>
                     Business Address:
                   </Typography>
-                  <Typography>
+                  <Typography variant="subtitle2">
                     Uday Tower, Level 12, <br />
                     54 & 56/A, Gulshan Avenue, Dhaka-1212.
                   </Typography>
                 </Box>
                 <Box sx={{ py: 4 }}>
-                  <Typography variant="h4">
+                  <Typography variant="h5">
                     Write in:raw@.market.com.bd
                   </Typography>
-                  <Typography>Call us: 01573347472 </Typography>
-                  <Typography>Call us: 01573347472</Typography>
+                  <Typography variant="subtitle2">Call us: 01573347472 </Typography>
+                  <Typography variant="subtitle2">Call us: 01573347472</Typography>
                 </Box>
               </Box>
             </Box>
@@ -103,6 +103,7 @@ const ContactFrom = () => {
                 placeholder="Your Name*"
                 name="user_name}"
                 id="fullWidth"
+                required
               />
               <TextField
                 sx={{ p: 1 }}
@@ -110,6 +111,7 @@ const ContactFrom = () => {
                 placeholder=" Email Address*"
                 name="user_email"
                 id="fullWidth"
+                required
               />
               <TextField
                 sx={{ p: 1 }}
@@ -117,13 +119,15 @@ const ContactFrom = () => {
                 placeholder="Subject*"
                 name="from_name"
                 id="fullWidth"
+                required
               />
-              <Box sx={{ p: 1 }}>
+              <Box sx={{ p: 1 , }}>
                 <TextareaAutosize
                   name="message"
                   placeholder="Your Message type her.....*"
                   defaultValue=""
-                  style={{ width: "100%", height: "200px", padding: "10px", }}
+                  required
+                  style={{ width: "100%", height: "200px", padding: "10px", backgroundColor:'#F9FFF7' }}
                 />
                 <br/>
                  <Button variant="contained" color="success" type="Submit" value="send" fullWidth id="fullWidth">

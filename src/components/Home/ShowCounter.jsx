@@ -6,7 +6,6 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
   return (
     <Box
       sx={{
-        mt: 8,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
