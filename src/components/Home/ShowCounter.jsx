@@ -25,8 +25,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
           // xs: "100vh",
         },
         width: "100%",
-      }}
-      className="show-counter"
+      }} 
     >
       <Box sx={{p:4}}>
         <Typography

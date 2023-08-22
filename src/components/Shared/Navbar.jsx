@@ -35,7 +35,7 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="sticky" stickyheader={true} sx={{ backgroundColor: "#fff", boxShadow:'none' }}>
+    <AppBar position="static" sx={{ backgroundColor: "#fff", mx:0  }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <LocalMall
@@ -139,7 +139,7 @@ const Navbar = () => {
             </Menu>
           </Box>
           <LocalMall
-            sx={{ display: { xs: "none", md: "none" }, mr: 1, color: "white" }}
+            sx={{ display: { xs: "none", md: "none" }, mr: 1, color: "black" }}
           />
           <Typography
             variant="h5"

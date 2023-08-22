@@ -101,7 +101,7 @@ const Banner = () => {
                 <Box component="span" fontWeight="bold">
                   Organic food
                 </Box>{" "}
-                <br />& healthy tasty
+                <Box component="br" />& healthy tasty
               </Typography>
               {/* <Button
                 variant="outlined"
@@ -150,7 +150,7 @@ const Banner = () => {
                 <Box component="span" fontWeight="bold">
                   Organic food
                 </Box>{" "}
-                <br />& healthy tasty
+                <Box component="br" />& healthy tasty
               </Typography>
               <CustomButton
                 color={"green"}

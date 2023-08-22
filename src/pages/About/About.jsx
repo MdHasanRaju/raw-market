@@ -5,7 +5,7 @@ import middleBanner from "../../assets/banners/middle-banner.png";
 const About = () => {
   return (
     <Box>
-      <Container>
+      {/* <Container>
         <Typography
           variant="h3"
           sx={{ color: "green", textAlign: "center", pt: "20px", pb: "10px" }}
@@ -242,7 +242,7 @@ const About = () => {
             </Grid>
           </Grid>
         </Box>
-      </Container>
+      </Container> */}
     </Box>
   );
 };
