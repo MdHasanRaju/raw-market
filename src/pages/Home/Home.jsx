@@ -9,7 +9,7 @@ import CompanyAdd from "../../components/Home/CompanyAdd";
 
 const Home = () => {
   return (
-    <Box> 
+    <Box sx={{bgcolor:'##E5FFDA'}}> 
       <Banner />
       <FoodOffer/>
       <ExquisiteService />

@@ -17,15 +17,15 @@ import { Box, Typography } from '@mui/material';
 
 function CompanyAdd() {
   return (
-     <Box>
-      <Box style={{}}>
+     <Box sx={{bgcolor:'#F4FFF0', p:1}}>
+      <Box>
       <Box>
         <Typography sx={{textAlign:'center', mt:4}} variant='h3'>Our Technology Partner</Typography>
-        <Typography sx={{textAlign:'center', my:1}} variant='subtitle1'>Lorem, ipsum dolor sit amet consectetur adipisicing <Box component="br"/> elit. Consectetur esse nemo ipsam velit quia ut.</Typography>
+        <Typography sx={{textAlign:'center', my:1}} variant='subtitle1'>A 2023 GoTo study says that <Box sx={{color:'#45553E'}}  component="span">95%</Box> of companies plan to consolidate <Box component="br"/>  their tech tools in the next year. One way to respond to this downscaling is to seek out technology partnerships..</Typography>
       </Box>
 
       <Box sx={{py:8}}>
-        <Marquee direction="right" speed={100} delay={1}>
+        <Marquee direction="left" speed={100} delay={1}>
           <Box sx={{mr:8}}>
           <Box
                 component="img"
