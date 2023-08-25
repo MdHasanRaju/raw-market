@@ -174,7 +174,7 @@ const DiscoverProducts = () => {
           const { title, image, price, ratings, id } = product;
           return (
             <Grid key={id} item md={3} sm={4} xs={6}>
-              <Box sx={{}}>
+              <Box>
                 <Box
                   component="img"
                   height="200px"
