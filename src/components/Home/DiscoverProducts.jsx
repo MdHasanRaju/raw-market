@@ -119,7 +119,7 @@ const DiscoverProducts = () => {
 
   return (
     <Container sx={{ my: 6 }}>
-      <Typography sx={{ textAlign: "center", mb: 6 }} variant="h3">
+      <Typography sx={{ textAlign: "center", mb: 6 }} variant="h5">
         Discover products
       </Typography>
       <Box sx={{ display: "flex", justifyContent: "center" }}>
@@ -169,16 +169,16 @@ const DiscoverProducts = () => {
           Fruits
         </Button>
       </Box>
-      <Grid container spacing={2} sx={{ mt: 3, mb:8 }}>
+      <Grid container spacing={2} sx={{ mt: 3, mb: 8 }}>
         {products?.map((product) => {
           const { title, image, price, ratings, id } = product;
           return (
-            <Grid key={id} item md={3}>
+            <Grid key={id} item md={3} sm={4} xs={6}>
               <Box sx={{}}>
                 <Box
                   component="img"
                   height="200px"
-                  width="100%"
+                  sx={{ width: { md: "100%", sm: "100%", xs: "150px" } }}
                   alt="product image"
                   src={image}
                 />
@@ -188,12 +188,15 @@ const DiscoverProducts = () => {
                 >
                   {title}
                 </Typography>
-                <Typography variant="subtitle2" sx={{textAlign:"center"}}>Rating: {ratings}</Typography>
+                <Typography variant="subtitle2" sx={{ textAlign: "center" }}>
+                  Rating: {ratings}
+                </Typography>
                 <Typography
                   variant="subtitle1"
                   sx={{ textAlign: "center", color: "black" }}
                 >
-                  €{price} <Box component="del">90.00</Box> <Box component="ins">New</Box>!
+                  €{price} <Box component="del">90.00</Box>{" "}
+                  <Box component="ins">New</Box>!
                 </Typography>
               </Box>
             </Grid>
