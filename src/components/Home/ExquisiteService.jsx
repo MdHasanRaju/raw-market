@@ -56,11 +56,11 @@ const ExquisiteService = () => {
                           width="24"
                           height="24"
                           stroke="currentColor"
-                          stroke-width="1"
+                          strokeWidth="1"
                           fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          class="css-i6dzq1"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="css-i6dzq1"
                         >
                           <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path>
                         </svg>
@@ -107,11 +107,11 @@ const ExquisiteService = () => {
                           width="24"
                           height="24"
                           stroke="currentColor"
-                          stroke-width="1"
+                          strokeWidth="1"
                           fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          class="css-i6dzq1"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="css-i6dzq1"
                         >
                           <rect x="1" y="3" width="15" height="13"></rect>
                           <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
@@ -176,11 +176,11 @@ const ExquisiteService = () => {
                           width="24"
                           height="24"
                           stroke="currentColor"
-                          stroke-width="1"
+                          strokeWidth="1"
                           fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          class="css-i6dzq1"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="css-i6dzq1"
                         >
                           <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                           <polyline points="22,6 12,13 2,6"></polyline>
@@ -228,11 +228,11 @@ const ExquisiteService = () => {
                           width="24"
                           height="24"
                           stroke="currentColor"
-                          stroke-width="1"
+                          strokeWidth="1"
                           fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          class="css-i6dzq1"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="css-i6dzq1"
                         >
                           <polyline points="23 4 23 10 17 10"></polyline>
                           <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>

@@ -19,7 +19,10 @@ const Footer = () => {
           <Grid item xs={12} sm={12} md={3}>
             <Box sx={{ display: { sm: "flex", md: "block" }, gap: "21%" }}>
               <Box>
-                <Typography variant="subtitle1" sx={{mb:3, color: "#232323", fontWeight:"bold"}}>
+                <Typography
+                  variant="subtitle1"
+                  sx={{ mb: 3, color: "#232323", fontWeight: "bold" }}
+                >
                   PRODUCTS
                 </Typography>
                 <Typography variant="subtitle2">
@@ -40,7 +43,7 @@ const Footer = () => {
                 >
                   <i
                     style={{ paddingRight: "10px", fontSize: "28px" }}
-                    class="fa-brands fa-instagram"
+                    className="fa-brands fa-instagram"
                   ></i>
                 </Box>
                 <Box
@@ -54,7 +57,7 @@ const Footer = () => {
                 >
                   <i
                     style={{ paddingRight: "10px", fontSize: "28px" }}
-                    class="fa-brands fa-youtube"
+                    className="fa-brands fa-youtube"
                   ></i>
                 </Box>
                 <Box
@@ -68,7 +71,7 @@ const Footer = () => {
                 >
                   <i
                     style={{ paddingRight: "10px", fontSize: "28px" }}
-                    class="fa-brands fa-linkedin"
+                    className="fa-brands fa-linkedin"
                   ></i>
                 </Box>
                 <Box
@@ -82,7 +85,7 @@ const Footer = () => {
                 >
                   <i
                     style={{ paddingRight: "10px", fontSize: "28px" }}
-                    class="fa-brands fa-pinterest"
+                    className="fa-brands fa-pinterest"
                   ></i>
                 </Box>
               </Box>
@@ -92,7 +95,10 @@ const Footer = () => {
           <Grid item md={9}>
             <Grid container>
               <Grid item md={3} sm={6} xs={12}>
-                <Typography variant="subtitle1" sx={{mb:3, color: "#232323", fontWeight:"bold"}}>
+                <Typography
+                  variant="subtitle1"
+                  sx={{ mb: 3, color: "#232323", fontWeight: "bold" }}
+                >
                   SERVICES
                 </Typography>
                 <Box>
@@ -130,7 +136,10 @@ const Footer = () => {
               </Grid>
 
               <Grid item md={3} sm={6} xs={12}>
-                <Typography variant="subtitle1" sx={{mb:3, color: "#232323", fontWeight:"bold"}}>
+                <Typography
+                  variant="subtitle1"
+                  sx={{ mb: 3, color: "#232323", fontWeight: "bold" }}
+                >
                   PRIVACY & TERMS
                 </Typography>
                 <Box>
@@ -168,7 +177,10 @@ const Footer = () => {
                 </Box>
               </Grid>
               <Grid item md={3} sm={6} xs={12}>
-                <Typography variant="subtitle1" sx={{mb:3, color: "#232323", fontWeight:"bold"}}>
+                <Typography
+                  variant="subtitle1"
+                  sx={{ mb: 3, color: "#232323", fontWeight: "bold" }}
+                >
                   MY ACCOUNT
                 </Typography>
                 <Box>
@@ -206,7 +218,10 @@ const Footer = () => {
                 </Box>
               </Grid>
               <Grid item md={3} sm={6} xs={12}>
-                <Typography variant="subtitle1" sx={{mb:3, color: "#232323", fontWeight:"bold"}}>
+                <Typography
+                  variant="subtitle1"
+                  sx={{ mb: 3, color: "#232323", fontWeight: "bold" }}
+                >
                   SUBSCRIBE LATEST DEAL
                 </Typography>
                 <Box>
@@ -246,7 +261,7 @@ const Footer = () => {
                                 color: "black",
                                 fontSize: 18,
                               }}
-                              class="fa-solid fa-arrow-right"
+                              className="fa-solid fa-arrow-right"
                             ></i>
                           </InputAdornment>
                         ),
@@ -271,10 +286,10 @@ const Footer = () => {
       >
         <Typography variant="body1">© 2023 Theme powered by Bazar</Typography>
         <Box sx={{ display: "flex", gap: 1 }}>
-          {/* <i class="fa-brands fa-cc-amex"></i>
-                      <i class="fa-brands fa-cc-visa"></i>
-                      <i class="fa-brands fa-cc-paypal"></i>
-                      <i class="fa-brands fa-cc-mastercard"></i> */}
+          {/* <i className="fa-brands fa-cc-amex"></i>
+                      <i className="fa-brands fa-cc-visa"></i>
+                      <i className="fa-brands fa-cc-paypal"></i>
+                      <i className="fa-brands fa-cc-mastercard"></i> */}
           <VisaCard />
           <Paypal />
           <MasterCard />

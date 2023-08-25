@@ -5,6 +5,7 @@ import ExquisiteService from "../../components/Home/ExquisiteService";
 import OfferTimer from "../../components/Home/OfferTimer";
 import Store from "../../components/Home/Store";
 import CompanyAdd from "../../components/Home/CompanyAdd";
+import DiscoverProducts from "../../components/Home/DiscoverProducts";
 
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
     <Box sx={{bgcolor:'##E5FFDA'}}> 
       <Banner />
       <FoodOffer/>
+      <DiscoverProducts/>
       <ExquisiteService />
       <Store />
       <OfferTimer/>

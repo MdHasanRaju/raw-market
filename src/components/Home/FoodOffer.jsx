@@ -51,15 +51,33 @@ const FoodOffer = () => {
           </Box>
         </Grid>
 
-        <Grid width="50%" md={6}>
-          <Box sx={{ position: "relative", }}>
+        <Grid width="50%" item md={6}>
+          <Box sx={{ position: "relative" }}>
             <Box
               sx={{ width: "100%" }}
               component="img"
               alt="video banner image"
               src={videoBanner}
             ></Box>
-            <Typography sx={{position:"absolute", top:"30%", right:"40%", color:"green", fontWeight:'bold'}} variant="h4">FRESH <br /><Typography variant='body1' color="black" sx={{fontSize:25,ml:3, fontWeight:"light"}}>farm</Typography></Typography>
+            <Typography
+              sx={{
+                position: "absolute",
+                top: "30%",
+                right: "40%",
+                color: "green",
+                fontWeight: "bold",
+              }}
+              variant="h4"
+            >
+              FRESH <br />
+              <Typography
+                variant="body1"
+                color="black"
+                sx={{ fontSize: 25, ml: 3, fontWeight: "light" }}
+              >
+                farm
+              </Typography>
+            </Typography>
             <Box
               sx={{
                 bgcolor: "green",
@@ -78,7 +96,7 @@ const FoodOffer = () => {
               <Link to="/https://www.youtube.com/watch?v=0etCKCAsImI">
                 <i
                   style={{ fontSize: "40px", color: "orange" }}
-                  class="fa-solid fa-play"
+                  className="fa-solid fa-play"
                 ></i>
               </Link>
             </Box>

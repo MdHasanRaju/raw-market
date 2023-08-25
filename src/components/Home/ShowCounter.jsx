@@ -59,7 +59,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
               color="white"
             >
               <Typography variant="h5">DAY</Typography>
-              <Typography variant="h6" sx={days <=3 && {color:'red'}}>{days}</Typography>
+              <Typography variant="h6" sx={days <=3 ? {color:'red'} : {}}>{days}</Typography>
             </Box>
             <Typography variant="body1" sx={{ fontSize: 24 }}>
               :
