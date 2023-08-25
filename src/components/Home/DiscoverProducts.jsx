@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import coconut from "../../assets/products/coconut.jpg";
 import apple from "../../assets/products/apple.jpg";
 import pineapple from "../../assets/products/pineapple.jpg";
@@ -16,6 +16,7 @@ const productItems = [
     ratings: 4,
     link: "https://best-hospitals-in-bangladesh.web.app/",
     image: coconut,
+    price: 72,
     category: "fruits",
     description: "This is created by react JS. it is one of my assignments.",
   },
@@ -25,6 +26,7 @@ const productItems = [
     ratings: 4,
     link: "https://explore-new-worlds-with-us.web.app/",
     image: pineapple,
+    price: 85,
     category: "fruits",
     description: "This is created by React. it is one of my assignments.",
   },
@@ -34,6 +36,7 @@ const productItems = [
     ratings: 4,
     link: "https://assignment-12-76cbb.web.app/",
     image: tomato,
+    price: 69,
     category: "vegetables",
     description: "This is created by React. it is one of my assignments.",
   },
@@ -43,6 +46,7 @@ const productItems = [
     ratings: 4,
     link: "https://earnest-mandazi-16ad1a.netlify.app/",
     image: greenCapsicum,
+    price: 78,
     category: "vegetables",
     description: "This is created by react JS. it is one of my assignments.",
   },
@@ -52,6 +56,7 @@ const productItems = [
     ratings: 4,
     link: "https://final-space-website.web.app/",
     image: cabbage,
+    price: 60,
     category: "vegetables",
     description: "This is created by react JS. it is one of my assignments.",
   },
@@ -61,6 +66,7 @@ const productItems = [
     ratings: 4,
     link: "https://mdhasanraju.github.io/job-project-1/index.html",
     image: banana,
+    price: 50,
     category: "fruits",
     description: "This is created by JavaScript. it is one of my assignments.",
   },
@@ -70,6 +76,7 @@ const productItems = [
     ratings: 4,
     link: "https://mdhasanraju.github.io/project-2/",
     image: apple,
+    price: 40,
     category: "fruits",
     description: "This is created by HTML-CSS. it is one of my assignments.",
   },
@@ -79,6 +86,7 @@ const productItems = [
     ratings: 4,
     link: "https://mdhasanraju.github.io/job-project-1/second-page.html",
     image: vinegar,
+    price: 90,
     category: "juice",
     description: "This is created by JavaScript. it is one of my assignments.",
   },
@@ -100,20 +108,27 @@ const DiscoverProducts = () => {
     return item.category === itemStatus;
   });
 
+  const activeBtn = {
+    bgcolor: "green",
+    color: "white",
+  };
+
+  const active = (activeStatus) => {
+    return itemStatus === activeStatus ? activeBtn : {};
+  };
+
   return (
-    <Box sx={{ my: 6 }}>
-      <Typography sx={{ textAlign: "center", mb: 4 }} variant="h3">
-        Discover product
+    <Container sx={{ my: 6 }}>
+      <Typography sx={{ textAlign: "center", mb: 6 }} variant="h3">
+        Discover products
       </Typography>
-      <Box
-        onClick={() => setItems(productItems)}
-        sx={{ display: "flex", justifyContent: "center" }}
-      >
+      <Box sx={{ display: "flex", justifyContent: "center" }}>
         <Button
           onClick={() => handleFilterItem("")}
           variant="outlined"
           color="success"
           sx={{
+            ...active(""),
             mr: 3,
             "&:hover": {
               bgcolor: "green",
@@ -128,6 +143,7 @@ const DiscoverProducts = () => {
           variant="outlined"
           color="success"
           sx={{
+            ...active("vegetables"),
             mr: 3,
             "&:hover": {
               bgcolor: "green",
@@ -142,6 +158,7 @@ const DiscoverProducts = () => {
           variant="outlined"
           color="success"
           sx={{
+            ...active("fruits"),
             mr: 3,
             "&:hover": {
               bgcolor: "green",
@@ -152,17 +169,38 @@ const DiscoverProducts = () => {
           Fruits
         </Button>
       </Box>
-      <Grid container spacing={2}>
+      <Grid container spacing={2} sx={{ mt: 3, mb:8 }}>
         {products?.map((item) => {
-          const { title, image, ratings, category, id } = item;
+          const { title, image, price, ratings, category, id } = item;
           return (
             <Grid key={id} item md={3}>
-              <Box component="span">{title}</Box>
+              <Box sx={{}}>
+                <Box
+                  component="img"
+                  height="200px"
+                  width="100%"
+                  alt="product image"
+                  src={image}
+                />
+                <Typography
+                  variant="body1"
+                  sx={{ textAlign: "center", color: "green" }}
+                >
+                  {title}
+                </Typography>
+                <Typography variant="subtitle2" sx={{textAlign:"center"}}>Rating: {ratings}</Typography>
+                <Typography
+                  variant="subtitle1"
+                  sx={{ textAlign: "center", color: "black" }}
+                >
+                  €{price} <Box component="del">90.00</Box> <Box component="ins">New</Box>!
+                </Typography>
+              </Box>
             </Grid>
           );
         })}
       </Grid>
-    </Box>
+    </Container>
   );
 };
 
