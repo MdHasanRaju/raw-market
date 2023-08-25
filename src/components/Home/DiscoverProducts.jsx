@@ -119,7 +119,7 @@ const DiscoverProducts = () => {
 
   return (
     <Container sx={{ my: 6 }}>
-      <Typography sx={{ textAlign: "center", mb: 6 }} variant="h5">
+      <Typography sx={{ textAlign: "center", mb: 6 }} variant="h3">
         Discover products
       </Typography>
       <Box sx={{ display: "flex", justifyContent: "center" }}>
