@@ -170,8 +170,8 @@ const DiscoverProducts = () => {
         </Button>
       </Box>
       <Grid container spacing={2} sx={{ mt: 3, mb:8 }}>
-        {products?.map((item) => {
-          const { title, image, price, ratings, category, id } = item;
+        {products?.map((product) => {
+          const { title, image, price, ratings, id } = product;
           return (
             <Grid key={id} item md={3}>
               <Box sx={{}}>
