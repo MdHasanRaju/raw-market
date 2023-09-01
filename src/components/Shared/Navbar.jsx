@@ -21,7 +21,6 @@ const Navbar = () => {
     setAnchorElNav(event.currentTarget);
   };
 
-  
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
   };
@@ -35,11 +34,15 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#fff", mx:0  }}>
+    <AppBar position="static" sx={{ backgroundColor: "#fff", mx: 0 }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <LocalMall
-            sx={{ display: { xs: "none", md: "flex" }, mr: 1, color: "#232323" }}
+            sx={{
+              display: { xs: "none", md: "flex" },
+              mr: 1,
+              color: "#232323",
+            }}
           />
           <Typography
             variant="h6"
@@ -68,7 +71,7 @@ const Navbar = () => {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon />
+              <MenuIcon sx={{color:'black'}} />
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -156,10 +159,7 @@ const Navbar = () => {
               textDecoration: "none",
             }}
           >
-            <Link
-              state={{ textDecoration: "none", color: "white" }}
-              to="/"
-            >
+            <Link state={{ textDecoration: "none", color: "white" }} to="/">
               Bazar
             </Link>
           </Typography>
@@ -238,7 +238,8 @@ const Navbar = () => {
               </IconButton>
             </Tooltip>
             <Menu
-              sx={{ mt: "45px" }}
+              disableScrollLock={true}
+              sx={{ mt: "45px", pr: 0 }}
               id="menu-appbar"
               anchorEl={anchorElUser}
               anchorOrigin={{

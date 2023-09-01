@@ -130,6 +130,7 @@ const DiscoverProducts = () => {
           sx={{
             ...active(""),
             mr: 3,
+            
             "&:hover": {
               bgcolor: "green",
               color: "white",
