@@ -1,7 +1,7 @@
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import img1 from "../../assets/Products/vegist-image (1).webp";
-import CustomButton from "../Shared/CustomButtons/CustomButton"; 
+import CustomButton from "../Shared/CustomButton"; 
 const Store = () => {
   return (
     <Box sx={{ bgcolor: "#F4FFF0", py: 10 }}>

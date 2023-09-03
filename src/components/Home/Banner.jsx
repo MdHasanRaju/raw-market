@@ -1,20 +1,20 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 import "./Banner.css";
 
 // import required modules
-import { Pagination, Navigation, Autoplay } from "swiper/modules";
-import { Box, Button, Typography } from "@mui/material";
-import vegetables from "../../assets/banners/banner-vegetables.jpg";
+import { Box, Typography } from "@mui/material";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import fruits from "../../assets/banners/banner-fruits.jpg";
 import juice from "../../assets/banners/banner-juice.jpg";
-import CustomButton from "../Shared/CustomButtons/CustomButton";
+import vegetables from "../../assets/banners/banner-vegetables.jpg";
+import CustomButton from "../Shared/CustomButton";
 
 const Banner = () => {
   return (
@@ -40,8 +40,7 @@ const Banner = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "start",
-              backgroundImage: `url(${vegetables})`,
-              backgroundPosition: "center",
+              backgroundImage: `url(${vegetables})`, 
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
               backgroundPosition: {
@@ -82,9 +81,7 @@ const Banner = () => {
             sx={{
               display: "flex",
               alignItems: "center",
-              justifyContent: "start",
-              // }}
-              // style={{
+              justifyContent: "start", 
               backgroundImage: `url(${fruits})`,
               backgroundPosition: "center",
               backgroundSize: "cover",
@@ -131,9 +128,7 @@ const Banner = () => {
             sx={{
               display: "flex",
               alignItems: "center",
-              justifyContent: "start",
-              // }}
-              // style={{
+              justifyContent: "start", 
               backgroundImage: `url(${juice})`,
               backgroundPosition: "center",
               backgroundSize: "cover",

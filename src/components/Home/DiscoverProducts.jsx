@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { Box, Button, Container, Grid, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Container,
+  Grid,
+  Rating,
+  Stack,
+  Typography,
+} from "@mui/material";
 import coconut from "../../assets/products/coconut.jpg";
 import apple from "../../assets/products/apple.jpg";
 import pineapple from "../../assets/products/pineapple.jpg";
@@ -13,7 +21,7 @@ const productItems = [
   {
     id: 1,
     title: "Fresh Coconut",
-    ratings: 4,
+    ratings: 3.5,
     link: "https://best-hospitals-in-bangladesh.web.app/",
     image: coconut,
     price: 72,
@@ -23,7 +31,7 @@ const productItems = [
   {
     id: 2,
     title: "Fresh Pineapple",
-    ratings: 4,
+    ratings: 5,
     link: "https://explore-new-worlds-with-us.web.app/",
     image: pineapple,
     price: 85,
@@ -33,7 +41,7 @@ const productItems = [
   {
     id: 3,
     title: "Fresh Tomato",
-    ratings: 4,
+    ratings: 2.5,
     link: "https://assignment-12-76cbb.web.app/",
     image: tomato,
     price: 69,
@@ -43,7 +51,7 @@ const productItems = [
   {
     id: 4,
     title: "Fresh Capsicum",
-    ratings: 4,
+    ratings: 6,
     link: "https://earnest-mandazi-16ad1a.netlify.app/",
     image: greenCapsicum,
     price: 78,
@@ -53,7 +61,7 @@ const productItems = [
   {
     id: 5,
     title: "Fresh Cabbage",
-    ratings: 4,
+    ratings: 3.5,
     link: "https://final-space-website.web.app/",
     image: cabbage,
     price: 60,
@@ -63,7 +71,7 @@ const productItems = [
   {
     id: 6,
     title: "Fresh Banana",
-    ratings: 4,
+    ratings: 3,
     link: "https://mdhasanraju.github.io/job-project-1/index.html",
     image: banana,
     price: 50,
@@ -83,7 +91,7 @@ const productItems = [
   {
     id: 8,
     title: "Fresh Juice",
-    ratings: 4,
+    ratings: 2.5,
     link: "https://mdhasanraju.github.io/job-project-1/second-page.html",
     image: vinegar,
     price: 90,
@@ -130,7 +138,7 @@ const DiscoverProducts = () => {
           sx={{
             ...active(""),
             mr: 3,
-            
+
             "&:hover": {
               bgcolor: "green",
               color: "white",
@@ -190,13 +198,21 @@ const DiscoverProducts = () => {
                   {title}
                 </Typography>
                 <Typography variant="subtitle2" sx={{ textAlign: "center" }}>
-                  Rating: {ratings}
+                  <Stack sx={{ alignItems: "center" }} spacing={1}>
+                    <Rating
+                      size="medium"
+                      name="half-rating-read"
+                      defaultValue={ratings}
+                      precision={0.5}
+                      readOnly
+                    />
+                  </Stack>
                 </Typography>
                 <Typography
                   variant="subtitle1"
                   sx={{ textAlign: "center", color: "black" }}
                 >
-                  €{price} <Box component="del">90.00</Box>{" "}
+                  €{price} <Box component="del">90.00</Box>
                   <Box component="ins">New</Box>!
                 </Typography>
               </Box>
