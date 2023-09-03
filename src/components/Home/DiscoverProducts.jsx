@@ -25,6 +25,7 @@ const productItems = [
     link: "https://best-hospitals-in-bangladesh.web.app/",
     image: coconut,
     price: 72,
+    prevPrice: 80,
     category: "fruits",
     description: "This is created by react JS. it is one of my assignments.",
   },
@@ -35,6 +36,7 @@ const productItems = [
     link: "https://explore-new-worlds-with-us.web.app/",
     image: pineapple,
     price: 85,
+    prevPrice: 90,
     category: "fruits",
     description: "This is created by React. it is one of my assignments.",
   },
@@ -45,6 +47,7 @@ const productItems = [
     link: "https://assignment-12-76cbb.web.app/",
     image: tomato,
     price: 69,
+    prevPrice: 75,
     category: "vegetables",
     description: "This is created by React. it is one of my assignments.",
   },
@@ -55,6 +58,7 @@ const productItems = [
     link: "https://earnest-mandazi-16ad1a.netlify.app/",
     image: greenCapsicum,
     price: 78,
+    prevPrice: 80,
     category: "vegetables",
     description: "This is created by react JS. it is one of my assignments.",
   },
@@ -65,6 +69,7 @@ const productItems = [
     link: "https://final-space-website.web.app/",
     image: cabbage,
     price: 60,
+    prevPrice: 70,
     category: "vegetables",
     description: "This is created by react JS. it is one of my assignments.",
   },
@@ -75,6 +80,7 @@ const productItems = [
     link: "https://mdhasanraju.github.io/job-project-1/index.html",
     image: banana,
     price: 50,
+    prevPrice: 65,
     category: "fruits",
     description: "This is created by JavaScript. it is one of my assignments.",
   },
@@ -85,6 +91,7 @@ const productItems = [
     link: "https://mdhasanraju.github.io/project-2/",
     image: apple,
     price: 40,
+    prevPrice: 50,
     category: "fruits",
     description: "This is created by HTML-CSS. it is one of my assignments.",
   },
@@ -95,6 +102,7 @@ const productItems = [
     link: "https://mdhasanraju.github.io/job-project-1/second-page.html",
     image: vinegar,
     price: 90,
+    prevPrice: 95,
     category: "juice",
     description: "This is created by JavaScript. it is one of my assignments.",
   },
@@ -180,7 +188,7 @@ const DiscoverProducts = () => {
       </Box>
       <Grid container spacing={2} sx={{ mt: 3, mb: 8 }}>
         {products?.map((product) => {
-          const { title, image, price, ratings, id } = product;
+          const { title, image, price, prevPrice, ratings, id } = product;
           return (
             <Grid key={id} item md={3} sm={4} xs={6}>
               <Box>
@@ -212,8 +220,8 @@ const DiscoverProducts = () => {
                   variant="subtitle1"
                   sx={{ textAlign: "center", color: "black" }}
                 >
-                  €{price} <Box component="del">90.00</Box>
-                  <Box component="ins">New</Box>!
+                  €{price} <Box component="del">{prevPrice}.00</Box>
+                  <Box component="ins"> New</Box>!
                 </Typography>
               </Box>
             </Grid>
