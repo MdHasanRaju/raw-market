@@ -4,6 +4,19 @@ import { Button, Grid, Typography } from "@mui/material";
 import offerImg from "../../assets/banners/offer-image.jpg";
 import videoBanner from "../../assets/banners/video-banner.jpg";
 import { Link } from "react-router-dom";
+import { keyframes } from "@mui/system";
+
+const spin = keyframes`
+  from {
+     
+    box-shadow: 0 0 0 45px rgba(232, 76, 61, 0)
+  }
+  to {
+    
+    box-shadow: 0 0 0 45px rgba(232, 76, 61, 0)
+  }
+`;
+
 
 const FoodOffer = () => {
   return (
@@ -91,6 +104,7 @@ const FoodOffer = () => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                animation: `${spin} 1s infinite ease`,
               }}
             >
               <Link to="/https://www.youtube.com/watch?v=0etCKCAsImI">

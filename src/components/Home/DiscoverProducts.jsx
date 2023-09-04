@@ -3,11 +3,13 @@ import {
   Box,
   Button,
   Container,
+  Fade,
   Grid,
   Rating,
   Stack,
   Typography,
 } from "@mui/material";
+import Slide from "@mui/material/Slide";
 import coconut from "../../assets/products/coconut.jpg";
 import apple from "../../assets/products/apple.jpg";
 import pineapple from "../../assets/products/pineapple.jpg";
@@ -190,15 +192,40 @@ const DiscoverProducts = () => {
         {products?.map((product) => {
           const { title, image, price, prevPrice, ratings, id } = product;
           return (
-            <Grid key={id} item md={3} sm={4} xs={6}>
-              <Box>
+            <Grid key={id} item md={3} sm={4} sx={{ pl: 0 }} xs={6}>
+              <Box
+                sx={{
+                  width: "100%",
+                  position: "relative",
+                  cursor: "pointer",
+                  "&:hover > Button": {
+                    zIndex: 10,
+                    display: "block",
+                    opacity: 1,
+                    transform: "translateY(-10%)",
+                  },
+                }}
+              >
                 <Box
                   component="img"
                   height="200px"
                   sx={{ width: { md: "100%", sm: "100%", xs: "150px" } }}
                   alt="product image"
                   src={image}
-                />
+                />{" "}
+                <Button
+                  variant="contained"
+                  sx={{
+                    bottom: 40,
+                    width: "100%",
+                    transition: ".5s",
+                    opacity: 0,
+                    transform: "translateY(10%)",
+                  }}
+                  color="success"
+                >
+                  Shop Now
+                </Button>
                 <Typography
                   variant="body1"
                   sx={{ textAlign: "center", color: "green" }}
@@ -208,7 +235,7 @@ const DiscoverProducts = () => {
                 <Typography variant="subtitle2" sx={{ textAlign: "center" }}>
                   <Stack sx={{ alignItems: "center" }} spacing={1}>
                     <Rating
-                      size="medium"
+                      size="small"
                       name="half-rating-read"
                       defaultValue={ratings}
                       precision={0.5}
@@ -220,9 +247,10 @@ const DiscoverProducts = () => {
                   variant="subtitle1"
                   sx={{ textAlign: "center", color: "black" }}
                 >
-                  €{price} <Box component="del">{prevPrice}.00</Box>
+                  €{price}.00 <Box component="del">{prevPrice}.00</Box>
                   <Box component="ins"> New</Box>!
                 </Typography>
+                <></>
               </Box>
             </Grid>
           );
