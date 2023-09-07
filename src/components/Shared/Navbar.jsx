@@ -12,6 +12,9 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import { Link, NavLink } from "react-router-dom";
 import { LocalMall } from "@mui/icons-material";
+import logo from "../../assets/icon/bazar.png";
+import logo2 from "../../assets/icon/logo.png";
+import logo3 from "../../assets/icon/bazar2.png";
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -37,18 +40,19 @@ const Navbar = () => {
     <AppBar position="static" sx={{ backgroundColor: "#fff", mx: 0 }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <LocalMall
+          {/* <LocalMall
             sx={{
               display: { xs: "none", md: "flex" },
               mr: 1,
               color: "#82ae46",
             }}
-          />
+          /> */}
+
           <Typography
             variant="h6"
             noWrap
             sx={{
-              mr: 2,
+              // mr: 2,
               display: { xs: "none", md: "flex" },
               fontFamily: "monospace",
               fontWeight: 700,
@@ -57,9 +61,39 @@ const Navbar = () => {
             }}
           >
             <Link style={{ color: "#82ae46", textDecoration: "none" }} to="/">
-              GREENSHOP
+              <Box
+                noWrap
+                sx={{
+                  width: "auto",
+                  height: 70,
+                  display: "flex",
+                }}
+                component="img"
+                alt="logo"
+                src={logo3}
+              />
             </Link>
           </Typography>
+          {/* <Link
+            style={{
+              color: "#82ae46",
+              textDecoration: "none",
+              marginRight: "2px",
+            }}
+            to="/"
+          >
+            <Box
+              noWrap
+              sx={{ 
+                width: "auto",
+                height: 64,
+                display: { xs: "none", md: "flex" },
+              }}
+              component="img"
+              alt="logo"
+              src={logo}
+            />
+          </Link> */}
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -96,7 +130,7 @@ const Navbar = () => {
                     style={({ isActive }) => {
                       return {
                         fontWeight: isActive ? "bold" : "",
-                        color: isActive ? "#82ae46" : "#232323",
+                        color: isActive ? "#228b22" : "#232323",
                         textDecoration: "none",
                       };
                     }}
@@ -107,12 +141,12 @@ const Navbar = () => {
                 </Typography>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>
-                <Typography sx={{ color: "#82ae46" }} textAlign="center">
+                <Typography sx={{ color: "#228b22" }} textAlign="center">
                   <NavLink
                     style={({ isActive }) => {
                       return {
                         fontWeight: isActive ? "bold" : "",
-                        color: isActive ? "#82ae46" : "#232323",
+                        color: isActive ? "#228b22" : "#232323",
                         textDecoration: "none",
                       };
                     }}
@@ -123,12 +157,12 @@ const Navbar = () => {
                 </Typography>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>
-                <Typography sx={{ color: "#82ae46" }} textAlign="center">
+                <Typography sx={{ color: "#228b22" }} textAlign="center">
                   <NavLink
                     style={({ isActive }) => {
                       return {
                         fontWeight: isActive ? "bold" : "",
-                        color: isActive ? "#82ae46" : "#232323",
+                        color: isActive ? "#228b22" : "#232323",
                         textDecoration: "none",
                       };
                     }}
@@ -170,7 +204,7 @@ const Navbar = () => {
                   style={({ isActive }) => {
                     return {
                       fontWeight: isActive ? "bold" : "",
-                      color: isActive ? "#82ae46" : "#232323",
+                      color: isActive ? "green" : "#232323",
                       textDecoration: "none",
                     };
                   }}
@@ -186,7 +220,7 @@ const Navbar = () => {
                   style={({ isActive }) => {
                     return {
                       fontWeight: isActive ? "bold" : "",
-                      color: isActive ? "#82ae46" : "#232323",
+                      color: isActive ? "#228b22" : "#232323",
                       textDecoration: "none",
                     };
                   }}
@@ -202,7 +236,7 @@ const Navbar = () => {
                   style={({ isActive }) => {
                     return {
                       fontWeight: isActive ? "bold" : "",
-                      color: isActive ? "#82ae46" : "#232323",
+                      color: isActive ? "#228b22" : "#232323",
                       textDecoration: "none",
                     };
                   }}
@@ -218,7 +252,7 @@ const Navbar = () => {
                   style={({ isActive }) => {
                     return {
                       fontWeight: isActive ? "bold" : "",
-                      color: isActive ? "#82ae46" : "#232323",
+                      color: isActive ? "#228b22" : "#232323",
                       textDecoration: "none",
                     };
                   }}

@@ -116,9 +116,9 @@ const DiscoverProducts = () => {
   const [limit, setLimit] = useState(4);
   const [page, setPage] = useState(1);
 
-  const totalProducts = productItems.length;
-  const eachPageLimit =  totalProducts / 2;
-
+  // const indexOfLastTodo = limit * limit;
+  // const indexOfFirstTodo = indexOfLastTodo - limit;
+  // const currentTodos = todos.slice(indexOfFirstTodo, indexOfLastTodo);
 
   const handleFilterItem = (category) => {
     setItemStatus(category);
@@ -228,7 +228,7 @@ const DiscoverProducts = () => {
                 />{" "}
                 <Button
                   variant="contained"
-                  sx={{ 
+                  sx={{
                     width: "100%",
                     transition: ".5s",
                     opacity: 0,
@@ -244,7 +244,10 @@ const DiscoverProducts = () => {
                 >
                   {title}
                 </Typography>
-                <Typography variant="subtitle2" sx={{ textAlign: "center", my:1 }}>
+                <Typography
+                  variant="subtitle2"
+                  sx={{ textAlign: "center", my: 1 }}
+                >
                   <Stack sx={{ alignItems: "center" }} spacing={1}>
                     <Rating
                       size="small"
@@ -257,7 +260,7 @@ const DiscoverProducts = () => {
                 </Typography>
                 <Typography
                   variant="subtitle1"
-                  sx={{ textAlign: "center", color: "black",color:'green' }}
+                  sx={{ textAlign: "center", color: "black", color: "green" }}
                 >
                   €{price}.00 <Box component="del">{prevPrice}.00</Box>
                   <Box component="ins"> New</Box>!
