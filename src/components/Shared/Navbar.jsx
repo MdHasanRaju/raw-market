@@ -41,7 +41,7 @@ const Navbar = () => {
             sx={{
               display: { xs: "none", md: "flex" },
               mr: 1,
-              color: "#232323",
+              color: "#82ae46",
             }}
           />
           <Typography
@@ -52,13 +52,12 @@ const Navbar = () => {
               display: { xs: "none", md: "flex" },
               fontFamily: "monospace",
               fontWeight: 700,
-              letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
             }}
           >
-            <Link style={{ color: "#232323", textDecoration: "none" }} to="/">
-              Bazar
+            <Link style={{ color: "#82ae46", textDecoration: "none" }} to="/">
+              GREENSHOP
             </Link>
           </Typography>
 
@@ -71,7 +70,7 @@ const Navbar = () => {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon sx={{color:'black'}} />
+              <MenuIcon sx={{ color: "black" }} />
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -97,7 +96,7 @@ const Navbar = () => {
                     style={({ isActive }) => {
                       return {
                         fontWeight: isActive ? "bold" : "",
-                        color: isActive ? "red" : "#232323",
+                        color: isActive ? "#82ae46" : "#232323",
                         textDecoration: "none",
                       };
                     }}
@@ -108,12 +107,12 @@ const Navbar = () => {
                 </Typography>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>
-                <Typography sx={{ color: "red" }} textAlign="center">
+                <Typography sx={{ color: "#82ae46" }} textAlign="center">
                   <NavLink
                     style={({ isActive }) => {
                       return {
                         fontWeight: isActive ? "bold" : "",
-                        color: isActive ? "red" : "#232323",
+                        color: isActive ? "#82ae46" : "#232323",
                         textDecoration: "none",
                       };
                     }}
@@ -124,12 +123,12 @@ const Navbar = () => {
                 </Typography>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>
-                <Typography sx={{ color: "red" }} textAlign="center">
+                <Typography sx={{ color: "#82ae46" }} textAlign="center">
                   <NavLink
                     style={({ isActive }) => {
                       return {
                         fontWeight: isActive ? "bold" : "",
-                        color: isActive ? "red" : "#232323",
+                        color: isActive ? "#82ae46" : "#232323",
                         textDecoration: "none",
                       };
                     }}
@@ -171,7 +170,7 @@ const Navbar = () => {
                   style={({ isActive }) => {
                     return {
                       fontWeight: isActive ? "bold" : "",
-                      color: isActive ? "red" : "#232323",
+                      color: isActive ? "#82ae46" : "#232323",
                       textDecoration: "none",
                     };
                   }}
@@ -187,7 +186,7 @@ const Navbar = () => {
                   style={({ isActive }) => {
                     return {
                       fontWeight: isActive ? "bold" : "",
-                      color: isActive ? "red" : "#232323",
+                      color: isActive ? "#82ae46" : "#232323",
                       textDecoration: "none",
                     };
                   }}
@@ -203,7 +202,7 @@ const Navbar = () => {
                   style={({ isActive }) => {
                     return {
                       fontWeight: isActive ? "bold" : "",
-                      color: isActive ? "red" : "#232323",
+                      color: isActive ? "#82ae46" : "#232323",
                       textDecoration: "none",
                     };
                   }}
@@ -219,7 +218,7 @@ const Navbar = () => {
                   style={({ isActive }) => {
                     return {
                       fontWeight: isActive ? "bold" : "",
-                      color: isActive ? "red" : "#232323",
+                      color: isActive ? "#82ae46" : "#232323",
                       textDecoration: "none",
                     };
                   }}

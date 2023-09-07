@@ -113,6 +113,12 @@ const productItems = [
 const DiscoverProducts = () => {
   const [items, setItems] = useState(productItems);
   const [itemStatus, setItemStatus] = useState("");
+  const [limit, setLimit] = useState(4);
+  const [page, setPage] = useState(1);
+
+  const totalProducts = productItems.length;
+  const eachPageLimit =  totalProducts / 2;
+
 
   const handleFilterItem = (category) => {
     setItemStatus(category);
@@ -196,31 +202,37 @@ const DiscoverProducts = () => {
               <Box
                 sx={{
                   width: "100%",
+                  bgcolor: "white",
                   position: "relative",
                   cursor: "pointer",
+                  border: "1px solid transparent",
+                  borderRadius: "2px",
                   "&:hover > Button": {
                     zIndex: 10,
-                    display: "block",
                     opacity: 1,
-                    transform: "translateY(-10%)",
+                    display: "block",
+                    transform: "translateY(-20%)",
                   },
                 }}
               >
                 <Box
                   component="img"
                   height="200px"
-                  sx={{ width: { md: "100%", sm: "100%", xs: "150px" } }}
+                  sx={{
+                    width: { md: "100%", sm: "100%", xs: "150px" },
+                    border: "1px solid transparent",
+                    borderRadius: "5px",
+                  }}
                   alt="product image"
                   src={image}
                 />{" "}
                 <Button
                   variant="contained"
-                  sx={{
-                    bottom: 40,
+                  sx={{ 
                     width: "100%",
                     transition: ".5s",
                     opacity: 0,
-                    transform: "translateY(10%)",
+                    transform: "translateY(20%)",
                   }}
                   color="success"
                 >
@@ -232,7 +244,7 @@ const DiscoverProducts = () => {
                 >
                   {title}
                 </Typography>
-                <Typography variant="subtitle2" sx={{ textAlign: "center" }}>
+                <Typography variant="subtitle2" sx={{ textAlign: "center", my:1 }}>
                   <Stack sx={{ alignItems: "center" }} spacing={1}>
                     <Rating
                       size="small"
@@ -245,7 +257,7 @@ const DiscoverProducts = () => {
                 </Typography>
                 <Typography
                   variant="subtitle1"
-                  sx={{ textAlign: "center", color: "black" }}
+                  sx={{ textAlign: "center", color: "black",color:'green' }}
                 >
                   €{price}.00 <Box component="del">{prevPrice}.00</Box>
                   <Box component="ins"> New</Box>!

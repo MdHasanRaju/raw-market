@@ -40,7 +40,7 @@ const Banner = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "start",
-              backgroundImage: `url(${vegetables})`, 
+              backgroundImage: `url(${vegetables})`,
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
               backgroundPosition: {
@@ -81,7 +81,7 @@ const Banner = () => {
             sx={{
               display: "flex",
               alignItems: "center",
-              justifyContent: "start", 
+              justifyContent: "start",
               backgroundImage: `url(${fruits})`,
               backgroundPosition: "center",
               backgroundSize: "cover",
@@ -106,7 +106,7 @@ const Banner = () => {
                   "&:hover": {
                     outline: "none",
                     bgcolor: "green",
-                    color: "white",
+                    color: "#ee6c4d",
                   },
                 }}
                 color="success"
@@ -114,8 +114,8 @@ const Banner = () => {
                 Shop Now
               </Button> */}
               <CustomButton
-                color={"green"}
-                bgcolor={"green"}
+                color="success"
+                bgcolor={"success"}
                 outlineColor={"success"}
               >
                 shop now
@@ -128,7 +128,7 @@ const Banner = () => {
             sx={{
               display: "flex",
               alignItems: "center",
-              justifyContent: "start", 
+              justifyContent: "start",
               backgroundImage: `url(${juice})`,
               backgroundPosition: "center",
               backgroundSize: "cover",

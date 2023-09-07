@@ -10,7 +10,7 @@ import DiscoverProducts from "../../components/Home/DiscoverProducts";
 
 const Home = () => {
   return (
-    <Box sx={{bgcolor:'#E5FFDA'}}> 
+    <Box sx={{bgcolor:'#fff'}}> 
       <Banner />
       <FoodOffer/>
       <DiscoverProducts/>

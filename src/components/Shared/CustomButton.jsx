@@ -5,8 +5,7 @@ const CustomButton = ({ color, bgcolor, outlineColor, children }) => {
     <Button
       variant="outlined"
       color={outlineColor}
-      sx={{
-        color: color,
+      sx={{ 
         "&:hover": {
           outline: "none",
           bgcolor: bgcolor,
