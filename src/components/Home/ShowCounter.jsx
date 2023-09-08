@@ -1,10 +1,10 @@
 import React from "react"; 
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Container, Typography } from "@mui/material";
 import timerBanner from "../../assets/banners/timer-banner.jpg";
 
 const ShowCounter = ({ days, hours, minutes, seconds }) => {
   return (
-    <Box
+    <Container 
       sx={{
         display: "flex",
         alignItems: "center",
@@ -24,6 +24,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
           // xs: "100vh",
         },
         width: "100%",
+        
       }} 
     >
       <Box sx={{p:4}}>
@@ -178,7 +179,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
           <p>:</p>
           <DateTimeDisplay value={seconds} type={'Seconds'} isDanger={false} />
       </a> */}
-    </Box>
+    </Container>
   );
 };
 

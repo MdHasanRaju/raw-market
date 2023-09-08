@@ -1,15 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Box,
   Button,
-  Container,
-  Fade,
+  Container, 
   Grid,
   Rating,
   Stack,
   Typography,
 } from "@mui/material";
-import Slide from "@mui/material/Slide";
 import coconut from "../../assets/products/coconut.jpg";
 import apple from "../../assets/products/apple.jpg";
 import pineapple from "../../assets/products/pineapple.jpg";
@@ -18,6 +16,8 @@ import vinegar from "../../assets/products/vinegar.jpg";
 import tomato from "../../assets/products/tomato.jpg";
 import cabbage from "../../assets/products/cabbage.jpg";
 import greenCapsicum from "../../assets/products/greenCapsicum.jpg";
+import ReactPaginate from "react-paginate";
+import ReactDOM from "react-dom";
 
 const productItems = [
   {
@@ -113,12 +113,6 @@ const productItems = [
 const DiscoverProducts = () => {
   const [items, setItems] = useState(productItems);
   const [itemStatus, setItemStatus] = useState("");
-  const [limit, setLimit] = useState(4);
-  const [page, setPage] = useState(1);
-
-  // const indexOfLastTodo = limit * limit;
-  // const indexOfFirstTodo = indexOfLastTodo - limit;
-  // const currentTodos = todos.slice(indexOfFirstTodo, indexOfLastTodo);
 
   const handleFilterItem = (category) => {
     setItemStatus(category);
@@ -140,6 +134,24 @@ const DiscoverProducts = () => {
   const active = (activeStatus) => {
     return itemStatus === activeStatus ? activeBtn : {};
   };
+
+  const [currentItems, setCurrentItems] = useState(null);
+  const [pageCount, setPageCount] = useState(0);
+  const [itemOffset, setItemOffset] = useState(0);
+  const itemsPerPage = 6;
+
+  useEffect(() => {
+    const endOffset = itemOffset + itemsPerPage;
+    setCurrentItems(products.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(products.length / itemsPerPage));
+  },[itemOffset, itemsPerPage, products])
+
+  const handlePageClick = (event) => {
+    const newOffset = (event.selected * itemsPerPage) % products.length;
+    setItemOffset(newOffset);
+  };
+
+  
 
   return (
     <Container sx={{ my: 6 }}>
@@ -195,7 +207,7 @@ const DiscoverProducts = () => {
         </Button>
       </Box>
       <Grid container spacing={2} sx={{ mt: 3, mb: 8 }}>
-        {products?.map((product) => {
+        {currentItems?.map((product) => {
           const { title, image, price, prevPrice, ratings, id } = product;
           return (
             <Grid key={id} item md={3} sm={4} sx={{ pl: 0 }} xs={6}>
@@ -271,6 +283,17 @@ const DiscoverProducts = () => {
           );
         })}
       </Grid>
+      <Box>
+        <ReactPaginate
+          breakLabel="..."
+          nextLabel="next >"
+          onPageChange={handlePageClick}
+          pageRangeDisplayed={3}
+          pageCount={pageCount}
+          previousLabel="< previous"
+          renderOnZeroPageCount={null}
+        />
+      </Box>
     </Container>
   );
 };

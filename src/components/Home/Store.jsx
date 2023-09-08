@@ -4,7 +4,7 @@ import img1 from "../../assets/Products/vegist-image (1).webp";
 import CustomButton from "../Shared/CustomButton"; 
 const Store = () => {
   return (
-    <Box sx={{ bgcolor: "#F4FFF0", py: 10 }}>
+    <Box sx={{ bgcolor: "#fff", py: 10 }}>
       <Container>
         <Grid container sx={{ justifyContent: "center", alignItems: "center" }}>
           <Grid item xs={12} sm={6} md={6}>

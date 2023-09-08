@@ -14,9 +14,9 @@ const Home = () => {
       <Banner />
       <FoodOffer/>
       <DiscoverProducts/>
-      <ExquisiteService />
       <Store />
       <OfferTimer/>
+      <ExquisiteService />
       <CompanyAdd />
     </Box>
   );

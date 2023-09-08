@@ -50,7 +50,7 @@ const Navbar = () => {
 
           <Typography
             variant="h6"
-            noWrap
+            nowrap="true"
             sx={{
               // mr: 2,
               display: { xs: "none", md: "flex" },
@@ -62,7 +62,7 @@ const Navbar = () => {
           >
             <Link style={{ color: "#82ae46", textDecoration: "none" }} to="/">
               <Box
-                noWrap
+                nowrap="true"
                 sx={{
                   width: "auto",
                   height: 70,
@@ -83,7 +83,7 @@ const Navbar = () => {
             to="/"
           >
             <Box
-              noWrap
+              nowrap="true"
               sx={{ 
                 width: "auto",
                 height: 64,
@@ -179,7 +179,7 @@ const Navbar = () => {
           />
           <Typography
             variant="h5"
-            noWrap
+            nowrap="true"
             sx={{
               mr: 2,
               textDecoration: "none",

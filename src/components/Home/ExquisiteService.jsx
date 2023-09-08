@@ -4,7 +4,7 @@ import middleBanner from "../../assets/banners/middle-banner.png";
 
 const ExquisiteService = () => {
   return (
-    <Box>
+    <Box my={12}>
       <Box>
         <Box>
           <Container>
@@ -13,11 +13,11 @@ const ExquisiteService = () => {
               sx={{
                 color: "green",
                 textAlign: "center",
-                pt: "20px",
-                pb: "10px",
+                mt: 8,
+                mb: 6,
               }}
             >
-              Exquisite service
+              EXQUISITE SERVICE
             </Typography>
 
             <Box sx={{ flexGrow: 1 }}>
@@ -75,7 +75,7 @@ const ExquisiteService = () => {
                   </Box>
                   <Box
                     sx={{
-                      mt: "20px",
+                      mt:4,
                       display: "flex",
                       justifyContent: "start",
                       alignItems: "center",
@@ -196,7 +196,7 @@ const ExquisiteService = () => {
                   </Box>
                   <Box
                     sx={{
-                      mt: "20px",
+                      mt:4,
                       display: "flex",
                       justifyContent: "start",
                       alignItems: "center",

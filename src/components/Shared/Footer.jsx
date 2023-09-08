@@ -10,10 +10,11 @@ import Paypal from "../Svg/Paypal";
 import MasterCard from "../Svg/MasterCard";
 import GooglePay from "../Svg/GooglePay";
 import AmericanExpress from "../Svg/AmericanExpress";
+// f6f6f6
 
 const Footer = () => {
   return (
-    <Box sx={{ backgroundColor: "#f6f6f6", color: "#6f6f6f", pt: 8, pb: 4 }}>
+    <Box sx={{ backgroundColor: "#fff", color: "#6f6f6f", pt: 8, pb: 4 }}>
       <Container>
         <Grid container>
           <Grid item xs={12} sm={12} md={3}>
@@ -226,29 +227,35 @@ const Footer = () => {
                 </Typography>
                 <Box>
                   <Typography variant="subtitle2">
-                    Subscribe to our newsletter <br /> to re ceive fashion store
+                    Subscribe to our newsletter <br /> to receive fashion store
                     news on new update.{" "}
                   </Typography>
                   <Box>
-                    <TextField
+                    <TextField style={{color:'white', backgroundColor:'black'}}
                       size="small"
                       id="standard-basic"
                       placeholder="example@gmail.com"
                       sx={{
                         mt: 3,
-                        bgcolor: "white",
+                        border: "1px solid transparent",
+                        borderRadius: 1, 
+                        bgcolor: "ThreeDHighlight",
                         "& ::placeholder": {
                           fontSize: 17,
+                          color: "white",
                         },
                         "& .MuiOutlinedInput-root": {
                           "& fieldset": {
                             border: "none",
+                            color: "white",
                           },
                           "&:hover fieldset": {
                             border: "none",
+                            color: "white",
                           },
                           "&.Mui-focused fieldset": {
                             border: "none",
+                            color: "white",
                           },
                         },
                       }}
@@ -258,7 +265,7 @@ const Footer = () => {
                             {/* <SearchIcon sx={{ color: "red" }} /> */}
                             <i
                               style={{
-                                color: "black",
+                                color: "gray",
                                 fontSize: 18,
                               }}
                               className="fa-solid fa-arrow-right"
