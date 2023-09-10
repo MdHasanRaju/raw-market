@@ -355,7 +355,7 @@ const DiscoverProducts = () => {
           breakLabel="..."
           nextLabel="next >"
           onPageChange={handlePageClick}
-          pageRangeDisplayed={3}
+          pageRangeDisplayed={2}
           pageCount={pageCount}
           previousLabel="< previous"
           renderOnZeroPageCount={null}
