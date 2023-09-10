@@ -18,8 +18,8 @@ function CompanyAdd() {
     <Box sx={{ bgcolor: "#F4FFF0", p: 1 }}>
       <Box>
         <Box>
-          <Typography sx={{ textAlign: "center", mt: 4 }} variant="h3">
-            Our Technology Partner
+          <Typography sx={{ textAlign: "center" , mt: 4 ,}} variant="h3">
+           OUR TECHNOLOGY PARTNER
           </Typography>
           <Typography sx={{ textAlign: "center", my: 1 }} variant="subtitle1">
             A 2023 GoTo study says that{" "}
