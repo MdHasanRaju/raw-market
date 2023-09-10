@@ -175,6 +175,28 @@ const productItems = [
     category: "juice",
     description: "This is created by JavaScript. it is one of my assignments.",
   },
+  {
+    id: 15,
+    title: "Fresh Juice",
+    ratings: 2.5,
+    link: "https://mdhasanraju.github.io/job-project-1/second-page.html",
+    image: vinegar,
+    price: 90,
+    prevPrice: 95,
+    category: "juice",
+    description: "This is created by JavaScript. it is one of my assignments.",
+  },
+  {
+    id: 16,
+    title: "Fresh Juice",
+    ratings: 2.5,
+    link: "https://mdhasanraju.github.io/job-project-1/second-page.html",
+    image: vinegar,
+    price: 90,
+    prevPrice: 95,
+    category: "juice",
+    description: "This is created by JavaScript. it is one of my assignments.",
+  },
 ];
 
 const DiscoverProducts = () => {
