@@ -291,9 +291,9 @@ const Navbar = () => {
                 <Typography textAlign="center">
                   <Link
                     style={{ color: "black", textDecoration: "none" }}
-                    to="/home"
+                    to="/login"
                   >
-                    Home
+                    Login
                   </Link>
                 </Typography>
               </MenuItem>
