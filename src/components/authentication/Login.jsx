@@ -1,13 +1,78 @@
-import { Typography } from '@mui/material';
-import React from 'react';
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+
+import { Button, Container, Grid, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
+
 
 const Login = () => {
-    return (
-        <div>
-            <h1>login page add</h1>
-          <Typography variant='h3'>Login </Typography>
-        </div>
-    );
-};
+  return (
+    <Box sx={{ bgcolor: "#fff", py: 10 }}>
+    <Container>
+    <Typography sx={{textAlign:'center'}} variant='h4'>Plages Login</Typography>
+           <Grid container >
+           <Grid item xs={12} sm={6} md={6}>
+           <form action="">
+        <Box sx={{display:'flex', flexWrap:'wrap', flexFlow:'column', gap:1}}>
+        <TextField
+          required
+          id="outlined-required"
+          label="Your Email"
+        />
+        <br />
+        <TextField
+          id="outlined-password-input"
+          label="Password"
+          type="password"
+          autoComplete="current-password"
+        />
+        <br />
+        <Button fullWidth variant="contained" color="success">
+        Submit
+      </Button>
+
+      </Box>
+        </form>
+        <Typography sx={{textAlign:'center'}}>Forget password? Reset password</Typography>
+        <Button fullWidth variant="contained" color="success">Google SignUp</Button>
+        <Typography sx={{textAlign:'center'}} variant='subtitle1'>Don't have an account? <Link to={'/register'}>Sign up</Link></Typography>
+           </Grid>
+           <Grid item xs={12} sm={6} md={6}></Grid>
+
+           </Grid>
+    </Container>
+    </Box>
+  );
+}
+
 
 export default Login;
+
+
+
+
+/* 
+
+
+  <form action="">
+        <Box sx={{display:'flex', flexWrap:'wrap', flexFlow:'column', gap:2}}>
+        <TextField
+          required
+          id="outlined-required"
+          label="Your Email"
+        />
+        <br />
+        <TextField
+          id="outlined-password-input"
+          label="Password"
+          type="password"
+          autoComplete="current-password"
+        />
+        <br />
+        <Button sx={{}} variant="contained" color="success">
+        Submit
+      </Button>
+      </Box>
+        </form>
+*/
