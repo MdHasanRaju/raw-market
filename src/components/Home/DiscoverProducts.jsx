@@ -18,6 +18,7 @@ import cabbage from "../../assets/products/cabbage.jpg";
 import greenCapsicum from "../../assets/products/greenCapsicum.jpg";
 import ReactPaginate from "react-paginate";
 import ReactDOM from "react-dom";
+import './DiscoverProducts.css';
 
 const productItems = [
   {
@@ -108,6 +109,72 @@ const productItems = [
     category: "juice",
     description: "This is created by JavaScript. it is one of my assignments.",
   },
+  {
+    id: 9,
+    title: "Fresh Juice",
+    ratings: 2.5,
+    link: "https://mdhasanraju.github.io/job-project-1/second-page.html",
+    image: vinegar,
+    price: 90,
+    prevPrice: 95,
+    category: "juice",
+    description: "This is created by JavaScript. it is one of my assignments.",
+  },
+  {
+    id: 10,
+    title: "Fresh Juice",
+    ratings: 2.5,
+    link: "https://mdhasanraju.github.io/job-project-1/second-page.html",
+    image: vinegar,
+    price: 90,
+    prevPrice: 95,
+    category: "juice",
+    description: "This is created by JavaScript. it is one of my assignments.",
+  },
+  {
+    id: 11,
+    title: "Fresh Juice",
+    ratings: 2.5,
+    link: "https://mdhasanraju.github.io/job-project-1/second-page.html",
+    image: vinegar,
+    price: 90,
+    prevPrice: 95,
+    category: "juice",
+    description: "This is created by JavaScript. it is one of my assignments.",
+  },
+  {
+    id: 12,
+    title: "Fresh Juice",
+    ratings: 2.5,
+    link: "https://mdhasanraju.github.io/job-project-1/second-page.html",
+    image: vinegar,
+    price: 90,
+    prevPrice: 95,
+    category: "juice",
+    description: "This is created by JavaScript. it is one of my assignments.",
+  },
+  {
+    id: 13,
+    title: "Fresh Juice",
+    ratings: 2.5,
+    link: "https://mdhasanraju.github.io/job-project-1/second-page.html",
+    image: vinegar,
+    price: 90,
+    prevPrice: 95,
+    category: "juice",
+    description: "This is created by JavaScript. it is one of my assignments.",
+  },
+  {
+    id: 14,
+    title: "Fresh Juice",
+    ratings: 2.5,
+    link: "https://mdhasanraju.github.io/job-project-1/second-page.html",
+    image: vinegar,
+    price: 90,
+    prevPrice: 95,
+    category: "juice",
+    description: "This is created by JavaScript. it is one of my assignments.",
+  },
 ];
 
 const DiscoverProducts = () => {
@@ -135,10 +202,10 @@ const DiscoverProducts = () => {
     return itemStatus === activeStatus ? activeBtn : {};
   };
 
-  const [currentItems, setCurrentItems] = useState(null);
+  const [currentItems, setCurrentItems] = useState([]);
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
-  const itemsPerPage = 6;
+  const itemsPerPage = 4;
 
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;
@@ -283,7 +350,7 @@ const DiscoverProducts = () => {
           );
         })}
       </Grid>
-      <Box>
+      <Container>
         <ReactPaginate
           breakLabel="..."
           nextLabel="next >"
@@ -292,8 +359,13 @@ const DiscoverProducts = () => {
           pageCount={pageCount}
           previousLabel="< previous"
           renderOnZeroPageCount={null}
+          containerClassName="pagination"
+          pageLinkClassName="page-num"
+          previousLinkClassName="page-num"
+          nextLinkClassName="page-num"
+          activeLinkClassName="active"
         />
-      </Box>
+      </Container>
     </Container>
   );
 };
