@@ -29,13 +29,13 @@ const Login = () => {
         />
         <br />
         <Button fullWidth variant="contained" color="success">
-        Submit
+        Login
       </Button>
 
       </Box>
         </form>
         <Typography sx={{textAlign:'center'}}>Forget password? Reset password</Typography>
-        <Button fullWidth variant="contained" color="success">Google SignUp</Button>
+        <Button fullWidth variant="contained" color="success">Google In SignUp</Button>
         <Typography sx={{textAlign:'center'}} variant='subtitle1'>Don't have an account? <Link to={'/register'}>Sign up</Link></Typography>
            </Grid>
            <Grid item xs={12} sm={6} md={6}></Grid>
