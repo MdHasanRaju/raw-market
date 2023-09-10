@@ -1,9 +1,9 @@
 import React from 'react';
-
+import LoginAuth from '../../components/authentication/Login';
 const Login = () => {
     return (
         <div>
-            <h1>login page add</h1>
+            <LoginAuth></LoginAuth>
         </div>
     );
 };
