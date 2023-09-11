@@ -34,7 +34,7 @@ const Login = () => {
 
       </Box>
         </form>
-        <Typography sx={{textAlign:'center'}}>Forget password? Reset password</Typography>
+        <Typography sx={{textAlign:'center'}}>Forget password? Reset passwords</Typography>
         <Button fullWidth variant="contained" color="success">Google In SignUp</Button>
         <Typography sx={{textAlign:'center'}} variant='subtitle1'>Don't have an account? <Link to={'/register'}>Sign up</Link></Typography>
            </Grid>
