@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import {
   Box,
   Button,
-  Container, 
+  Container,
   Grid,
   Rating,
   Stack,
@@ -16,8 +16,8 @@ import vinegar from "../../assets/products/vinegar.jpg";
 import tomato from "../../assets/products/tomato.jpg";
 import cabbage from "../../assets/products/cabbage.jpg";
 import greenCapsicum from "../../assets/products/greenCapsicum.jpg";
-import ReactPaginate from "react-paginate"; 
-import './DiscoverProducts.css';
+import ReactPaginate from "react-paginate";
+import "./DiscoverProducts.css";
 
 const productItems = [
   {
@@ -263,8 +263,18 @@ const productItems = [
 ];
 
 const DiscoverProducts = () => {
-  const [items, setItems] = useState(productItems);
+  // const [items, setItems] = useState(productItems);
   const [itemStatus, setItemStatus] = useState("");
+  const [data, setData] = useState([])
+  const [items, setItems] = useState(data);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/api/v1/products")
+      .then((res) => res.json())
+      .then((data) => {
+        setItems(data.products);  
+      });
+  }, []);
 
   const handleFilterItem = (category) => {
     setItemStatus(category);
@@ -296,14 +306,12 @@ const DiscoverProducts = () => {
     const endOffset = itemOffset + itemsPerPage;
     setCurrentItems(products.slice(itemOffset, endOffset));
     setPageCount(Math.ceil(products.length / itemsPerPage));
-  },[itemOffset, itemsPerPage, products])
+  }, [itemOffset, itemsPerPage, products]);
 
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % products.length;
     setItemOffset(newOffset);
   };
-
-  
 
   return (
     <Container sx={{ my: 6 }}>
@@ -360,9 +368,9 @@ const DiscoverProducts = () => {
       </Box>
       <Grid container spacing={2} sx={{ mt: 3, mb: 8 }}>
         {currentItems?.map((product) => {
-          const { title, image, price, prevPrice, ratings, id } = product;
+          const { title, photoUrl, price, prevPrice, ratings, _id } = product; 
           return (
-            <Grid key={id} item md={3} sm={4} sx={{ pl: 0 }} xs={6}>
+            <Grid key={_id} item md={3} sm={4} sx={{ pl: 0 }} xs={6}>
               <Box
                 sx={{
                   width: "100%",
@@ -388,7 +396,8 @@ const DiscoverProducts = () => {
                     borderRadius: "5px",
                   }}
                   alt="product image"
-                  src={image}
+                  // src={image}
+                  src={photoUrl}
                 />{" "}
                 <Button
                   variant="contained"
