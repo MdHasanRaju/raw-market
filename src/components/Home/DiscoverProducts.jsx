@@ -315,8 +315,16 @@ const DiscoverProducts = () => {
 
   return (
     <Container sx={{ my: 6 }}>
-      <Typography sx={{ textAlign: "center", mb: 6, fontSize:{xs:24}, mt:{xs:16} }} variant="h3">
-        Discover products
+      <Typography
+        sx={{
+          typography: { sm: "h4", xs: "h6", md:"h3" },
+          textAlign: "center",
+          mb: {xs:3, sm:6, md:6}, 
+          mt: { xs: 16 },
+        }}
+        variant="h3"
+      >
+        DISCOVER PRODUCTS
       </Typography>
       <Box sx={{ display: "flex", justifyContent: "center" }}>
         <Button
@@ -326,6 +334,9 @@ const DiscoverProducts = () => {
           size="small"
           sx={{
             ...active(""),
+            button:{xs:'large', md:'large'},
+            px: { md: 2, sm: 2, xs: 1 },
+            py: { md: 0.5, sm: 0.5, xs: 0.5 },
             mr: 3,
 
             "&:hover": {
@@ -344,6 +355,8 @@ const DiscoverProducts = () => {
           sx={{
             ...active("vegetables"),
             mr: 3,
+            px: { md: 2, sm: 2, xs: 1 },
+            py: { md: 0.5, sm: 0.5, xs: 0.5 },
             "&:hover": {
               bgcolor: "green",
               color: "white",
@@ -359,7 +372,8 @@ const DiscoverProducts = () => {
           size="small"
           sx={{
             ...active("fruits"),
-            mr: 3,
+            px: { md: 2, sm: 2, xs: 1 },
+            py: { md: 0.5, sm: 0.5, xs: 0.5 },
             "&:hover": {
               bgcolor: "green",
               color: "white",
@@ -371,7 +385,7 @@ const DiscoverProducts = () => {
       </Box>
       <Grid container spacing={2} sx={{ mt: 3, mb: 8 }}>
         {currentItems?.map((product) => {
-          const { title, photoUrl, price, prevPrice, ratings, _id } = product; 
+          const { title, photoUrl, price, prevPrice, ratings, _id } = product;
           return (
             <Grid key={_id} item md={4} sm={4} sx={{ pl: 0 }} xs={6}>
               <Box
@@ -384,8 +398,8 @@ const DiscoverProducts = () => {
                   borderRadius: "2px",
                   display: "flex",
                   justifyContent: "center",
-                  flexDirection:'column',
-                  alignItems:'center',
+                  flexDirection: "column",
+                  alignItems: "center",
                   "&:hover > Button": {
                     zIndex: 10,
                     opacity: 1,
@@ -396,7 +410,7 @@ const DiscoverProducts = () => {
               >
                 <Box
                   component="img"
-                  height="200px"
+                  height="180px"
                   sx={{
                     width: { md: "85%", sm: "100%", xs: "150px" },
                     border: "1px solid transparent",
@@ -410,7 +424,6 @@ const DiscoverProducts = () => {
                   variant="contained"
                   size="small"
                   sx={{
-                     
                     width: "60%",
                     transition: ".5s",
                     opacity: 0,
