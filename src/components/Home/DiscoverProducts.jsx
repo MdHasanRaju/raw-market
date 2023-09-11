@@ -304,7 +304,7 @@ const DiscoverProducts = () => {
 
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;
-    setCurrentItems(products.slice(itemOffset, endOffset));
+    setCurrentItems(products?.slice(itemOffset, endOffset));
     setPageCount(Math.ceil(products.length / itemsPerPage));
   }, [itemOffset, itemsPerPage, products]);
 
@@ -315,7 +315,7 @@ const DiscoverProducts = () => {
 
   return (
     <Container sx={{ my: 6 }}>
-      <Typography sx={{ textAlign: "center", mb: 6 }} variant="h3">
+      <Typography sx={{ textAlign: "center", mb: 6, fontSize:{xs:24}, mt:{xs:16} }} variant="h3">
         Discover products
       </Typography>
       <Box sx={{ display: "flex", justifyContent: "center" }}>
@@ -323,6 +323,7 @@ const DiscoverProducts = () => {
           onClick={() => handleFilterItem("")}
           variant="outlined"
           color="success"
+          size="small"
           sx={{
             ...active(""),
             mr: 3,
@@ -339,6 +340,7 @@ const DiscoverProducts = () => {
           onClick={() => handleFilterItem("vegetables")}
           variant="outlined"
           color="success"
+          size="small"
           sx={{
             ...active("vegetables"),
             mr: 3,
@@ -354,6 +356,7 @@ const DiscoverProducts = () => {
           onClick={() => handleFilterItem("fruits")}
           variant="outlined"
           color="success"
+          size="small"
           sx={{
             ...active("fruits"),
             mr: 3,
@@ -405,7 +408,9 @@ const DiscoverProducts = () => {
                 />{" "}
                 <Button
                   variant="contained"
+                  size="small"
                   sx={{
+                     
                     width: "60%",
                     transition: ".5s",
                     opacity: 0,
