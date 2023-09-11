@@ -264,17 +264,17 @@ const productItems = [
 
 const DiscoverProducts = () => {
   // const [items, setItems] = useState(productItems);
-  const [itemStatus, setItemStatus] = useState("");
   const [data, setData] = useState([])
+  const [itemStatus, setItemStatus] = useState("");
   const [items, setItems] = useState(data);
 
   useEffect(() => {
     fetch("http://localhost:3000/api/v1/products")
       .then((res) => res.json())
       .then((data) => {
-        setItems(data.products);  
+        setItems(data?.products);
       });
-  }, []);
+  }, [items, itemStatus]);
 
   const handleFilterItem = (category) => {
     setItemStatus(category);
@@ -300,7 +300,7 @@ const DiscoverProducts = () => {
   const [currentItems, setCurrentItems] = useState([]);
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
-  const itemsPerPage = 4;
+  const itemsPerPage = 6;
 
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;
@@ -370,7 +370,7 @@ const DiscoverProducts = () => {
         {currentItems?.map((product) => {
           const { title, photoUrl, price, prevPrice, ratings, _id } = product; 
           return (
-            <Grid key={_id} item md={3} sm={4} sx={{ pl: 0 }} xs={6}>
+            <Grid key={_id} item md={4} sm={4} sx={{ pl: 0 }} xs={6}>
               <Box
                 sx={{
                   width: "100%",
@@ -379,6 +379,10 @@ const DiscoverProducts = () => {
                   cursor: "pointer",
                   border: "1px solid transparent",
                   borderRadius: "2px",
+                  display: "flex",
+                  justifyContent: "center",
+                  flexDirection:'column',
+                  alignItems:'center',
                   "&:hover > Button": {
                     zIndex: 10,
                     opacity: 1,
@@ -391,7 +395,7 @@ const DiscoverProducts = () => {
                   component="img"
                   height="200px"
                   sx={{
-                    width: { md: "100%", sm: "100%", xs: "150px" },
+                    width: { md: "85%", sm: "100%", xs: "150px" },
                     border: "1px solid transparent",
                     borderRadius: "5px",
                   }}
@@ -402,7 +406,7 @@ const DiscoverProducts = () => {
                 <Button
                   variant="contained"
                   sx={{
-                    width: "100%",
+                    width: "60%",
                     transition: ".5s",
                     opacity: 0,
                     transform: "translateY(20%)",
