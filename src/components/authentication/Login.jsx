@@ -5,8 +5,17 @@ import TextField from '@mui/material/TextField';
 import { Button, Container, Grid, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 
+import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
+import { useEffect } from 'react';
 
 const Login = () => {
+
+useEffect(()=>{
+  loadCaptchaEnginge(6); 
+},[])
+
+
+
  const handelLogin = event => {
   event.preventDefault()
   const form = event.target;
@@ -26,52 +35,48 @@ const Login = () => {
             <Box onSubmit={handelLogin} sx={{width:'100%'}} component="form" action="" >
               <Box  sx={{ display: 'flex', flexWrap: 'wrap', flexFlow: 'column', gap: 1 }}>
                <Box>
+                <Typography>Email</Typography>
                <TextField
-                  required
-                  id="outlined-required"
-                  label="Your Email"
                   type="email"
                   name="email"
+                  placeholder='Please your email*'
+                  required
                 />
                </Box>
               
                 <Box>
+                <Typography>Password</Typography>
                 <TextField
-                  id="outlined-password-input"
-                  label="Password"
                   type="password"
                   name="password"
                   autoComplete="current-password"
+                  placeholder='Please current password*'
+                  required
                 />
                 </Box>
-                <Box>
+                <Box><Typography >Forget password?</Typography></Box>
+                  <Box>
+                  <LoadCanvasTemplate />
+                  </Box>
+                  <Box>
                 <TextField
-                  id="outlined-password-input"
-                  label="Type"
                   type="text"
-                  name="text"
+                  name="captcha"
+                  placeholder='type the text above captcha'
                   autoComplete="current-password"
+                  required
                 />
                 </Box>
-                <Box>
-                <TextField
-                  id="outlined-password-input"
-                  label="Type Her"
-                  type="text"
-                  name="text"
-                  autoComplete="current-password"
-                />
-                </Box>
-  
+
                  <Box>
-                 <Button fullWidth type='submit'  variant="contained" color="success">
+                 <Button  type='submit'  variant="contained" color="success">
                   Login
                 </Button>
                  </Box>
-
+      
               </Box>
             </Box>
-            <Typography sx={{ textAlign: 'center' }}>Forget password? Reset passwords</Typography>
+            <br />
             <Button sx={{width:'80%'}}  variant="contained" color="success">Google In SignUp</Button>
             <Typography sx={{ textAlign: 'center' }} variant='subtitle1'>Don't have an account? <Link to={'/register'}>Sign up</Link></Typography>
           </Grid>
