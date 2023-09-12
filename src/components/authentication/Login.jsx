@@ -7,28 +7,41 @@ import { Link } from 'react-router-dom';
 
 
 const Login = () => {
+ const handelLogin = event => {
+  event.preventDefault()
+  const form = event.target;
+  const email = form.email.value;
+  const password = form.password.value;
+  const user ={email, password}
+  console.log(user)
+ }
+
+
   return (
     <Box sx={{ bgcolor: "#fff", py: 10 }}>
       <Container>
         <Typography sx={{ textAlign: 'center' }} variant='h4'>Plages Login</Typography>
         <Grid container >
           <Grid item xs={12} sm={6} md={6} >
-            <Box sx={{width:'80%'}} component="form" action="" >
+            <Box onSubmit={handelLogin} sx={{width:'80%'}} component="form" action="" >
               <Box  sx={{ display: 'flex', flexWrap: 'wrap', flexFlow: 'column', gap: 1 }}>
                 <TextField
                   required
                   id="outlined-required"
                   label="Your Email"
+                  type="email"
+                  name="email"
                 />
                 <br />
                 <TextField
                   id="outlined-password-input"
                   label="Password"
                   type="password"
+                  name="password"
                   autoComplete="current-password"
                 />
                 <br />
-                <Button variant="contained" color="success">
+                <Button type='submit'  variant="contained" color="success">
                   Login
                 </Button>
 
