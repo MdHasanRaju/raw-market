@@ -23,16 +23,19 @@ const Login = () => {
         <Typography sx={{ textAlign: 'center' }} variant='h4'>Plages Login</Typography>
         <Grid container >
           <Grid item xs={12} sm={6} md={6} >
-            <Box onSubmit={handelLogin} sx={{width:'80%'}} component="form" action="" >
+            <Box onSubmit={handelLogin} sx={{width:'100%'}} component="form" action="" >
               <Box  sx={{ display: 'flex', flexWrap: 'wrap', flexFlow: 'column', gap: 1 }}>
-                <TextField
+               <Box>
+               <TextField
                   required
                   id="outlined-required"
                   label="Your Email"
                   type="email"
                   name="email"
                 />
-                <br />
+               </Box>
+              
+                <Box>
                 <TextField
                   id="outlined-password-input"
                   label="Password"
@@ -40,10 +43,31 @@ const Login = () => {
                   name="password"
                   autoComplete="current-password"
                 />
-                <br />
-                <Button type='submit'  variant="contained" color="success">
+                </Box>
+                <Box>
+                <TextField
+                  id="outlined-password-input"
+                  label="Type"
+                  type="text"
+                  name="text"
+                  autoComplete="current-password"
+                />
+                </Box>
+                <Box>
+                <TextField
+                  id="outlined-password-input"
+                  label="Type Her"
+                  type="text"
+                  name="text"
+                  autoComplete="current-password"
+                />
+                </Box>
+  
+                 <Box>
+                 <Button fullWidth type='submit'  variant="contained" color="success">
                   Login
                 </Button>
+                 </Box>
 
               </Box>
             </Box>
