@@ -14,7 +14,8 @@ import { Link, NavLink } from "react-router-dom";
 import { LocalMall } from "@mui/icons-material";
 import logo from "../../assets/icon/bazar.png";
 import logo2 from "../../assets/icon/logo.png";
-import logo3 from "../../assets/icon/bazar2.png";
+import logo3 from "../../assets/icon/bazar2.png"; 
+import ToggleColorMode from "../../Theme/ToggleColorMode";
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -265,6 +266,11 @@ const Navbar = () => {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
+            <Tooltip title="Dark mode">
+              <IconButton sx={{ p: 0 }}>
+                <ToggleColorMode />
+              </IconButton>
+            </Tooltip>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />

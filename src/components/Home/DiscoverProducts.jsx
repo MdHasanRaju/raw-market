@@ -331,12 +331,12 @@ const DiscoverProducts = () => {
           onClick={() => handleFilterItem("")}
           variant="outlined"
           color="success"
-          size="small"
+          // size="small"
           sx={{
             ...active(""),
-            button:{xs:'large', md:'large'},
-            px: { md: 2, sm: 2, xs: 1 },
-            py: { md: 0.5, sm: 0.5, xs: 0.5 },
+            typography:{xs:'xs', sm:"lg", md:'xl'},
+            // px: { md: 2, sm: 2, xs: 1 },
+            // py: { md: 0.5, sm: 0.5, xs: 0.5 },
             mr: 3,
 
             "&:hover": {
@@ -351,12 +351,12 @@ const DiscoverProducts = () => {
           onClick={() => handleFilterItem("vegetables")}
           variant="outlined"
           color="success"
-          size="small"
+          // size="small"
           sx={{
             ...active("vegetables"),
             mr: 3,
-            px: { md: 2, sm: 2, xs: 1 },
-            py: { md: 0.5, sm: 0.5, xs: 0.5 },
+            // px: { md: 2, sm: 2, xs: 1 },
+            // py: { md: 0.5, sm: 0.5, xs: 0.5 },
             "&:hover": {
               bgcolor: "green",
               color: "white",
@@ -369,11 +369,11 @@ const DiscoverProducts = () => {
           onClick={() => handleFilterItem("fruits")}
           variant="outlined"
           color="success"
-          size="small"
+          // size="small"
           sx={{
             ...active("fruits"),
-            px: { md: 2, sm: 2, xs: 1 },
-            py: { md: 0.5, sm: 0.5, xs: 0.5 },
+            // px: { md: 2, sm: 2, xs: 1 },
+            // py: { md: 0.5, sm: 0.5, xs: 0.5 },
             "&:hover": {
               bgcolor: "green",
               color: "white",
