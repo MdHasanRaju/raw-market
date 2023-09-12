@@ -8,12 +8,12 @@ const Main = () => {
   console.log(loction)
 
   const noNavbarFooter = loction.pathname.includes('login')
-  const  navbarFooter = loction.pathname.includes('register')
+const  navbarFooter = loction.pathname.includes('register')  
   return (
     <div>
-     {noNavbarFooter || navbarFooter || <Navbar></Navbar>}
+    {noNavbarFooter || navbarFooter || <Navbar></Navbar>}
       <Outlet></Outlet>
-    { noNavbarFooter || navbarFooter|| <Footer></Footer>}
+    {noNavbarFooter || navbarFooter || <Footer></Footer>}
     </div>
   );
 };

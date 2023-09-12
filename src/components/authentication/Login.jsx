@@ -21,7 +21,8 @@ useEffect(()=>{
   const form = event.target;
   const email = form.email.value;
   const password = form.password.value;
-  const user ={email, password}
+  const captcha = form.captcha.value;
+  const user ={email, password, captcha}
   console.log(user)
  }
 
@@ -69,7 +70,7 @@ useEffect(()=>{
                 </Box>
 
                  <Box>
-                 <Button  type='submit'  variant="contained" color="success">
+                 <Button sx={{width:'41%'}}  type='submit'  variant="contained" color="success">
                   Login
                 </Button>
                  </Box>
@@ -77,11 +78,13 @@ useEffect(()=>{
               </Box>
             </Box>
             <br />
-            <Button sx={{width:'80%'}}  variant="contained" color="success">Google In SignUp</Button>
-            <Typography sx={{ textAlign: 'center' }} variant='subtitle1'>Don't have an account? <Link to={'/register'}>Sign up</Link></Typography>
+            <Button  sx={{width:'41%'}}  variant="contained" color="success">Google In SignUp</Button>
+            <Typography variant='subtitle1'>Don't have an account? <Link to={'/register'}>Sign up</Link></Typography>
           </Grid>
-          <Grid item xs={12} sm={6} md={6}></Grid>
-
+          <Grid item xs={12} sm={6} md={6}>
+            
+          </Grid>
+               
         </Grid>
       </Container>
     </Box>
