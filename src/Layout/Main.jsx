@@ -9,6 +9,7 @@ const Main = () => {
 
   const noNavbarFooter = loction.pathname.includes('login')
 const  navbarFooter = loction.pathname.includes('register')  
+/* hhahsdfsdhsdfhsdlh */
   return (
     <div>
     {noNavbarFooter || navbarFooter || <Navbar></Navbar>}
