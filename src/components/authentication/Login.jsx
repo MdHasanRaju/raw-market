@@ -6,9 +6,11 @@ import { Button, Container, Grid, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
-import { useEffect } from 'react';
+import { useEffect,useRef } from 'react';
 
 const Login = () => {
+
+  const captchRef = useRef(null)
 
 useEffect(()=>{
   loadCaptchaEnginge(6); 
@@ -21,10 +23,21 @@ useEffect(()=>{
   const form = event.target;
   const email = form.email.value;
   const password = form.password.value;
-  const captcha = form.captcha.value;
-  const user ={email, password, captcha}
+  const user ={email, password}
   console.log(user)
  }
+
+
+
+ const handleValidateCaptcha = (e) => {
+  const user_captcha_value = e.target.value;
+  if (validateCaptcha(user_captcha_value)) {
+      setDisabled(false);
+  }
+  else {
+      setDisabled(true)
+  }
+}
 
 
   return (
@@ -62,6 +75,7 @@ useEffect(()=>{
                   <Box>
                 <TextField
                   type="text"
+                  onBlur={handleValidateCaptcha} 
                   name="captcha"
                   placeholder='type the text above captcha'
                   autoComplete="current-password"
@@ -69,6 +83,11 @@ useEffect(()=>{
                 />
                 </Box>
 
+                 <Box>
+                 <Button onClick={handelValidateCaptcha} sx={{width:'41%'}}   variant="contained" color="success">
+                  Validate
+                </Button>
+                 </Box>
                  <Box>
                  <Button sx={{width:'41%'}}  type='submit'  variant="contained" color="success">
                   Login
