@@ -6,11 +6,17 @@ import { Button, Container, Grid, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
-import { useEffect,useRef } from 'react';
+import { useEffect,useRef,useState } from 'react';
+import { useContext } from 'react';
+import { AuthContext } from '../../providers/AuthProvider';
+
+
 
 const Login = () => {
-
   const captchRef = useRef(null)
+  const [disabled, setDisabled] = useState(true);
+
+  const {  signIn} = useContext(AuthContext)
 
 useEffect(()=>{
   loadCaptchaEnginge(6); 
@@ -23,8 +29,13 @@ useEffect(()=>{
   const form = event.target;
   const email = form.email.value;
   const password = form.password.value;
-  const user ={email, password}
-  console.log(user)
+  console.log(email,password)
+  signIn(email, password)
+  .then(result =>{
+    const user = result.user
+    console.log(user)
+  })
+ 
  }
 
 
