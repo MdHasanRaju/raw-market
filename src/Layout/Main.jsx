@@ -1,15 +1,22 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Footer from "../components/Shared/Footer";
 import Navbar from "../components/Shared/Navbar";
 import { Box } from "@mui/material";
 const Main = () => {
+
+  const loction = useLocation()
+  console.log(loction)
+
+  const noNavbarFooter = loction.pathname.includes('login')
+const  navbarFooter = loction.pathname.includes('register')  
+/* hhahsdfsdhsdfhsdlh */
   return (
-    <Box>
-      <Navbar></Navbar>
+    <div>
+    {noNavbarFooter || navbarFooter || <Navbar></Navbar>}
       <Outlet></Outlet>
-      <Footer></Footer>
-    </Box>
+    {noNavbarFooter || navbarFooter || <Footer></Footer>}
+    </div>
   );
 };
 
