@@ -19,7 +19,7 @@ const Register = () => {
   return (
     <>
       <Helmet>
-                <title>Bistro Boss | Login</title>
+                <title>Raw_Bazar | Register</title>
        </Helmet>
        <Box sx={{ bgcolor: "#fff", py: 10 }}>
       <Container>
@@ -75,8 +75,7 @@ const Register = () => {
                      {errors.password?.type === 'pattern' && <Typography sx={{color:'red'}} className="text-red-600">Password must have one Uppercase one lower case, one number and one special character.</Typography>}
                 <Box><Typography >Forget password?</Typography></Box>
                   
-                
-
+        
                
                  <Box>
                  <Button sx={{width:'41%'}}  type='submit'  variant="contained" color="success">
