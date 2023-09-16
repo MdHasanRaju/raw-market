@@ -10,7 +10,7 @@ import { useForm } from 'react-hook-form';
 
 
 const Register = () => {
-  const { register,handleSubmit, watch,formState: { errors }, } = useForm()
+  const { register,handleSubmit, reset,  watch,formState: { errors }, } = useForm()
 
   const onSubmit = (data) =>{
     console.log(data)
@@ -60,13 +60,19 @@ const Register = () => {
                 <TextField
                   type="password"
                   name="password"
-                  {...register("password", { required: true, minLength:6, maxLength: 20 })}
+                  {...register("password", { required: true, minLength:6, maxLength: 20,  pattern: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/ })}
                   autoComplete="current-password"
                   placeholder='Please current password*'
                
                 />
                 </Box>
-                {errors.password?.type === "required" && ( <Typography sx={{color:'red'}}>Password is required</Typography>  )}
+
+                {errors.password?.type === "required" && ( <Typography sx={{color:'red'}}>password is required</Typography>  )}
+                {errors.password?.type === "minLength" && ( <Typography sx={{color:'red'}}>password must be at least 6 characters</Typography>
+                  )}
+                   {errors.password?.type === "maxLength" && ( <Typography sx={{color:'red'}}>password must be less then 20  <br/>characters</Typography>
+                  )}
+                     {errors.password?.type === 'pattern' && <Typography sx={{color:'red'}} className="text-red-600">Password must have one Uppercase one lower case, one number and one special character.</Typography>}
                 <Box><Typography >Forget password?</Typography></Box>
                   
                 
