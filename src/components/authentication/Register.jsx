@@ -3,17 +3,18 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
 import { Button, Container, Grid, Typography } from '@mui/material';
-import { Link,  } from 'react-router-dom';
+import { Link, useNavigate,  } from 'react-router-dom';
 
 import { Helmet } from 'react-helmet-async';
 import { useForm } from 'react-hook-form';
 import { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
+import Swal from 'sweetalert2';
 
 
 const Register = () => {
   const { register,handleSubmit, reset,  watch,formState: { errors }, } = useForm()
-
+  const navigate = useNavigate();
   const { createUser}=useContext(AuthContext)
 
 
@@ -23,7 +24,18 @@ const Register = () => {
     .then(result =>{
       const loggedUser = result.user
       console.log(loggedUser)
+      Swal.fire({
+        title: 'User Login Successful.',
+        showClass: {
+            popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+            popup: 'animate__animated animate__fadeOutUp'
+        }
+    });
+    navigate('/');
     })
+    reset()
    
   }
 
