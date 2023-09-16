@@ -6,7 +6,7 @@ import { Button, Container, Grid, Typography } from '@mui/material';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
-import { useEffect,useRef,useState } from 'react';
+import { useEffect,useState } from 'react';
 import { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import Swal from 'sweetalert2'
@@ -14,7 +14,7 @@ import { Helmet } from 'react-helmet-async';
 
 
 const Login = () => {
-  const captchRef = useRef(null)
+ 
   const [disabled, setDisabled] = useState(true);
   const navigate = useNavigate();
   const location = useLocation();
@@ -70,8 +70,13 @@ useEffect(()=>{
 } 
 
 
+
+
+
   return (
     <>
+
+    {/* raju@gmail.com Shipon56# */}
       <Helmet>
                 <title>Raw__Bazar | Login</title>
        </Helmet>
@@ -117,13 +122,9 @@ useEffect(()=>{
                 />
                 </Box>
 
+            
                  <Box>
-                 <Button disabled={false} sx={{width:'41%'}}   variant="contained" color="success">
-                  Validate
-                </Button>
-                 </Box>
-                 <Box>
-                 <Button sx={{width:'41%'}}  type='submit'  variant="contained" color="success">
+                 <Button disabled={false} sx={{width:'41%'}}  type='submit'  variant="contained" color="success">
                   Login
                 </Button>
                  </Box>

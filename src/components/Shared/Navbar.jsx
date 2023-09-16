@@ -15,11 +15,21 @@ import { LocalMall } from "@mui/icons-material";
 import logo from "../../assets/icon/bazar.png";
 import logo2 from "../../assets/icon/logo.png";
 import logo3 from "../../assets/icon/bazar2.png";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
+import CustomButton from "./CustomButton";
 
 const Navbar = () => {
+  const {user,  logOut}= useContext(AuthContext)
+
+  const handelLogOut =()=>{
+   logOut()
+   .then(()=>{})
+   .catch(error => console.log(error))
+  }
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -289,12 +299,18 @@ const Navbar = () => {
             >
               <MenuItem onClick={handleCloseNavMenu}>
                 <Typography textAlign="center">
+                 {
+                  user ? <>
+                  <CustomButton onClick={handelLogOut}>LogOut</CustomButton>
+                  </> : <>
                   <Link
                     style={{ color: "black", textDecoration: "none" }}
                     to="/login"
                   >
                     Login
                   </Link>
+                  </>
+                 }
                 </Typography>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>
