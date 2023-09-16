@@ -41,15 +41,11 @@ useEffect(()=>{
   .then(result =>{
     const user = result.user
     console.log(user)
-    Swal.fire({
-      title: 'User Login Successful.',
-      showClass: {
-          popup: 'animate__animated animate__fadeInDown'
-      },
-      hideClass: {
-          popup: 'animate__animated animate__fadeOutUp'
-      }
-  });
+    Swal.fire(
+      'Good job! ',
+      'Login is successfuly!',
+      'success'
+    )
   navigate(from, { replace: true });
 })
   

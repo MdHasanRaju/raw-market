@@ -24,15 +24,11 @@ const Register = () => {
     .then(result =>{
       const loggedUser = result.user
       console.log(loggedUser)
-      Swal.fire({
-        title: 'User Login Successful.',
-        showClass: {
-            popup: 'animate__animated animate__fadeInDown'
-        },
-        hideClass: {
-            popup: 'animate__animated animate__fadeOutUp'
-        }
-    });
+      Swal.fire(
+        'Thank you!!! ',
+        'User Create Successfuly!!!',
+        'success'
+      )
     navigate('/');
     })
     reset()
