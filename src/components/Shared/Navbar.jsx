@@ -302,7 +302,7 @@ const Navbar = () => {
               <MenuItem onClick={handleCloseNavMenu}>
                  {
                   user ?<>
-                    <Button onClick={handelLogOut}>LogOUt</Button>
+                    <Button variant="outlined" onClick={handelLogOut}>LogOUt</Button>
                   </>:<>
                    <Typography textAlign="center">
                   <Link
