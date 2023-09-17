@@ -3,12 +3,27 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
 import { Button, Container, Grid, Typography } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
-import { useEffect } from 'react';
+import { useEffect,useState } from 'react';
+import { useContext } from 'react';
+import { AuthContext } from '../../providers/AuthProvider';
+import Swal from 'sweetalert2'
+import { Helmet } from 'react-helmet-async';
+
 
 const Login = () => {
+ 
+  const [disabled, setDisabled] = useState(true);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+
+  const from = location.state?.from?.pathname || "/";
+
+
+  const {  signIn} = useContext(AuthContext)
 
 useEffect(()=>{
   loadCaptchaEnginge(6); 
@@ -21,14 +36,46 @@ useEffect(()=>{
   const form = event.target;
   const email = form.email.value;
   const password = form.password.value;
-  const captcha = form.captcha.value;
-  const user ={email, password, captcha}
-  console.log(user)
+  console.log(email,password)
+  signIn(email, password)
+  .then(result =>{
+    const user = result.user
+    console.log(user)
+    Swal.fire(
+      'Good job! ',
+      'Login is successfuly!',
+      'success'
+    )
+  navigate(from, { replace: true });
+})
+  
+ 
  }
 
 
+
+  const handleValidateCaptcha = (e) => {
+   const user_captcha_value = e.target.value;
+  if (validateCaptcha(user_captcha_value)) {
+      setDisabled(false);
+  }
+  else {
+      setDisabled(true)
+  } 
+} 
+
+
+
+
+
   return (
-    <Box sx={{ bgcolor: "#fff", py: 10 }}>
+    <>
+
+    {/* raju@gmail.com Shipon56# */}
+      <Helmet>
+                <title>Raw__Bazar | Login</title>
+       </Helmet>
+       <Box sx={{ bgcolor: "#fff", py: 10 }}>
       <Container>
         <Typography sx={{ textAlign: 'center' }} variant='h4'>Plages Login</Typography>
         <Grid container >
@@ -62,6 +109,7 @@ useEffect(()=>{
                   <Box>
                 <TextField
                   type="text"
+                  onBlur={handleValidateCaptcha} 
                   name="captcha"
                   placeholder='type the text above captcha'
                   autoComplete="current-password"
@@ -69,8 +117,9 @@ useEffect(()=>{
                 />
                 </Box>
 
+            
                  <Box>
-                 <Button sx={{width:'41%'}}  type='submit'  variant="contained" color="success">
+                 <Button disabled={false} sx={{width:'41%'}}  type='submit'  variant="contained" color="success">
                   Login
                 </Button>
                  </Box>
@@ -88,6 +137,7 @@ useEffect(()=>{
         </Grid>
       </Container>
     </Box>
+     </>
   );
 }
 

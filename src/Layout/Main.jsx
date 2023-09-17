@@ -5,17 +5,17 @@ import Navbar from "../components/Shared/Navbar";
 import { Box } from "@mui/material";
 const Main = () => {
 
-  const loction = useLocation()
+  /* const loction = useLocation()
   console.log(loction)
 
   const noNavbarFooter = loction.pathname.includes('login')
-const  navbarFooter = loction.pathname.includes('register')  
-/* hhahsdfsdhsdfhsdlh */
+const  navbarFooter = loction.pathname.includes('register')   */
+
   return (
     <div>
-    {noNavbarFooter || navbarFooter || <Navbar></Navbar>}
+    <Navbar></Navbar>
       <Outlet></Outlet>
-    {noNavbarFooter || navbarFooter || <Footer></Footer>}
+     <Footer></Footer>
     </div>
   );
 };

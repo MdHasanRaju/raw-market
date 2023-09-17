@@ -14,14 +14,25 @@ import { Link, NavLink } from "react-router-dom";
 import { LocalMall } from "@mui/icons-material";
 import logo from "../../assets/icon/bazar.png";
 import logo2 from "../../assets/icon/logo.png";
-import logo3 from "../../assets/icon/bazar2.png"; 
-import ToggleColorMode from "../../Theme/ToggleColorMode";
-import DarkMode from "../../Theme/DarkMode";
+import logo3 from "../../assets/icon/bazar2.png";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
+import CustomButton from "./CustomButton";
+import { Button } from "@mui/material";
+import DarkMode from './../../Theme/DarkMode';
 
 const Navbar = () => {
+  const {user,  logOut}= useContext(AuthContext)
+
+
+  const handelLogOut =()=>{
+    logOut()
+    .then(()=>{})
+    .catch(error =>console.log(error))
+   }
+  
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -296,7 +307,11 @@ const Navbar = () => {
               onClose={handleCloseUserMenu}
             >
               <MenuItem onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">
+                 {
+                  user ?<>
+                    <Button variant="outlined" onClick={handelLogOut}>LogOUt</Button>
+                  </>:<>
+                   <Typography textAlign="center">
                   <Link
                     style={{ color: "black", textDecoration: "none" }}
                     to="/login"
@@ -304,6 +319,8 @@ const Navbar = () => {
                     Login
                   </Link>
                 </Typography>
+                  </>
+                 }
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>
                 <Typography textAlign="center">
