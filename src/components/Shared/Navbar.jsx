@@ -16,6 +16,7 @@ import logo from "../../assets/icon/bazar.png";
 import logo2 from "../../assets/icon/logo.png";
 import logo3 from "../../assets/icon/bazar2.png"; 
 import ToggleColorMode from "../../Theme/ToggleColorMode";
+import DarkMode from "../../Theme/DarkMode";
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -268,7 +269,8 @@ const Navbar = () => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Dark mode">
               <IconButton sx={{ p: 0 }}>
-                <ToggleColorMode />
+                {/* <ToggleColorMode /> */}
+                <DarkMode/>
               </IconButton>
             </Tooltip>
             <Tooltip title="Open settings">
