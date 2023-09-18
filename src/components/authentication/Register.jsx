@@ -10,12 +10,13 @@ import { useForm } from 'react-hook-form';
 import { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import Swal from 'sweetalert2';
+import GoogleSocialLogin from './GoogleSocialLogin';
 
 
 const Register = () => {
   const { register,handleSubmit, reset,  watch,formState: { errors }, } = useForm()
   const navigate = useNavigate();
-  const { createUser}=useContext(AuthContext)
+  const { createUser,updateUserProfile}=useContext(AuthContext)
 
 
   const onSubmit = (data) =>{
@@ -24,6 +25,12 @@ const Register = () => {
     .then(result =>{
       const loggedUser = result.user
       console.log(loggedUser)
+      updateUserProfile(data.name)
+      .then(()=>{
+        console.log('user profile updated')
+      })
+      .catch(error =>console.log(error))
+
       Swal.fire(
         'Thank you!!! ',
         'User Create Successfuly!!!',
@@ -105,7 +112,7 @@ const Register = () => {
               </Box>
             </Box>
             <br />
-            <Button  sx={{width:'41%'}}  variant="contained" color="success">Google In SignUp</Button>
+            <GoogleSocialLogin></GoogleSocialLogin>
             <Typography variant='subtitle1'>Don't have an account? <Link to={'/login'}>Login </Link></Typography>
           </Grid>
                
