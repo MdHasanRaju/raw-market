@@ -10,9 +10,10 @@ import Paypal from "../Svg/Paypal";
 import MasterCard from "../Svg/MasterCard";
 import GooglePay from "../Svg/GooglePay";
 import AmericanExpress from "../Svg/AmericanExpress";
+import { useTheme } from "styled-components";
 // f6f6f6
 
-const Footer = () => {
+const Footer = () => { 
   return (
     <Box sx={{ backgroundColor: "#fff", color: "#6f6f6f", pt: 8, pb: 4 }}>
       <Container>
@@ -22,7 +23,11 @@ const Footer = () => {
               <Box>
                 <Typography
                   variant="subtitle1"
-                  sx={{ mb: 3, color: "#232323", fontWeight: "bold" }}
+                  sx={{
+                    color: "#232323",
+                    mb: 3,
+                    fontWeight: "bold",
+                  }}
                 >
                   PRODUCTS
                 </Typography>
@@ -231,14 +236,15 @@ const Footer = () => {
                     news on new update.{" "}
                   </Typography>
                   <Box>
-                    <TextField style={{color:'white', backgroundColor:'black'}}
+                    <TextField
+                      style={{ color: "white", backgroundColor: "black" }}
                       size="small"
                       id="standard-basic"
                       placeholder="example@gmail.com"
                       sx={{
                         mt: 3,
                         border: "1px solid transparent",
-                        borderRadius: 1, 
+                        borderRadius: 1,
                         bgcolor: "ThreeDHighlight",
                         "& ::placeholder": {
                           fontSize: 17,

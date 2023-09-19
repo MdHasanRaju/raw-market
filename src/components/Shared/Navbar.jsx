@@ -15,6 +15,8 @@ import { LocalMall } from "@mui/icons-material";
 import logo from "../../assets/icon/bazar.png";
 import logo2 from "../../assets/icon/logo.png";
 import logo3 from "../../assets/icon/bazar2.png";
+import userLogo from "../../assets/icon/user-icon.png";
+import userLogo2 from "../../assets/icon/user-icon2.png";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import CustomButton from "./CustomButton";
@@ -281,12 +283,12 @@ const Navbar = () => {
             <Tooltip title="Dark mode">
               <IconButton sx={{ p: 0 }}>
                 {/* <ToggleColorMode /> */}
-                <DarkMode/>
+                {/* <DarkMode/> */}
               </IconButton>
             </Tooltip>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="Remy Sharp" src={userLogo2}/>
               </IconButton>
             </Tooltip>
             <Menu

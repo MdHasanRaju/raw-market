@@ -65,8 +65,8 @@ export default function ToggleColorMode() {
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
-        {/* <Main></Main> */}
         <TogglerButton />
+        {/* <Main></Main> */}
       </ThemeProvider>
     </ColorModeContext.Provider>
   );

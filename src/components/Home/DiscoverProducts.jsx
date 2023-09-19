@@ -274,7 +274,7 @@ const DiscoverProducts = () => {
       .then((data) => {
         setItems(data?.products);
       });
-  }, [items, itemStatus]);
+  }, []);
 
   const handleFilterItem = (category) => {
     setItemStatus(category);
@@ -304,8 +304,12 @@ const DiscoverProducts = () => {
 
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;
-    setCurrentItems(products?.slice(itemOffset, endOffset));
-    setPageCount(Math.ceil(products.length / itemsPerPage));
+    const slicedProducts = products?.slice(itemOffset, endOffset);
+    setCurrentItems(slicedProducts);
+    // setCurrentItems(products?.slice(itemOffset, endOffset));
+    const countedPage = Math.ceil(products.length / itemsPerPage);
+    setPageCount(countedPage);
+    // setPageCount(Math.ceil(products.length / itemsPerPage));
   }, [itemOffset, itemsPerPage, products]);
 
   const handlePageClick = (event) => {

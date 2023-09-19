@@ -1,31 +1,41 @@
-import React from "react"; 
-import "./DarkMode.css";
-// import Sun from "../components/Svg/Sun";
-// import Moon from "../components/Svg/Moon"; 
-// import { ReactComponent as Sun } from "./Sun.svg";
-// import { ReactComponent as Moon } from "./Moon.svg";
+import React from "react";
+import IconButton from "@mui/material/IconButton";
+import Box from "@mui/material/Box";
+import { useTheme, ThemeProvider, createTheme } from "@mui/material/styles";
+import Brightness4Icon from "@mui/icons-material/Brightness4";
+import Brightness7Icon from "@mui/icons-material/Brightness7";
 
 const DarkMode = () => {
-    const setDarkMode  = () => {
-        document.querySelector("body").setAttribute("data-theme", "dark");
-    }
-    const setLightMode  = () => {
-        document.querySelector("body").setAttribute("data-theme", "light");
-    }
-    setDarkMode();  
-    return (
-      <div className="dark_mode">
-        <input
-          className="dark_mode_input"
-          type="checkbox"
-          id="darkmode-toggle"
-        />
-        <label className="dark_mode_label" htmlFor="darkmode-toggle">
-          {/* <Sun /> */}
-          {/* <Moon /> */}
-        </label>
-      </div>
-    );
+  // const theme = useTheme();
+  // const colorMode = React.useContext(ColorModeContext);
+  return (
+    <></>
+    // <Box
+    //   sx={{
+    //     display: "flex",
+    //     width: "100%",
+    //     alignItems: "center",
+    //     justifyContent: "center",
+    //     bgcolor: "background.default",
+    //     color: "text.primary",
+    //     borderRadius: 1,
+    //     p: 3,
+    //   }}
+    // >
+    //   {theme.palette.mode} mode
+    //   <IconButton
+    //     sx={{ ml: 1 }}
+    //     onClick={colorMode.toggleColorMode}
+    //     color="inherit"
+    //   >
+    //     {theme.palette.mode === "dark" ? (
+    //       <Brightness7Icon />
+    //     ) : (
+    //       <Brightness4Icon />
+    //     )}
+    //   </IconButton>
+    // </Box>
+  );
 };
 
 export default DarkMode;
