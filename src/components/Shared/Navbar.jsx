@@ -311,6 +311,8 @@ const Navbar = () => {
               <MenuItem onClick={handleCloseNavMenu}>
                  {
                   user ?<>
+                  <Typography>{user?.displayName}</Typography>
+                  <br/>
                     <Button variant="outlined" onClick={handelLogOut}>LogOUt</Button>
                   </>:<>
                    <Typography textAlign="center">

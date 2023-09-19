@@ -11,6 +11,7 @@ import { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import Swal from 'sweetalert2'
 import { Helmet } from 'react-helmet-async';
+import GoogleSocialLogin from './GoogleSocialLogin';
 
 
 const Login = () => {
@@ -127,7 +128,7 @@ useEffect(()=>{
               </Box>
             </Box>
             <br />
-            <Button  sx={{width:'41%'}}  variant="contained" color="success">Google In SignUp</Button>
+            <GoogleSocialLogin></GoogleSocialLogin>
             <Typography variant='subtitle1'>Don't have an account? <Link to={'/register'}>Sign up</Link></Typography>
           </Grid>
           <Grid item xs={12} sm={6} md={6}>

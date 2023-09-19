@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { app } from "../firebase/firebase.config";
 import { useEffect } from "react";
 import { Password } from "@mui/icons-material";
@@ -9,21 +9,35 @@ const auth = getAuth(app);
 
 const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null)
-    const [loading, setLoding] = useState(true)
-
+    const [loading, setLoading] = useState(true)
+  
+    const googleProvider = new GoogleAuthProvider();
 
     const createUser = (email, password)=>{
-        setLoding(true)
+        setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
     const  signIn = (email, password)=>{
-        setLoding(true)
+        setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
 
+    const googleSignIn = () =>{
+        setLoading(true);
+        return signInWithPopup(auth, googleProvider);
+    }
+
+
+    const updateUserProfile = (name, photo) => {
+        return updateProfile(auth.currentUser, {
+            displayName: name, photoURL: photo
+        });
+    }
+
+
     const logOut = ()=>{
-        setLoding(true)
+        setLoading(true)
         return signOut(auth)
     }
 
@@ -31,7 +45,7 @@ const AuthProvider = ({children}) => {
        const unsubscribe = onAuthStateChanged(auth, currentUser =>{
          setUser(currentUser)
          console.log('user login ', currentUser)
-         setLoding(false)
+         setLoading(false)
         })
         return ()=>{
             return unsubscribe()
@@ -43,6 +57,8 @@ const AuthProvider = ({children}) => {
               loading,
               createUser,
               signIn,
+              googleSignIn,
+              updateUserProfile,
               logOut,
       }
     return (
