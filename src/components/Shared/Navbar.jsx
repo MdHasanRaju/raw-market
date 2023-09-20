@@ -1,27 +1,22 @@
-import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
-import Tooltip from "@mui/material/Tooltip";
-import MenuItem from "@mui/material/MenuItem";
-import { Link, NavLink } from "react-router-dom";
 import { LocalMall } from "@mui/icons-material";
-import logo from "../../assets/icon/bazar.png";
-import logo2 from "../../assets/icon/logo.png";
-import logo3 from "../../assets/icon/bazar2.png";
-import userLogo from "../../assets/icon/user-icon.png";
-import userLogo2 from "../../assets/icon/user-icon2.png";
-import { useContext } from "react";
-import { AuthContext } from "../../providers/AuthProvider";
-import CustomButton from "./CustomButton";
+import MenuIcon from "@mui/icons-material/Menu";
 import { Button } from "@mui/material";
-import DarkMode from './../../Theme/DarkMode';
+import AppBar from "@mui/material/AppBar";
+import Avatar from "@mui/material/Avatar";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import IconButton from "@mui/material/IconButton";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import Toolbar from "@mui/material/Toolbar";
+import Tooltip from "@mui/material/Tooltip";
+import Typography from "@mui/material/Typography";
+import * as React from "react";
+import { useContext } from "react";
+import { Link, NavLink } from "react-router-dom";
+import logo3 from "../../assets/icon/bazar2.png";
+import userLogo2 from "../../assets/icon/user-icon2.png";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Navbar = () => {
   const {user,  logOut}= useContext(AuthContext)

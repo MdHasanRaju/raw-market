@@ -52,12 +52,12 @@ const Fruits = () => {
         >
           <Typography
             sx={{
-              typography: { sm: "h4", xs: "h6", md: "h4", lg: "h3" },
+              typography: { sm: "h5", xs: "h6", md: "h4", lg: "h4" },
               textAlign: "center",
               mb: { xs: 3, sm: 3, md: 3 },
               mt: { xs: 5, md: 4, sm: 4 },
               color: "green",
-              width: 400,
+              width: 125,
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
@@ -67,8 +67,7 @@ const Fruits = () => {
             FRUITS
             <Divider
               sx={{
-                width: "100%",
-                fontWeight: "bold",
+                width: "100%", 
                 borderBottomWidth: 2,
                 bgcolor: "green",
               }}
