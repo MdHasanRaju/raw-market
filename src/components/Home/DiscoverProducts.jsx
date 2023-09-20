@@ -21,15 +21,18 @@ import "./DiscoverProducts.css";
 
 const DiscoverProducts = () => {
   // const [items, setItems] = useState(productItems);
-  const [data, setData] = useState([])
+  // const [data, setData] = useState([])
   const [itemStatus, setItemStatus] = useState("");
-  const [items, setItems] = useState(data);
+  const [items, setItems] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:3000/api/v1/products")
       .then((res) => res.json())
       .then((data) => {
-        setItems(data?.products);
+        console.log(data.products);
+        const slicedItems = data?.products?.slice(0, 8);
+        setItems(slicedItems);
+        console.log(slicedItems);
       });
   }, []);
 
@@ -54,33 +57,13 @@ const DiscoverProducts = () => {
     return itemStatus === activeStatus ? activeBtn : {};
   };
 
-  const [currentItems, setCurrentItems] = useState([]);
-  const [pageCount, setPageCount] = useState(0);
-  const [itemOffset, setItemOffset] = useState(0);
-  const itemsPerPage = 6;
-
-  useEffect(() => {
-    const endOffset = itemOffset + itemsPerPage;
-    const slicedProducts = products?.slice(itemOffset, endOffset);
-    setCurrentItems(slicedProducts);
-    // setCurrentItems(products?.slice(itemOffset, endOffset));
-    const countedPage = Math.ceil(products.length / itemsPerPage);
-    setPageCount(countedPage);
-    // setPageCount(Math.ceil(products.length / itemsPerPage));
-  }, [itemOffset, itemsPerPage, products]);
-
-  const handlePageClick = (event) => {
-    const newOffset = (event.selected * itemsPerPage) % products.length;
-    setItemOffset(newOffset);
-  };
-
   return (
     <Container sx={{ my: 6 }}>
       <Typography
         sx={{
-          typography: { sm: "h4", xs: "h6", md:"h3" },
+          typography: { sm: "h4", xs: "h6", md: "h3" },
           textAlign: "center",
-          mb: {xs:3, sm:6, md:6}, 
+          mb: { xs: 3, sm: 6, md: 6 },
           mt: { xs: 16 },
         }}
         variant="h3"
@@ -92,12 +75,12 @@ const DiscoverProducts = () => {
           onClick={() => handleFilterItem("")}
           variant="outlined"
           color="success"
-          // size="small"
+          size="small"
           sx={{
             ...active(""),
-            typography:{xs:'xs', sm:"lg", md:'xl'},
-            // px: { md: 2, sm: 2, xs: 1 },
-            // py: { md: 0.5, sm: 0.5, xs: 0.5 },
+            typography: { xs: "xs", sm: "lg", md: "xl" },
+            px: { md: 2, sm: 2, xs: 1 },
+            py: { md: 0.5, sm: 0.5, xs: 0.5 },
             mr: 3,
 
             "&:hover": {
@@ -112,12 +95,12 @@ const DiscoverProducts = () => {
           onClick={() => handleFilterItem("vegetables")}
           variant="outlined"
           color="success"
-          // size="small"
+          size="small"
           sx={{
             ...active("vegetables"),
             mr: 3,
-            // px: { md: 2, sm: 2, xs: 1 },
-            // py: { md: 0.5, sm: 0.5, xs: 0.5 },
+            px: { md: 2, sm: 2, xs: 1 },
+            py: { md: 0.5, sm: 0.5, xs: 0.5 },
             "&:hover": {
               bgcolor: "green",
               color: "white",
@@ -130,11 +113,11 @@ const DiscoverProducts = () => {
           onClick={() => handleFilterItem("fruits")}
           variant="outlined"
           color="success"
-          // size="small"
+          size="small"
           sx={{
             ...active("fruits"),
-            // px: { md: 2, sm: 2, xs: 1 },
-            // py: { md: 0.5, sm: 0.5, xs: 0.5 },
+            px: { md: 2, sm: 2, xs: 1 },
+            py: { md: 0.5, sm: 0.5, xs: 0.5 },
             "&:hover": {
               bgcolor: "green",
               color: "white",
@@ -145,10 +128,10 @@ const DiscoverProducts = () => {
         </Button>
       </Box>
       <Grid container spacing={2} sx={{ mt: 3, mb: 8 }}>
-        {currentItems?.map((product) => {
+        {products?.map((product) => {
           const { title, photoUrl, price, prevPrice, ratings, _id } = product;
           return (
-            <Grid key={_id} item md={4} sm={4} sx={{ pl: 0 }} xs={6}>
+            <Grid key={_id} item md={3} sm={3} sx={{ pl: 0 }} xs={6}>
               <Box
                 sx={{
                   width: "100%",
@@ -177,7 +160,7 @@ const DiscoverProducts = () => {
                     border: "1px solid transparent",
                     borderRadius: "5px",
                   }}
-                  alt="product image" 
+                  alt="product image"
                   src={photoUrl}
                 />{" "}
                 <Button
@@ -225,23 +208,7 @@ const DiscoverProducts = () => {
             </Grid>
           );
         })}
-      </Grid>
-      <Container>
-        <ReactPaginate
-          breakLabel="..."
-          nextLabel="next >"
-          onPageChange={handlePageClick}
-          pageRangeDisplayed={2}
-          pageCount={pageCount}
-          previousLabel="< previous"
-          renderOnZeroPageCount={null}
-          containerClassName="pagination"
-          pageLinkClassName="page-num"
-          previousLinkClassName="page-num"
-          nextLinkClassName="page-num"
-          activeLinkClassName="active"
-        />
-      </Container>
+      </Grid> 
     </Container>
   );
 };

@@ -4,11 +4,12 @@ import {
   Box,
   Button,
   Container,
+  Divider,
   Grid,
   Rating,
   Stack,
   Typography,
-} from "@mui/material"; 
+} from "@mui/material";
 import ReactPaginate from "react-paginate";
 
 const Vegetables = () => {
@@ -42,25 +43,40 @@ const Vegetables = () => {
   return (
     <Box>
       <Container>
-        <Typography
-          sx={{
-            typography: { sm: "h4", xs: "h6", md: "h3" },
-            textAlign: "center",
-            mb: { xs: 3, sm: 3, md: 3 },
-            mt: { xs: 5, md:4, sm:4 },
-          }}
-          variant="h3"
-        >
-          VEGETABLES
-        </Typography>
+        <Box sx={{display:'flex', justifyContent:"center", alignItems:'center'}}>
+          <Typography
+            sx={{
+              typography: { sm: "h4", xs: "h6", md: "h4", lg:'h3' },
+              textAlign: "center",
+              mb: { xs: 3, sm: 3, md: 3 },
+              mt: { xs: 5, md: 4, sm: 4 },
+              color: "green",
+              width: 400,
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            VEGETABLES
+            <Divider
+              sx={{
+                width: "100%",
+                fontWeight: "bold",
+                borderBottomWidth: 2,
+                bgcolor: "green",
+              }}
+            />
+          </Typography>
+        </Box>
         <Grid container spacing={2} sx={{ mb: 8 }}>
           {currentItems?.map((product) => {
             const { title, photoUrl, price, prevPrice, ratings, _id } = product;
             return (
               <Grid key={_id} item md={4} sm={4} sx={{ pl: 0 }} xs={6}>
                 <Box
-                  sx={{ 
-                    bgcolor: "white", 
+                  sx={{
+                    bgcolor: "white",
                     cursor: "pointer",
                     border: "1px solid transparent",
                     borderRadius: "2px",
@@ -80,11 +96,11 @@ const Vegetables = () => {
                     component="img"
                     height="200px"
                     sx={{
-                      width: { lg:"85%", md: "85%", sm: "85%", xs: "150px" },
+                      width: { lg: "85%", md: "85%", sm: "85%", xs: "150px" },
                       border: "1px solid transparent",
                       borderRadius: "5px",
                     }}
-                    alt="product image" 
+                    alt="product image"
                     src={photoUrl}
                   />{" "}
                   <Button
@@ -94,7 +110,7 @@ const Vegetables = () => {
                       width: "60%",
                       transition: ".5s",
                       opacity: 0,
-                      display: 'block',
+                      display: "block",
                       transform: "translateY(20%)",
                     }}
                     color="success"

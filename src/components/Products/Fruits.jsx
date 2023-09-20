@@ -4,6 +4,7 @@ import {
   Box,
   Button,
   Container,
+  Divider,
   Grid,
   Rating,
   Stack,
@@ -42,18 +43,39 @@ const Fruits = () => {
   return (
     <Box>
       <Container>
-        <Typography
+        <Box
           sx={{
-            typography: { sm: "h4", xs: "h6", md: "h3" },
-            textAlign: "center",
-            mb: { xs: 3, sm: 3, md: 3 },
-            mt: { xs: 5, md: 4, sm: 4 },
-            color:'green'
-        }}
-          variant="h3"
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
         >
-          FRUITS
-        </Typography>
+          <Typography
+            sx={{
+              typography: { sm: "h4", xs: "h6", md: "h4", lg: "h3" },
+              textAlign: "center",
+              mb: { xs: 3, sm: 3, md: 3 },
+              mt: { xs: 5, md: 4, sm: 4 },
+              color: "green",
+              width: 400,
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            FRUITS
+            <Divider
+              sx={{
+                width: "100%",
+                fontWeight: "bold",
+                borderBottomWidth: 2,
+                bgcolor: "green",
+              }}
+            />
+          </Typography>
+        </Box>
+
         <Grid container spacing={2} sx={{ mb: 8 }}>
           {currentItems?.map((product) => {
             const { title, photoUrl, price, prevPrice, ratings, _id } = product;
