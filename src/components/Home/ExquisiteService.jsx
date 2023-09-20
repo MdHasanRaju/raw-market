@@ -10,7 +10,7 @@ const ExquisiteService = () => {
           <Container>
             <Typography
               sx={{
-                typography: { sm: "h5", xs: "h6", md: "h4", lg: "h4" },
+                typography: { sm: "h5", xs: "h6", md: "h4", lg: "h3" },
                 color: "green",
                 textAlign: "center",
                 mt: 8,
