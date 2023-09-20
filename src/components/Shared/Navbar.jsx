@@ -52,7 +52,7 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#fff", mx: 0 }}>
+    <AppBar position="static" sx={{ backgroundColor: "#fff", mx: 0 , boxShadow:'none'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* <LocalMall
