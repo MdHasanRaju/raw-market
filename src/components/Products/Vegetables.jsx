@@ -43,10 +43,16 @@ const Vegetables = () => {
   return (
     <Box>
       <Container>
-        <Box sx={{display:'flex', justifyContent:"center", alignItems:'center'}}>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           <Typography
             sx={{
-              typography: { sm: "h4", xs: "h6", md: "h4", lg:'h3' },
+              typography: { sm: "h5", xs: "h6", md: "h4", lg: "h3" },
               textAlign: "center",
               mb: { xs: 3, sm: 3, md: 3 },
               mt: { xs: 5, md: 4, sm: 4 },

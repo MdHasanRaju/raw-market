@@ -9,8 +9,8 @@ const ExquisiteService = () => {
         <Box>
           <Container>
             <Typography
-              variant="h3"
               sx={{
+                typography: { sm: "h5", xs: "h6", md: "h4", lg: "h4" },
                 color: "green",
                 textAlign: "center",
                 mt: 8,
@@ -75,7 +75,7 @@ const ExquisiteService = () => {
                   </Box>
                   <Box
                     sx={{
-                      mt:4,
+                      mt: 4,
                       display: "flex",
                       justifyContent: "start",
                       alignItems: "center",
@@ -196,7 +196,7 @@ const ExquisiteService = () => {
                   </Box>
                   <Box
                     sx={{
-                      mt:4,
+                      mt: 4,
                       display: "flex",
                       justifyContent: "start",
                       alignItems: "center",

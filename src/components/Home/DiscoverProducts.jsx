@@ -61,12 +61,11 @@ const DiscoverProducts = () => {
     <Container sx={{ my: 6 }}>
       <Typography
         sx={{
-          typography: { sm: "h4", xs: "h6", md: "h3" },
+          typography: { sm: "h4", xs: "h6", md: "h4", lg: "h3" },
           textAlign: "center",
           mb: { xs: 3, sm: 6, md: 6 },
           mt: { xs: 16 },
-        }}
-        variant="h3"
+        }} 
       >
         DISCOVER PRODUCTS
       </Typography>
@@ -208,7 +207,7 @@ const DiscoverProducts = () => {
             </Grid>
           );
         })}
-      </Grid> 
+      </Grid>
     </Container>
   );
 };
