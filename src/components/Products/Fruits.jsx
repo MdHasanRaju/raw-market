@@ -8,17 +8,17 @@ import {
   Rating,
   Stack,
   Typography,
-} from "@mui/material"; 
+} from "@mui/material";
 import ReactPaginate from "react-paginate";
 
-const Vegetables = () => {
+const Fruits = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/v1/vegetables")
+    fetch("http://localhost:3000/api/v1/fruits")
       .then((res) => res.json())
       .then((data) => {
-        setData(data?.vegetables);
+        setData(data?.fruits);
       });
   }, []);
 
@@ -47,11 +47,12 @@ const Vegetables = () => {
             typography: { sm: "h4", xs: "h6", md: "h3" },
             textAlign: "center",
             mb: { xs: 3, sm: 3, md: 3 },
-            mt: { xs: 5, md:4, sm:4 },
-          }}
+            mt: { xs: 5, md: 4, sm: 4 },
+            color:'green'
+        }}
           variant="h3"
         >
-          VEGETABLES
+          FRUITS
         </Typography>
         <Grid container spacing={2} sx={{ mb: 8 }}>
           {currentItems?.map((product) => {
@@ -59,8 +60,9 @@ const Vegetables = () => {
             return (
               <Grid key={_id} item md={4} sm={4} sx={{ pl: 0 }} xs={6}>
                 <Box
-                  sx={{ 
-                    bgcolor: "white", 
+                  sx={{
+                    bgcolor: "white",
+                    // position: "relative",
                     cursor: "pointer",
                     border: "1px solid transparent",
                     borderRadius: "2px",
@@ -80,11 +82,16 @@ const Vegetables = () => {
                     component="img"
                     height="200px"
                     sx={{
-                      width: { lg:"85%", md: "85%", sm: "85%", xs: "150px" },
+                      width: {
+                        lg: "85%",
+                        md: "85%",
+                        sm: "85%",
+                        xs: "150px",
+                      },
                       border: "1px solid transparent",
                       borderRadius: "5px",
                     }}
-                    alt="product image" 
+                    alt="product image"
                     src={photoUrl}
                   />{" "}
                   <Button
@@ -94,7 +101,7 @@ const Vegetables = () => {
                       width: "60%",
                       transition: ".5s",
                       opacity: 0,
-                      display: 'block',
+                      display: "block",
                       transform: "translateY(20%)",
                     }}
                     color="success"
@@ -155,4 +162,4 @@ const Vegetables = () => {
   );
 };
 
-export default Vegetables;
+export default Fruits;

@@ -1,13 +1,13 @@
 import Box from "@mui/material/Box";
 import React from "react";
-import Vegetables from '../../components/Products/Vegetables';
+import Vegetables from "../../components/Products/Vegetables";
+import Fruits from "../../components/Products/Fruits";
 
 const Products = () => {
   return (
-    <Box
-      sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
-    >
+    <Box>
       <Vegetables />
+      <Fruits/>
     </Box>
   );
 };
