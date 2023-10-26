@@ -3,13 +3,13 @@ import { initializeApp } from "firebase/app";
 
 // api key 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_apiKey,
-  authDomain: import.meta.env.VITE_authDomain,
-  projectId: import.meta.env.VITE_projectId,
-  storageBucket: import.meta.env.VITE_storageBucket,
-  messagingSenderId: import.meta.env.VITE_messagingSenderId,
-  appId: import.meta.env.VITE_appId,
-  measurementId: import.meta.env.VITE_measurementId
+  apiKey: "AIzaSyBATLKhKRGOpSK1ONMoS6Jd15YNxywaylg",
+  authDomain: "raw-bazar.firebaseapp.com",
+  projectId: "raw-bazar",
+  storageBucket: "raw-bazar.appspot.com",
+  messagingSenderId: "310914850460",
+  appId: "1:310914850460:web:09e69ec0db348fc1565759",
+  measurementId: "G-NQKE1CJ4Y3"
 };
 
 // Initialize Firebase
